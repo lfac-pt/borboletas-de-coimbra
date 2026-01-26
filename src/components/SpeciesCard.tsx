@@ -4,83 +4,103 @@ interface SpeciesCardProps {
     species: Species;
 }
 
-const SpeciesCard: React.FC<SpeciesCardProps> = ({ species }) => {
+const SpeciesCard = ({ species }: SpeciesCardProps) => {
     const getImagePath = (latinName: string, family: string) => {
         const formattedName = latinName.replace(/\//g, '_');
         return `/imgs/sp/${family}/${formattedName}.jpg`;
     };
 
     return (
-        <div className="bg-white/10 backdrop-blur-md rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 group">
-            <div className="relative aspect-[4/3] overflow-hidden">
+        <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col md:flex-row group transition-all hover:shadow-md h-full">
+            {/* Left Photo */}
+            <div className="w-full md:w-1/3 aspect-[4/3] md:aspect-square overflow-hidden shrink-0">
                 <img
                     src={getImagePath(species.latinName, species.family)}
                     alt={species.latinName}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     onError={(e) => {
-                        (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x300?text=Sem+Foto';
+                        (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x400?text=Sem+Foto';
                     }}
                 />
-                <div className="absolute top-2 right-2 px-2 py-1 bg-black/50 backdrop-blur-sm rounded text-xs text-white font-medium">
-                    {species.family}
-                </div>
             </div>
 
-            <div className="p-4 space-y-3">
-                <div>
-                    <h3 className="text-xl font-bold text-white leading-tight">
-                        {species.commonName}
-                    </h3>
-                    <p className="text-sm italic text-gray-300">
+            {/* Right Content */}
+            <div className="p-6 md:p-8 flex-1 flex flex-col min-w-0">
+                <div className="mb-4">
+                    <h3 className="serif-title text-2xl md:text-3xl text-gray-800 italic mb-1 truncate">
                         {species.latinName}
+                    </h3>
+                    <p className="text-lg text-gray-500 font-medium">
+                        {species.commonName}
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 text-sm">
-                    <div className="space-y-1">
-                        <span className="text-xs uppercase tracking-wider text-gray-400 font-semibold block">Habitat</span>
-                        <p className="text-gray-200 line-clamp-2">
-                            {species.ecology?.habitats.join(', ') || 'Informação não disponível'}
-                        </p>
-                    </div>
-                    <div className="space-y-1">
-                        <span className="text-xs uppercase tracking-wider text-gray-400 font-semibold block">Planta Anfitriã</span>
-                        <p className="text-gray-200 line-clamp-2">
-                            {species.ecology?.hostPlantFamilies.join(', ') || (species.ecology?.hostPlantSpecies.join(', ')) || 'Informação não disponível'}
-                        </p>
-                    </div>
-                </div>
-
-                <div className="flex flex-wrap gap-2 pt-2 border-t border-white/10">
-                    {species.details?.sizeCategory && (
-                        <span className="px-2 py-0.5 bg-blue-500/20 text-blue-300 rounded-full text-xs">
-                            Porte: {species.details.sizeCategory}
-                        </span>
-                    )}
-                    {species.details?.predominantColor && (
-                        <span className="px-2 py-0.5 bg-yellow-500/20 text-yellow-300 rounded-full text-xs">
-                            Cor: {species.details.predominantColor}
-                        </span>
+                <div className="flex flex-wrap gap-2 mb-6">
+                    <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold border border-blue-100">
+                        {species.family}
+                    </span>
+                    {species.details?.similarSpecies && species.details.similarSpecies.length > 0 && (
+                        <button className="flex items-center gap-1 px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-semibold hover:bg-gray-200 transition-colors">
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Espécies similares ({species.details.similarSpecies.length})
+                        </button>
                     )}
                 </div>
 
-                {species.details?.similarSpecies && species.details.similarSpecies.length > 0 && (
-                    <div className="pt-2">
-                        <div className="relative group/tooltip">
-                            <span className="text-xs font-semibold text-pink-400 cursor-help underline decoration-dotted">
-                                Espécies semelhantes
+                {/* Stats Row */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8 mt-auto">
+                    <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-700 shrink-0">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                        </div>
+                        <div className="min-w-0">
+                            <span className="text-[10px] uppercase tracking-wider text-gray-400 font-bold block">Habitat</span>
+                            <span className="text-sm text-gray-700 font-semibold truncate block">
+                                {species.ecology?.habitats[0] || 'Inconhecido'}
                             </span>
-                            <div className="absolute bottom-full left-0 mb-2 w-64 p-3 bg-gray-900 rounded-lg text-xs text-gray-200 opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none z-10 shadow-xl border border-white/10">
-                                {species.details.similarSpecies.map((s, i) => (
-                                    <div key={i} className="mb-2 last:mb-0">
-                                        <div className="font-bold text-white">{s.name}</div>
-                                        <div>{s.distinction}</div>
-                                    </div>
-                                ))}
-                            </div>
                         </div>
                     </div>
-                )}
+
+                    <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-700 shrink-0">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <div className="min-w-0">
+                            <span className="text-[10px] uppercase tracking-wider text-gray-400 font-bold block">Plantas</span>
+                            <span className="text-sm text-gray-700 font-semibold truncate block">
+                                {species.ecology?.hostPlantFamilies[0] || 'N/A'}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-700 shrink-0">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                        </div>
+                        <div className="min-w-0">
+                            <span className="text-[10px] uppercase tracking-wider text-gray-400 font-bold block">Porte</span>
+                            <span className="text-sm text-gray-700 font-semibold truncate block">
+                                {species.details?.sizeCategory || 'N/A'}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Footer info: Color */}
+                <div className="pt-4 border-t border-gray-100 flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-orange-500 shadow-sm"></div>
+                    <p className="text-sm text-gray-500">
+                        Cor predominante: <span className="font-semibold text-gray-700">{species.details?.predominantColor || 'Inconhecida'}</span>
+                    </p>
+                </div>
             </div>
         </div>
     );

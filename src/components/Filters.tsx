@@ -1,5 +1,3 @@
-
-
 interface FiltersProps {
     onMonthChange: (month: string | null) => void;
     onSortChange: (sort: 'taxonomy' | 'size' | 'color') => void;
@@ -11,17 +9,23 @@ const MONTHS = [
     'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro'
 ];
 
-const Filters: React.FC<FiltersProps> = ({ onMonthChange, onSortChange, selectedMonth, selectedSort }) => {
+const Filters = ({ onMonthChange, onSortChange, selectedMonth, selectedSort }: FiltersProps) => {
     return (
-        <div className="flex flex-col md:flex-row gap-4 mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-            <div className="flex-1 space-y-2">
-                <label className="text-sm font-semibold text-gray-400 uppercase tracking-wider block">Filtrar por Mês</label>
+        <div className="bg-white border border-gray-100 rounded-xl shadow-sm p-4 mb-10 flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-4 w-full">
+                <div className="flex items-center gap-2 text-forest-green mb-2 md:mb-0">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <span className="text-sm font-semibold whitespace-nowrap">Mês de observação</span>
+                </div>
+
                 <div className="flex flex-wrap gap-2">
                     <button
                         onClick={() => onMonthChange(null)}
-                        className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedMonth === null
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                        className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${selectedMonth === null
+                            ? 'bg-[#2d6a4f] text-white shadow-md'
+                            : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
                             }`}
                     >
                         Todos
@@ -30,9 +34,9 @@ const Filters: React.FC<FiltersProps> = ({ onMonthChange, onSortChange, selected
                         <button
                             key={month}
                             onClick={() => onMonthChange(month)}
-                            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedMonth === month
-                                ? 'bg-blue-600 text-white'
-                                : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${selectedMonth === month
+                                ? 'bg-[#2d6a4f] text-white shadow-md'
+                                : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
                                 }`}
                         >
                             {month}
@@ -41,15 +45,20 @@ const Filters: React.FC<FiltersProps> = ({ onMonthChange, onSortChange, selected
                 </div>
             </div>
 
-            <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-400 uppercase tracking-wider block">Ordenar por</label>
+            <div className="flex items-center gap-4 w-full lg:w-auto">
+                <div className="flex items-center gap-2 text-forest-green">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+                    </svg>
+                    <span className="text-sm font-semibold whitespace-nowrap">Ordenar por</span>
+                </div>
+
                 <select
                     value={selectedSort}
                     onChange={(e) => onSortChange(e.target.value as any)}
-                    className="bg-gray-800 text-white border border-white/20 rounded-lg px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-48 appearance-none"
-                    style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'white\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M19 9l-7 7-7-7\'%3E%3C/path%3E%3C/svg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 0.5rem center', backgroundSize: '1rem' }}
+                    className="bg-gray-50 border border-gray-200 text-gray-700 rounded-lg px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-[#2d6a4f] w-full md:w-48 cursor-pointer"
                 >
-                    <option value="taxonomy">Táxon (Família)</option>
+                    <option value="taxonomy">Taxonomia</option>
                     <option value="size">Tamanho</option>
                     <option value="color">Cor Predominante</option>
                 </select>
