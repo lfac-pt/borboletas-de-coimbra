@@ -1,0 +1,15 @@
+Adapt this empty app to be a site called "Borboletas diurnas de Coimbra". This site is a list of the most common species found in the Coimbra district. It should have a list of cards each card representing a species. Each card should contain:
+- The common (see the data/common-names.json) and latin name
+- The family (use the information in constants.ts)
+- The host plant and habitat (see the data/species-ecology.json file)
+- A photo (see the imgs folder)
+- The size category (small, medium, large), this information is not available yet, create a data json file were it can be later added
+- The predominant color, this information is not available yet, create a data json file were it can be later added
+- The months when it can be seen, create a data json file were it can be later added
+- A list of similar species and a tooltip with how to distinguish them, create a data json file were it can be later added
+
+The list can be filtered by month (from March to September) and can be organized taxonomically or size/color.
+
+All the site should be in Portuguese and should be responsive.
+
+Use tailwind for styling.
