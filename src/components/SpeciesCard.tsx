@@ -157,7 +157,7 @@ const SpeciesCard = ({ species }: SpeciesCardProps) => {
                 <div className="pt-4 border-t border-gray-100 flex items-center gap-2">
                     <div className="flex -space-x-1">
                         {(Array.isArray(species.details?.predominantColor)
-                            ? species.details?.predominantColor
+                            ? species.details.predominantColor
                             : [species.details?.predominantColor || '']
                         ).map((color, idx) => (
                             <div
