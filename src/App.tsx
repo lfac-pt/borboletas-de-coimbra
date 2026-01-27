@@ -77,6 +77,22 @@ const App = () => {
     return new Set(filteredSpecies.map(s => s.family)).size;
   }, [filteredSpecies]);
 
+  const monthCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    SPECIES_FAMILIES; // Just ensuring constants are available if needed, but we use speciesList
+    const allMonths = ['Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro'];
+    allMonths.forEach(m => counts[m] = 0);
+
+    speciesList.forEach(s => {
+      s.details?.months.forEach(m => {
+        if (counts[m] !== undefined) {
+          counts[m]++;
+        }
+      });
+    });
+    return counts;
+  }, [speciesList]);
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-white">
@@ -140,6 +156,8 @@ const App = () => {
           selectedSort={sortBy}
           onMonthChange={setSelectedMonth}
           onSortChange={setSortBy}
+          monthCounts={monthCounts}
+          totalCount={speciesList.filter(s => (s.details?.months.length ?? 0) > 0).length}
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
