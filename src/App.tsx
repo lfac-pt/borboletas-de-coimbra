@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import './App.css';
-import { SPECIES_FAMILIES } from './constants';
+import { SPECIES_FAMILIES, endangered_eu, endangered_pt, HABITAT_TRANSLATIONS } from './constants';
+import { HABITAT_TYPE_SPRITES } from './utils/habitatTypeIcons';
 import type { Species, SpeciesEcology, SpeciesDetails } from './constants';
 import SpeciesCard from './components/SpeciesCard';
 import Filters from './components/Filters';
@@ -11,6 +12,13 @@ const App = () => {
   const [selectedMonth, setSelectedMonth] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<'taxonomy' | 'size' | 'color'>('taxonomy');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+
+  // Advanced filters
+  const [selectedSize, setSelectedSize] = useState<string | null>(null);
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
+  const [selectedHabitat, setSelectedHabitat] = useState<string | null>(null);
+  const [selectedHostFamily, setSelectedHostFamily] = useState<string | null>(null);
+  const [onlyEndangered, setOnlyEndangered] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,6 +62,35 @@ const App = () => {
       list = list.filter(s => s.details?.months.includes(selectedMonth));
     }
 
+    if (selectedSize) {
+      list = list.filter(s => s.details?.sizeCategory === selectedSize);
+    }
+
+    if (selectedColor) {
+      list = list.filter(s => {
+        if (!s.details?.predominantColor) return false;
+        const colors = Array.isArray(s.details.predominantColor)
+          ? s.details.predominantColor
+          : [s.details.predominantColor];
+        return colors.includes(selectedColor);
+      });
+    }
+
+    if (selectedHabitat) {
+      list = list.filter(s => {
+        const habitatTypeTrans = s.ecology?.habitatType ? (HABITAT_TRANSLATIONS[s.ecology.habitatType] || s.ecology.habitatType) : (HABITAT_TRANSLATIONS['Generalist'] || 'Generalista');
+        return habitatTypeTrans === selectedHabitat;
+      });
+    }
+
+    if (selectedHostFamily) {
+      list = list.filter(s => s.ecology?.hostPlantFamilies.includes(selectedHostFamily));
+    }
+
+    if (onlyEndangered) {
+      list = list.filter(s => endangered_pt[s.latinName] || endangered_eu[s.latinName]);
+    }
+
     list.sort((a, b) => {
       let result = 0;
       if (sortBy === 'taxonomy') {
@@ -84,7 +121,31 @@ const App = () => {
     });
 
     return list;
-  }, [speciesList, selectedMonth, sortBy, sortOrder]);
+  }, [speciesList, selectedMonth, sortBy, sortOrder, selectedSize, selectedColor, selectedHabitat, selectedHostFamily, onlyEndangered]);
+
+  const filterOptions = useMemo(() => {
+    const colors = new Set<string>();
+    const hostFamilies = new Set<string>();
+
+    speciesList.forEach(s => {
+      if (s.details?.predominantColor) {
+        if (Array.isArray(s.details.predominantColor)) {
+          s.details.predominantColor.forEach(c => c && colors.add(c));
+        } else {
+          colors.add(s.details.predominantColor);
+        }
+      }
+      s.ecology?.hostPlantFamilies.forEach(f => hostFamilies.add(f));
+    });
+
+    const mainHabitats = Object.keys(HABITAT_TYPE_SPRITES).map(h => HABITAT_TRANSLATIONS[h] || h);
+
+    return {
+      colors: Array.from(colors).filter(Boolean).sort() as string[],
+      habitats: Array.from(new Set(mainHabitats)).sort() as string[],
+      hostFamilies: Array.from(hostFamilies).filter(Boolean).sort() as string[]
+    };
+  }, [speciesList]);
 
   // Derived stats
   const familiesCount = useMemo(() => {
@@ -172,6 +233,18 @@ const App = () => {
           onOrderChange={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}
           monthCounts={monthCounts}
           totalCount={speciesList.filter(s => (s.details?.months.length ?? 0) > 0).length}
+          // Advanced filter props
+          selectedSize={selectedSize}
+          setSelectedSize={setSelectedSize}
+          selectedColor={selectedColor}
+          setSelectedColor={setSelectedColor}
+          selectedHabitat={selectedHabitat}
+          setSelectedHabitat={setSelectedHabitat}
+          selectedHostFamily={selectedHostFamily}
+          setSelectedHostFamily={setSelectedHostFamily}
+          onlyEndangered={onlyEndangered}
+          setOnlyEndangered={setOnlyEndangered}
+          filterOptions={filterOptions}
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">

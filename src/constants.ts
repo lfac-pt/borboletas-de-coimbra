@@ -320,6 +320,45 @@ export const endangered_eu: Record<string | number | symbol, string> = {
     "Erebia zapateri": "NT",
 };
 
+export const HABITAT_TRANSLATIONS: Record<string, string> = {
+    "open areas": "Áreas Abertas",
+    "agricultural areas": "Áreas Agrícolas",
+    "meadow": "Prados",
+    "grassland": "Pradarias",
+    "rocky areas": "Zonas Rochosas",
+    "gardens": "Jardins",
+    "disturbed areas": "Áreas Perturbadas",
+    "woodland": "Zonas Florestais",
+    "woodland edges": "Margens De Floresta",
+    "wetlands": "Zonas Húmidas",
+    "woodland clearings": "Clarões De Floresta",
+    "parks": "Parques",
+    "riparian woodland": "Florestas Ribeirinhas",
+    "roadsides": "Beiras De Estrada",
+    "diverse habitats": "Habitats Diversos",
+    "alpine meadows": "Prados Alpinos",
+    "hillsides": "Encostas",
+    "woodland rides": "Caminhos Florestais",
+    "hedgerow": "Sebes",
+    "scrubland": "Matagais",
+    "heathland": "Charnecas",
+    "sand dunes": "Dunas De Areia",
+    "dry grassland": "Pradarias Secas",
+    "coastal": "Zonas Costeiras",
+    "calcareous grassland": "Pradarias Calcárias",
+    "quarries": "Pedreiras",
+    "abandoned orchards": "Pomares Abandonados",
+    "dry slopes": "Encostas Secas",
+    "Generalist": "Generalista",
+    "Rocky/Mountain": "Rochoso/Montanhoso",
+    "Urban/Agricultural": "Urbano/Agrícola",
+    "Coastal": "Costeiro",
+    "Grassland": "Pradaria",
+    "Woodland": "Floresta",
+    "Scrubland": "Matagais",
+    "Wetland": "Zonas Húmidas",
+};
+
 export interface SpeciesEcology {
     habitats: string[];
     habitatType: string;
