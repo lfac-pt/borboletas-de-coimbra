@@ -1,5 +1,6 @@
 import { getPlantFamilySpritePosition, getPlantFamilyCommonName } from '../utils/plantFamilyIcons';
 import { getHabitatSpritePosition } from '../utils/habitatTypeIcons';
+import { getSizeSpritePosition } from '../utils/sizeTypeIcons';
 import { endangered_pt, endangered_eu } from '../constants';
 import type { Species } from '../constants';
 
@@ -28,6 +29,7 @@ const SpeciesCard = ({ species }: SpeciesCardProps) => {
     const plantFamily = species.ecology?.hostPlantFamilies[0];
     const plantPos = plantFamily ? getPlantFamilySpritePosition(plantFamily) : null;
     const plantCommonName = plantFamily ? getPlantFamilyCommonName(plantFamily) : null;
+    const sizePos = species.details?.sizeCategory ? getSizeSpritePosition(species.details.sizeCategory) : null;
 
     return (
         <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col md:flex-row group transition-all hover:shadow-md h-full">
@@ -116,11 +118,23 @@ const SpeciesCard = ({ species }: SpeciesCardProps) => {
 
                     {/* Size Icon */}
                     <div className="flex items-center justify-center sm:justify-start">
-                        <div className="w-[88px] h-[88px] rounded-lg bg-green-50 flex items-center justify-center text-green-700 shrink-0" title={`Porte: ${species.details?.sizeCategory || 'N/A'}`}>
-                            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                            </svg>
-                        </div>
+                        {sizePos ? (
+                            <div
+                                className="w-[88px] h-[88px] shrink-0 grayscale hover:grayscale-0 transition-all duration-300 rounded-lg"
+                                style={{
+                                    backgroundImage: 'url("/imgs/sizes.PNG")',
+                                    backgroundPosition: `${sizePos.x}px ${sizePos.y}px`,
+                                    backgroundSize: '352px 192px',
+                                }}
+                                title={`Porte: ${species.details?.sizeCategory || 'N/A'}`}
+                            />
+                        ) : (
+                            <div className="w-[88px] h-[88px] rounded-lg bg-green-50 flex items-center justify-center text-green-700 shrink-0" title={`Porte: ${species.details?.sizeCategory || 'N/A'}`}>
+                                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                </svg>
+                            </div>
+                        )}
                     </div>
                 </div>
 
