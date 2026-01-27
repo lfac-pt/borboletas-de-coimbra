@@ -1,8 +1,10 @@
 interface FiltersProps {
     onMonthChange: (month: string | null) => void;
     onSortChange: (sort: 'taxonomy' | 'size' | 'color') => void;
+    onOrderChange: () => void;
     selectedMonth: string | null;
     selectedSort: string;
+    sortOrder: 'asc' | 'desc';
     monthCounts: Record<string, number>;
     totalCount: number;
 }
@@ -11,7 +13,16 @@ const MONTHS = [
     'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro'
 ];
 
-const Filters = ({ onMonthChange, onSortChange, selectedMonth, selectedSort, monthCounts, totalCount }: FiltersProps) => {
+const Filters = ({
+    onMonthChange,
+    onSortChange,
+    onOrderChange,
+    selectedMonth,
+    selectedSort,
+    sortOrder,
+    monthCounts,
+    totalCount
+}: FiltersProps) => {
     return (
         <div className="bg-white border border-gray-100 rounded-xl shadow-sm p-4 mb-10 flex flex-col lg:flex-row items-center justify-between gap-6">
             <div className="flex flex-col md:flex-row items-center gap-4 w-full">
@@ -46,12 +57,21 @@ const Filters = ({ onMonthChange, onSortChange, selectedMonth, selectedSort, mon
                 </div>
             </div>
 
-            <div className="flex items-center gap-4 w-full lg:w-auto">
-                <div className="text-forest-green">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-center gap-2 w-full lg:w-auto">
+                <button
+                    onClick={onOrderChange}
+                    title={sortOrder === 'asc' ? 'Ordem Ascendente' : 'Ordem Descendente'}
+                    className="p-2 text-forest-green hover:bg-forest-green/10 rounded-lg transition-colors border border-transparent hover:border-forest-green/20"
+                >
+                    <svg
+                        className={`w-6 h-6 transition-transform duration-300 ${sortOrder === 'desc' ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
                     </svg>
-                </div>
+                </button>
 
                 <select
                     value={selectedSort}

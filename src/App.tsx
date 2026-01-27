@@ -10,6 +10,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const [selectedMonth, setSelectedMonth] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<'taxonomy' | 'size' | 'color'>('taxonomy');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,23 +55,36 @@ const App = () => {
     }
 
     list.sort((a, b) => {
+      let result = 0;
       if (sortBy === 'taxonomy') {
-        return a.family.localeCompare(b.family) || a.latinName.localeCompare(b.latinName);
-      }
-      if (sortBy === 'size') {
-        const sizes = { 'pequena': 1, 'média': 2, 'grande': 3, '': 0 };
+        const familyOrder: Record<string, number> = {
+          'Hesperiidae': 1,
+          'Papilionidae': 2,
+          'Pieridae': 3,
+          'Nymphalidae': 4,
+          'Lycaenidae': 5
+        };
+        const orderA = familyOrder[a.family] || 99;
+        const orderB = familyOrder[b.family] || 99;
+        result = (orderA - orderB) || a.latinName.localeCompare(b.latinName);
+      } else if (sortBy === 'size') {
+        const sizes: Record<string, number> = { 'small': 1, 'medium': 2, 'large': 3, '': 0 };
         const sizeA = sizes[a.details?.sizeCategory || ''] || 0;
         const sizeB = sizes[b.details?.sizeCategory || ''] || 0;
-        return sizeB - sizeA || a.latinName.localeCompare(b.latinName);
+        // Size is naturally descending (large to small) in the original code, 
+        // but we'll normalize it to respect sortOrder
+        result = sizeA - sizeB || a.latinName.localeCompare(b.latinName);
+      } else if (sortBy === 'color') {
+        const colorA = Array.isArray(a.details?.predominantColor) ? a.details.predominantColor[0] : (a.details?.predominantColor || '');
+        const colorB = Array.isArray(b.details?.predominantColor) ? b.details.predominantColor[0] : (b.details?.predominantColor || '');
+        result = colorA.localeCompare(colorB) || a.latinName.localeCompare(b.latinName);
       }
-      if (sortBy === 'color') {
-        return (a.details?.predominantColor || '').localeCompare(b.details?.predominantColor || '') || a.latinName.localeCompare(b.latinName);
-      }
-      return 0;
+
+      return sortOrder === 'asc' ? result : -result;
     });
 
     return list;
-  }, [speciesList, selectedMonth, sortBy]);
+  }, [speciesList, selectedMonth, sortBy, sortOrder]);
 
   // Derived stats
   const familiesCount = useMemo(() => {
@@ -154,8 +168,10 @@ const App = () => {
         <Filters
           selectedMonth={selectedMonth}
           selectedSort={sortBy}
+          sortOrder={sortOrder}
           onMonthChange={setSelectedMonth}
           onSortChange={setSortBy}
+          onOrderChange={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}
           monthCounts={monthCounts}
           totalCount={speciesList.filter(s => (s.details?.months.length ?? 0) > 0).length}
         />
