@@ -55,7 +55,7 @@ const Filters = ({ onMonthChange, onSortChange, selectedMonth, selectedSort }: F
 
                 <select
                     value={selectedSort}
-                    onChange={(e) => onSortChange(e.target.value as any)}
+                    onChange={(e) => onSortChange(e.target.value as 'taxonomy' | 'size' | 'color')}
                     className="bg-gray-50 border border-gray-200 text-gray-700 rounded-lg px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-[#2d6a4f] w-full md:w-48 cursor-pointer"
                 >
                     <option value="taxonomy">Taxonomia</option>

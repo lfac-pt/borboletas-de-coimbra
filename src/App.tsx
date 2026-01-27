@@ -156,8 +156,8 @@ const App = () => {
       </main>
 
       <footer className="py-12 border-t border-gray-200 text-center text-gray-400 text-sm bg-white">
-        <p className="mb-2">&copy; 2026 Borboletas Diurnas de Coimbra</p>
-        <p className="text-gray-300">Guia ilustrado para fins educativos e científicos.</p>
+        <p className="mb-2">&copy; 2026 Luís Cardoso</p>
+        <p className="text-gray-300">Guia para fins educativos e científicos.</p>
       </footer>
     </div>
   );
