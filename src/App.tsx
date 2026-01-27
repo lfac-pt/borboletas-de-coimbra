@@ -93,7 +93,6 @@ const App = () => {
 
   const monthCounts = useMemo(() => {
     const counts: Record<string, number> = {};
-    SPECIES_FAMILIES; // Just ensuring constants are available if needed, but we use speciesList
     const allMonths = ['Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro'];
     allMonths.forEach(m => counts[m] = 0);
 
