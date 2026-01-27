@@ -2,7 +2,9 @@
   "Carcharodus alceae": {
     "sizeCategory": "small",
     "predominantColor": "",
-    "months": [],
+    "months": [
+      "Abril"
+    ],
     "similarSpecies": []
   },
   "Carcharodus baeticus": {
@@ -65,7 +67,8 @@
     "sizeCategory": "small",
     "predominantColor": "",
     "months": [
-      "Abril"
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -85,7 +88,8 @@
     "sizeCategory": "small",
     "predominantColor": "",
     "months": [
-      "Maio"
+      "Maio",
+      "Abril"
     ],
     "similarSpecies": []
   },
@@ -93,7 +97,8 @@
     "sizeCategory": "small",
     "predominantColor": "",
     "months": [
-      "Maio"
+      "Maio",
+      "Abril"
     ],
     "similarSpecies": []
   },
@@ -116,7 +121,8 @@
     "predominantColor": "",
     "months": [
       "Maio",
-      "Março"
+      "Março",
+      "Abril"
     ],
     "similarSpecies": []
   },
@@ -131,21 +137,27 @@
     "predominantColor": "",
     "months": [
       "Maio",
-      "Março"
+      "Março",
+      "Abril"
     ],
     "similarSpecies": []
   },
   "Callophrys avis": {
     "sizeCategory": "small",
     "predominantColor": "",
-    "months": [],
+    "months": [
+      "Abril",
+      "Maio"
+    ],
     "similarSpecies": []
   },
   "Callophrys rubi": {
     "sizeCategory": "small",
     "predominantColor": "",
     "months": [
-      "Março"
+      "Março",
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -154,7 +166,8 @@
     "predominantColor": "",
     "months": [
       "Março",
-      "Abril"
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -162,7 +175,8 @@
     "sizeCategory": "small",
     "predominantColor": "",
     "months": [
-      "Abril"
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -210,7 +224,8 @@
     "sizeCategory": "small",
     "predominantColor": "",
     "months": [
-      "Maio"
+      "Maio",
+      "Abril"
     ],
     "similarSpecies": []
   },
@@ -218,7 +233,8 @@
     "sizeCategory": "small",
     "predominantColor": "",
     "months": [
-      "Março"
+      "Março",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -226,7 +242,8 @@
     "sizeCategory": "small",
     "predominantColor": "",
     "months": [
-      "Abril"
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -234,7 +251,8 @@
     "sizeCategory": "small",
     "predominantColor": "",
     "months": [
-      "Maio"
+      "Maio",
+      "Abril"
     ],
     "similarSpecies": []
   },
@@ -249,7 +267,8 @@
     "predominantColor": "",
     "months": [
       "Abril",
-      "Março"
+      "Março",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -271,7 +290,8 @@
     "sizeCategory": "small",
     "predominantColor": "",
     "months": [
-      "Abril"
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -285,7 +305,8 @@
     "sizeCategory": "small",
     "predominantColor": "",
     "months": [
-      "Maio"
+      "Maio",
+      "Abril"
     ],
     "similarSpecies": []
   },
@@ -293,7 +314,8 @@
     "sizeCategory": "small",
     "predominantColor": "",
     "months": [
-      "Abril"
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -358,7 +380,9 @@
   "Tomares ballus": {
     "sizeCategory": "small",
     "predominantColor": "",
-    "months": [],
+    "months": [
+      "Abril"
+    ],
     "similarSpecies": []
   },
   "Zizeeria knysna": {
@@ -462,7 +486,8 @@
     "predominantColor": "",
     "months": [
       "Maio",
-      "Março"
+      "Março",
+      "Abril"
     ],
     "similarSpecies": []
   },
@@ -488,7 +513,8 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Maio"
+      "Maio",
+      "Abril"
     ],
     "similarSpecies": []
   },
@@ -521,7 +547,9 @@
   "Melitaea cinxia": {
     "sizeCategory": "medium",
     "predominantColor": "",
-    "months": [],
+    "months": [
+      "Maio"
+    ],
     "similarSpecies": []
   },
   "Melitaea deione": {
@@ -529,7 +557,8 @@
     "predominantColor": "",
     "months": [
       "Maio",
-      "Março"
+      "Março",
+      "Abril"
     ],
     "similarSpecies": []
   },
@@ -542,7 +571,9 @@
   "Melitaea celadussa": {
     "sizeCategory": "medium",
     "predominantColor": "",
-    "months": [],
+    "months": [
+      "Maio"
+    ],
     "similarSpecies": []
   },
   "Melitaea parthenoides": {
@@ -555,7 +586,8 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Maio"
+      "Maio",
+      "Abril"
     ],
     "similarSpecies": []
   },
@@ -570,7 +602,8 @@
     "predominantColor": "",
     "months": [
       "Abril",
-      "Março"
+      "Março",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -579,7 +612,8 @@
     "predominantColor": "",
     "months": [
       "Maio",
-      "Março"
+      "Março",
+      "Abril"
     ],
     "similarSpecies": []
   },
@@ -588,7 +622,8 @@
     "predominantColor": "",
     "months": [
       "Abril",
-      "Março"
+      "Março",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -602,7 +637,9 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Março"
+      "Março",
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -611,7 +648,8 @@
     "predominantColor": "",
     "months": [
       "Abril",
-      "Março"
+      "Março",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -619,7 +657,8 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Abril"
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -627,7 +666,9 @@
     "sizeCategory": "large",
     "predominantColor": "",
     "months": [
-      "Março"
+      "Março",
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -635,7 +676,9 @@
     "sizeCategory": "large",
     "predominantColor": "",
     "months": [
-      "Março"
+      "Março",
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -643,7 +686,9 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Março"
+      "Março",
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -652,7 +697,8 @@
     "predominantColor": "",
     "months": [
       "Abril",
-      "Março"
+      "Março",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -667,7 +713,8 @@
     "predominantColor": "",
     "months": [
       "Abril",
-      "Março"
+      "Março",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -676,7 +723,8 @@
     "predominantColor": "",
     "months": [
       "Março",
-      "Abril"
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -693,7 +741,8 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Abril"
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -707,7 +756,9 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Março"
+      "Março",
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -715,7 +766,9 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Março"
+      "Março",
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -732,7 +785,9 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Março"
+      "Março",
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -740,7 +795,9 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Março"
+      "Março",
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -748,7 +805,9 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Março"
+      "Março",
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -756,7 +815,8 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Maio"
+      "Maio",
+      "Abril"
     ],
     "similarSpecies": []
   },
@@ -777,7 +837,9 @@
   "Coenonympha arcania": {
     "sizeCategory": "medium",
     "predominantColor": "",
-    "months": [],
+    "months": [
+      "Maio"
+    ],
     "similarSpecies": []
   },
   "Coenonympha dorus": {
@@ -854,7 +916,9 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Março"
+      "Março",
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -862,7 +926,8 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Abril"
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -870,7 +935,8 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Abril"
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -886,7 +952,8 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Abril"
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
@@ -900,7 +967,9 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Março"
+      "Março",
+      "Abril",
+      "Maio"
     ],
     "similarSpecies": []
   },
