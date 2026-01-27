@@ -15,9 +15,9 @@ const App = () => {
     const fetchData = async () => {
       try {
         const [commonNamesRes, ecologyRes, detailsRes] = await Promise.all([
-          fetch('/data/common-names.json'),
-          fetch('/data/species-ecology.json'),
-          fetch('/data/species-details.json')
+          fetch('data/common-names.json'),
+          fetch('data/species-ecology.json'),
+          fetch('data/species-details.json')
         ]);
 
         const commonNames: Record<string, string> = await commonNamesRes.json();
@@ -105,7 +105,7 @@ const App = () => {
           </h1>
 
           <p className="text-white/70 max-w-2xl mx-auto text-lg md:text-xl font-light mb-12">
-            Guia ilustrado das espécies mais comuns observadas no distrito de Coimbra,
+            Guia das espécies existentes no distrito de Coimbra,
             com informações para identificação e distinção entre espécies similares.
           </p>
 
