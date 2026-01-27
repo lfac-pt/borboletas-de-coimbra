@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { getPlantFamilySpritePosition, getPlantFamilyCommonName } from '../utils/plantFamilyIcons';
 import { getHabitatSpritePosition } from '../utils/habitatTypeIcons';
 import { getSizeSpritePosition } from '../utils/sizeTypeIcons';
@@ -9,6 +10,8 @@ interface SpeciesCardProps {
 }
 
 const SpeciesCard = ({ species }: SpeciesCardProps) => {
+    const [imgError, setImgError] = useState(false);
+
     const getImagePath = (latinName: string, family: string) => {
         const formattedName = latinName.replace(/\//g, '_');
         return `imgs/sp/${family}/${formattedName}.jpg`;
@@ -49,15 +52,22 @@ const SpeciesCard = ({ species }: SpeciesCardProps) => {
     return (
         <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col md:flex-row group transition-all hover:shadow-md h-full">
             {/* Left Photo */}
-            <div className="w-full md:w-1/3 aspect-[4/3] md:aspect-square overflow-hidden shrink-0">
-                <img
-                    src={getImagePath(species.latinName, species.family)}
-                    alt={species.latinName}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    onError={(e) => {
-                        (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x400?text=Sem+Foto';
-                    }}
-                />
+            <div className="w-full md:w-1/3 aspect-[4/3] md:aspect-square overflow-hidden shrink-0 bg-green-50 flex items-center justify-center relative border-r border-gray-100">
+                {!imgError ? (
+                    <img
+                        src={getImagePath(species.latinName, species.family)}
+                        alt={species.latinName}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        onError={() => setImgError(true)}
+                    />
+                ) : (
+                    <div className="flex flex-col items-center gap-3 text-green-200 p-8">
+                        <svg className="w-16 h-16 md:w-20 md:h-20 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M12 20s-2-2-2-5 2-4 2-4 2 1 2 4-2 5-2 5ZM10 13c-3 0-5 1-5 4s2 4 5-1ZM14 13c3 0 5 1 5 4s-2 4-5-1ZM10 13c-3 0-5-2-5-5s2-5 5 1ZM14 13c3 0 5-2 5-5s-2-5-5 1ZM12 7l1-2m-2 2l-1-2" />
+                        </svg>
+                        <span className="text-[10px] uppercase tracking-widest font-bold opacity-40 text-center">Imagem em breve</span>
+                    </div>
+                )}
             </div>
 
             {/* Right Content */}
@@ -137,7 +147,7 @@ const SpeciesCard = ({ species }: SpeciesCardProps) => {
                             <div
                                 className="w-[88px] h-[88px] shrink-0 grayscale hover:grayscale-0 transition-all duration-300 rounded-lg"
                                 style={{
-                                    backgroundImage: 'url("imgs/sizes.PNG")',
+                                    backgroundImage: 'url("imgs/sizes.png")',
                                     backgroundPosition: `${sizePos.x}px ${sizePos.y}px`,
                                     backgroundSize: '352px 192px',
                                 }}
