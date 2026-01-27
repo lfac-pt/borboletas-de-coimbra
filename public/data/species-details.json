@@ -1,7 +1,7 @@
 {
   "Carcharodus alceae": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril"
     ],
@@ -33,7 +33,7 @@
   },
   "Hesperia comma": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [],
     "similarSpecies": []
   },
@@ -45,7 +45,7 @@
   },
   "Ochlodes sylvanus": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Preto",
     "months": [
       "Maio"
     ],
@@ -86,7 +86,7 @@
   },
   "Spialia sertorius": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio",
       "Abril"
@@ -95,7 +95,7 @@
   },
   "Thymelicus acteon": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio",
       "Abril"
@@ -110,7 +110,7 @@
   },
   "Thymelicus sylvestris": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio"
     ],
@@ -118,7 +118,10 @@
   },
   "Aricia cramera": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": [
+      "Castanho",
+      "Azul"
+    ],
     "months": [
       "Maio",
       "Março",
@@ -134,7 +137,7 @@
   },
   "Cacyreus marshalli": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio",
       "Março",
@@ -153,7 +156,7 @@
   },
   "Callophrys rubi": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Março",
       "Abril",
@@ -163,7 +166,7 @@
   },
   "Celastrina argiolus": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Março",
       "Abril",
@@ -173,7 +176,7 @@
   },
   "Cupido lorquinii": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril",
       "Maio"
@@ -206,7 +209,7 @@
   },
   "Glaucopsyche melanops": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril",
       "Maio",
@@ -222,7 +225,7 @@
   },
   "Laeosopis roboris": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [
       "Maio",
       "Abril"
@@ -231,7 +234,7 @@
   },
   "Lampides boeticus": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Março",
       "Maio"
@@ -240,7 +243,7 @@
   },
   "Leptotes pirithous": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [
       "Abril",
       "Maio"
@@ -249,7 +252,7 @@
   },
   "Lycaena alciphron": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Preto",
     "months": [
       "Maio",
       "Abril"
@@ -258,13 +261,13 @@
   },
   "Lycaena bleusei": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [],
     "similarSpecies": []
   },
   "Lycaena phlaeas": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril",
       "Março",
@@ -288,7 +291,7 @@
   },
   "Lysandra bellargus": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [
       "Abril",
       "Maio"
@@ -303,7 +306,7 @@
   },
   "Plebejus argus": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio",
       "Abril"
@@ -312,7 +315,7 @@
   },
   "Polyommatus icarus/celina": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [
       "Abril",
       "Maio"
@@ -345,7 +348,7 @@
   },
   "Pseudophilotes panoptes": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [
       "Abril"
     ],
@@ -353,7 +356,7 @@
   },
   "Satyrium esculi": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio"
     ],
@@ -367,7 +370,7 @@
   },
   "Satyrium spini": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [],
     "similarSpecies": []
   },
@@ -379,7 +382,7 @@
   },
   "Tomares ballus": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril"
     ],
@@ -387,13 +390,13 @@
   },
   "Zizeeria knysna": {
     "sizeCategory": "small",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [],
     "similarSpecies": []
   },
   "Aglais io": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [],
     "similarSpecies": []
   },
@@ -405,7 +408,7 @@
   },
   "Apatura ilia": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Branco",
     "months": [
       "Maio"
     ],
@@ -413,7 +416,7 @@
   },
   "Argynnis pandora": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio"
     ],
@@ -421,7 +424,7 @@
   },
   "Argynnis paphia": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [],
     "similarSpecies": []
   },
@@ -463,7 +466,7 @@
   },
   "Charaxes jasius": {
     "sizeCategory": "large",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio"
     ],
@@ -483,7 +486,7 @@
   },
   "Euphydryas aurinia": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [
       "Maio",
       "Março",
@@ -499,7 +502,7 @@
   },
   "Fabriciana adippe": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [],
     "similarSpecies": []
   },
@@ -511,7 +514,7 @@
   },
   "Issoria lathonia": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio",
       "Abril"
@@ -554,7 +557,7 @@
   },
   "Melitaea deione": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio",
       "Março",
@@ -564,7 +567,7 @@
   },
   "Melitaea didyma": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [],
     "similarSpecies": []
   },
@@ -584,7 +587,7 @@
   },
   "Melitaea phoebe": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Preto",
     "months": [
       "Maio",
       "Abril"
@@ -609,7 +612,7 @@
   },
   "Nymphalis polychloros": {
     "sizeCategory": "large",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio",
       "Março",
@@ -619,7 +622,7 @@
   },
   "Polygonia c-album": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril",
       "Março",
@@ -635,7 +638,7 @@
   },
   "Vanessa atalanta": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Preto",
     "months": [
       "Março",
       "Abril",
@@ -645,7 +648,7 @@
   },
   "Vanessa cardui ": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [
       "Abril",
       "Março",
@@ -655,7 +658,7 @@
   },
   "Vanessa virginiensis": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril",
       "Maio"
@@ -664,7 +667,7 @@
   },
   "Iphiclides feisthamelii": {
     "sizeCategory": "large",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Março",
       "Abril",
@@ -674,7 +677,7 @@
   },
   "Papilio machaon": {
     "sizeCategory": "large",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Março",
       "Abril",
@@ -684,7 +687,7 @@
   },
   "Zerynthia rumina": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Março",
       "Abril",
@@ -694,7 +697,7 @@
   },
   "Anthocharis cardamines": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril",
       "Março",
@@ -710,7 +713,7 @@
   },
   "Aporia crataegi": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril",
       "Março",
@@ -720,7 +723,7 @@
   },
   "Colias crocea": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Março",
       "Abril",
@@ -739,7 +742,7 @@
   },
   "Euchloe crameri": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril",
       "Maio"
@@ -754,7 +757,7 @@
   },
   "Gonepteryx cleopatra": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [
       "Março",
       "Abril",
@@ -764,7 +767,7 @@
   },
   "Gonepteryx rhamni ": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Preto",
     "months": [
       "Março",
       "Abril",
@@ -774,7 +777,7 @@
   },
   "Leptidea sinapis": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [
       "Abril",
       "Março"
@@ -783,7 +786,7 @@
   },
   "Pieris brassicae ": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [
       "Março",
       "Abril",
@@ -793,7 +796,7 @@
   },
   "Pieris napi": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Preto",
     "months": [
       "Março",
       "Abril",
@@ -803,7 +806,7 @@
   },
   "Pieris rapae": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [
       "Março",
       "Abril",
@@ -813,7 +816,7 @@
   },
   "Pontia daplidice": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio",
       "Abril"
@@ -836,7 +839,7 @@
   },
   "Coenonympha arcania": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio"
     ],
@@ -844,7 +847,7 @@
   },
   "Coenonympha dorus": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [],
     "similarSpecies": []
   },
@@ -856,7 +859,7 @@
   },
   "Coenonympha pamphilus": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril"
     ],
@@ -870,19 +873,19 @@
   },
   "Hipparchia fidia": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Castanho",
     "months": [],
     "similarSpecies": []
   },
   "Hipparchia hermione": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [],
     "similarSpecies": []
   },
   "Hipparchia semele": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Preto",
     "months": [
       "Maio"
     ],
@@ -890,7 +893,7 @@
   },
   "Hipparchia statilinus": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [],
     "similarSpecies": []
   },
@@ -914,7 +917,7 @@
   },
   "Lasiommata megera": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Março",
       "Abril",
@@ -924,7 +927,7 @@
   },
   "Maniola jurtina": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril",
       "Maio"
@@ -933,7 +936,7 @@
   },
   "Melanargia ines": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril",
       "Maio"
@@ -942,7 +945,7 @@
   },
   "Melanargia lachesis": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio"
     ],
@@ -950,7 +953,7 @@
   },
   "Melanargia occitanica": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril",
       "Maio"
@@ -965,7 +968,7 @@
   },
   "Pararge aegeria": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Março",
       "Abril",
@@ -975,7 +978,7 @@
   },
   "Pyronia bathseba": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Abril",
       "Maio"
@@ -984,7 +987,7 @@
   },
   "Pyronia cecilia": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [
       "Maio"
     ],
@@ -992,7 +995,7 @@
   },
   "Pyronia tithonus": {
     "sizeCategory": "medium",
-    "predominantColor": "",
+    "predominantColor": "Cinzento",
     "months": [],
     "similarSpecies": []
   },

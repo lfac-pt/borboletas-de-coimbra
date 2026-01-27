@@ -31,6 +31,21 @@ const SpeciesCard = ({ species }: SpeciesCardProps) => {
     const plantCommonName = plantFamily ? getPlantFamilyCommonName(plantFamily) : null;
     const sizePos = species.details?.sizeCategory ? getSizeSpritePosition(species.details.sizeCategory) : null;
 
+    const getColorClass = (color: string) => {
+        switch (color) {
+            case 'Branco': return 'bg-white border-gray-200';
+            case 'Preto': return 'bg-gray-900';
+            case 'Castanho': return 'bg-[#8B4513]';
+            case 'Laranja': return 'bg-orange-500';
+            case 'Amarelo': return 'bg-yellow-400';
+            case 'Azul': return 'bg-blue-500';
+            case 'Verde': return 'bg-green-600';
+            case 'Vermelho': return 'bg-red-600';
+            case 'Cinzento': return 'bg-gray-400';
+            default: return 'bg-gray-200';
+        }
+    };
+
     return (
         <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col md:flex-row group transition-all hover:shadow-md h-full">
             {/* Left Photo */}
@@ -140,9 +155,23 @@ const SpeciesCard = ({ species }: SpeciesCardProps) => {
 
                 {/* Footer info: Color */}
                 <div className="pt-4 border-t border-gray-100 flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-orange-500 shadow-sm"></div>
+                    <div className="flex -space-x-1">
+                        {(Array.isArray(species.details?.predominantColor)
+                            ? species.details?.predominantColor
+                            : [species.details?.predominantColor || '']
+                        ).map((color, idx) => (
+                            <div
+                                key={idx}
+                                className={`w-3 h-3 rounded-full shadow-sm border ${getColorClass(color)}`}
+                            />
+                        ))}
+                    </div>
                     <p className="text-sm text-gray-500">
-                        Cor predominante: <span className="font-semibold text-gray-700">{species.details?.predominantColor || 'Inconhecida'}</span>
+                        Cor predominante: <span className="font-semibold text-gray-700">
+                            {Array.isArray(species.details?.predominantColor)
+                                ? species.details.predominantColor.join(' / ')
+                                : species.details?.predominantColor || 'Inconhecida'}
+                        </span>
                     </p>
                 </div>
             </div>

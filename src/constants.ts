@@ -330,7 +330,7 @@ export interface SpeciesEcology {
 
 export interface SpeciesDetails {
     sizeCategory: "pequena" | "média" | "grande" | "";
-    predominantColor: string;
+    predominantColor: string | string[];
     months: string[];
     similarSpecies: {
         name: string;
