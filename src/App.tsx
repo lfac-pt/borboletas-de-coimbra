@@ -134,8 +134,7 @@ const App = () => {
           </h1>
 
           <p className="text-white/70 max-w-2xl mx-auto text-lg md:text-xl font-light mb-12">
-            Guia das espécies existentes no distrito de Coimbra,
-            com informações para identificação e distinção entre espécies similares.
+            Guia para contadores de borboletas diurnas no distrito de Coimbra.
           </p>
 
           <div className="flex justify-center items-end gap-12 text-white">
