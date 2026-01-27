@@ -285,24 +285,12 @@
     ],
     "similarSpecies": []
   },
-  "Polyommatus celina": {
-    "sizeCategory": "small",
-    "predominantColor": "",
-    "months": [],
-    "similarSpecies": []
-  },
-  "Polyommatus icarus": {
+  "Polyommatus icarus/celina": {
     "sizeCategory": "small",
     "predominantColor": "",
     "months": [
       "Abril"
     ],
-    "similarSpecies": []
-  },
-  "Polyommatus icarus/celina": {
-    "sizeCategory": "small",
-    "predominantColor": "",
-    "months": [],
     "similarSpecies": []
   },
   "Cyaniris semiargus": {

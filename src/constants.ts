@@ -40,8 +40,6 @@ export const SPECIES_FAMILIES: Record<string, string> = {
     "Lysandra bellargus": "Lycaenidae",
     "Phengaris alcon": "Lycaenidae",
     "Plebejus argus": "Lycaenidae",
-    "Polyommatus celina": "Lycaenidae",
-    "Polyommatus icarus": "Lycaenidae",
     "Polyommatus icarus/celina": "Lycaenidae",
     "Polyommatus semiargus": "Lycaenidae",
     "Cyaniris semiargus": "Lycaenidae", // Synonym for Polyommatus semiargus

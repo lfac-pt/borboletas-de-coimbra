@@ -85,7 +85,7 @@
       "https://www.butterfliesandmoths.org/species/Vanessa-atalanta"
     ]
   },
-  "Polyommatus icarus": {
+  "Polyommatus icarus/celina": {
     "habitats": [
       "grassland",
       "meadow",
@@ -1962,20 +1962,6 @@
       "https://en.wikipedia.org/wiki/Phengaris_alcon",
       "https://butterfly-conservation.org/butterflies/alcon-blue",
       "http://www.eurobutterflies.com/sp/alcon.php"
-    ]
-  },
-  "Polyommatus celina": {
-    "habitats": [
-      "grassland",
-      "flowery meadows"
-    ],
-    "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Fabaceae"
-    ],
-    "hostPlantSpecies": [],
-    "sources": [
-      "http://www.eurobutterflies.com/sp/celina.php"
     ]
   },
   "Pontia daplidice": {

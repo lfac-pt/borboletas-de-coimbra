@@ -21,5 +21,5 @@ export const HABITAT_TYPE_SPRITES: Record<string, HabitatSpritePosition> = {
 
 // Get sprite position for a habitat type, with fallback to Generalist
 export function getHabitatSpritePosition(habitatType: string): HabitatSpritePosition {
-    return HABITAT_TYPE_SPRITES[habitatType] || HABITAT_TYPE_SPRITES["Generalist"];
+    return HABITAT_TYPE_SPRITES[habitatType];
 }
