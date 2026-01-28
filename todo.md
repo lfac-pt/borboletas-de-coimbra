@@ -7,4 +7,3 @@
 7) Add the section with similar butterflies
 8) Add attribution to photos
 9) Add missing photos
-11) Filter and sorting state should be persisted in the url to enable sharing

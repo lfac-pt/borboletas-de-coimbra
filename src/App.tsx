@@ -7,18 +7,37 @@ import SpeciesCard from './components/SpeciesCard';
 import Filters from './components/Filters';
 
 const App = () => {
+  // State initialization from URL
+  const getUrlParam = (key: string) => new URLSearchParams(window.location.search).get(key);
+
   const [speciesList, setSpeciesList] = useState<Species[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedMonth, setSelectedMonth] = useState<string | null>(null);
-  const [sortBy, setSortBy] = useState<'taxonomy' | 'size' | 'color'>('taxonomy');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+  const [selectedMonth, setSelectedMonth] = useState<string | null>(getUrlParam('month'));
+  const [sortBy, setSortBy] = useState<'taxonomy' | 'size' | 'color'>((getUrlParam('sort') as any) || 'taxonomy');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>((getUrlParam('order') as any) || 'asc');
 
   // Advanced filters
-  const [selectedSize, setSelectedSize] = useState<string | null>(null);
-  const [selectedColor, setSelectedColor] = useState<string | null>(null);
-  const [selectedHabitat, setSelectedHabitat] = useState<string | null>(null);
-  const [selectedHostFamily, setSelectedHostFamily] = useState<string | null>(null);
-  const [onlyEndangered, setOnlyEndangered] = useState(false);
+  const [selectedSize, setSelectedSize] = useState<string | null>(getUrlParam('size'));
+  const [selectedColor, setSelectedColor] = useState<string | null>(getUrlParam('color'));
+  const [selectedHabitat, setSelectedHabitat] = useState<string | null>(getUrlParam('habitat'));
+  const [selectedHostFamily, setSelectedHostFamily] = useState<string | null>(getUrlParam('plant'));
+  const [onlyEndangered, setOnlyEndangered] = useState(getUrlParam('endangered') === 'true');
+
+  // Sync state to URL
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (selectedMonth) params.set('month', selectedMonth);
+    if (sortBy !== 'taxonomy') params.set('sort', sortBy);
+    if (sortOrder !== 'asc') params.set('order', sortOrder);
+    if (selectedSize) params.set('size', selectedSize);
+    if (selectedColor) params.set('color', selectedColor);
+    if (selectedHabitat) params.set('habitat', selectedHabitat);
+    if (selectedHostFamily) params.set('plant', selectedHostFamily);
+    if (onlyEndangered) params.set('endangered', 'true');
+
+    const newRelativePathQuery = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+    window.history.replaceState(null, '', newRelativePathQuery);
+  }, [selectedMonth, sortBy, sortOrder, selectedSize, selectedColor, selectedHabitat, selectedHostFamily, onlyEndangered]);
 
   useEffect(() => {
     const fetchData = async () => {
