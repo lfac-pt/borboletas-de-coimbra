@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import MultiSelect from './ui/MultiSelect';
 
 interface FiltersProps {
     onMonthChange: (month: string | null) => void;
@@ -13,16 +14,18 @@ interface FiltersProps {
     // Advanced filters
     selectedSize: string | null;
     setSelectedSize: (size: string | null) => void;
-    selectedColor: string | null;
-    setSelectedColor: (color: string | null) => void;
-    selectedHabitat: string | null;
-    setSelectedHabitat: (habitat: string | null) => void;
-    selectedHostFamily: string | null;
-    setSelectedHostFamily: (family: string | null) => void;
+    selectedColors: string[];
+    setSelectedColors: (colors: string[]) => void;
+    selectedHabitats: string[];
+    setSelectedHabitats: (habitats: string[]) => void;
+    selectedHostFamilies: string[];
+    setSelectedHostFamilies: (families: string[]) => void;
     onlyEndangered: boolean;
     setOnlyEndangered: (val: boolean) => void;
     onlyNewSpecies: boolean;
     setOnlyNewSpecies: (val: boolean) => void;
+    selectedRarities: string[];
+    setSelectedRarities: (rarities: string[]) => void;
     filterOptions: {
         colors: string[];
         habitats: string[];
@@ -55,28 +58,37 @@ const Filters = ({
     totalCount,
     selectedSize,
     setSelectedSize,
-    selectedColor,
-    setSelectedColor,
-    selectedHabitat,
-    setSelectedHabitat,
-    selectedHostFamily,
-    setSelectedHostFamily,
+    selectedColors,
+    setSelectedColors,
+    selectedHabitats,
+    setSelectedHabitats,
+    selectedHostFamilies,
+    setSelectedHostFamilies,
     onlyEndangered,
     setOnlyEndangered,
     onlyNewSpecies,
     setOnlyNewSpecies,
+    selectedRarities,
+    setSelectedRarities,
     filterOptions
 }: FiltersProps) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
-    const hasActiveAdvancedFilters = selectedSize || selectedColor || selectedHabitat || selectedHostFamily || onlyEndangered || (onlyNewSpecies && selectedMonth);
+    const hasActiveAdvancedFilters = selectedSize ||
+        selectedColors.length > 0 ||
+        selectedHabitats.length > 0 ||
+        selectedHostFamilies.length > 0 ||
+        onlyEndangered ||
+        (onlyNewSpecies && selectedMonth) ||
+        selectedRarities.length > 0;
 
     const clearAllFilters = () => {
         onMonthChange(null);
         setSelectedSize(null);
-        setSelectedColor(null);
-        setSelectedHabitat(null);
-        setSelectedHostFamily(null);
+        setSelectedColors([]);
+        setSelectedHabitats([]);
+        setSelectedHostFamilies([]);
+        setSelectedRarities([]);
         setOnlyEndangered(false);
         setOnlyNewSpecies(false);
     };
@@ -184,52 +196,57 @@ const Filters = ({
                     {/* Color Filter */}
                     <div className="flex flex-col gap-2">
                         <label className="text-xs font-bold uppercase tracking-wider text-gray-400">Cor</label>
-                        <select
-                            value={selectedColor || ''}
-                            onChange={(e) => setSelectedColor(e.target.value || null)}
-                            className="bg-gray-50 border border-gray-200 text-gray-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-[#2d6a4f] cursor-pointer"
-                        >
-                            <option value="">Todas as Cores</option>
-                            {filterOptions.colors.map(color => (
-                                <option key={color} value={color}>{color}</option>
-                            ))}
-                        </select>
+                        <MultiSelect
+                            label="Cores"
+                            options={filterOptions.colors}
+                            selected={selectedColors}
+                            onChange={setSelectedColors}
+                        />
                     </div>
 
                     {/* Habitat Filter */}
                     <div className="flex flex-col gap-2">
                         <label className="text-xs font-bold uppercase tracking-wider text-gray-400">Habitat</label>
-                        <select
-                            value={selectedHabitat || ''}
-                            onChange={(e) => setSelectedHabitat(e.target.value || null)}
-                            className="bg-gray-50 border border-gray-200 text-gray-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-[#2d6a4f] cursor-pointer"
-                        >
-                            <option value="">Todos os Habitats</option>
-                            {filterOptions.habitats.map(habitat => (
-                                <option key={habitat} value={habitat}>{habitat}</option>
-                            ))}
-                        </select>
+                        <MultiSelect
+                            label="Habitats"
+                            options={filterOptions.habitats}
+                            selected={selectedHabitats}
+                            onChange={setSelectedHabitats}
+                        />
                     </div>
 
                     {/* Host Plant Family Filter */}
                     <div className="flex flex-col gap-2">
-                        <label className="text-xs font-bold uppercase tracking-wider text-gray-400">Família da Planta Hospedeira</label>
-                        <select
-                            value={selectedHostFamily || ''}
-                            onChange={(e) => setSelectedHostFamily(e.target.value || null)}
-                            className="bg-gray-50 border border-gray-200 text-gray-700 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-[#2d6a4f] cursor-pointer"
-                        >
-                            <option value="">Todas as Famílias</option>
-                            {filterOptions.hostFamilies.map(family => (
-                                <option key={family} value={family}>{family}</option>
-                            ))}
-                        </select>
+                        <label className="text-xs font-bold uppercase tracking-wider text-gray-400">Família da Planta</label>
+                        <MultiSelect
+                            label="Famílias"
+                            options={filterOptions.hostFamilies}
+                            selected={selectedHostFamilies}
+                            onChange={setSelectedHostFamilies}
+                        />
+                    </div>
+
+                    {/* Rarity Filter */}
+                    <div className="flex flex-col gap-2">
+                        <label className="text-xs font-bold uppercase tracking-wider text-gray-400">Raridade</label>
+                        <MultiSelect
+                            label="Raridade"
+                            options={['very-common', 'common', 'uncommon', 'rare']}
+                            selected={selectedRarities}
+                            onChange={setSelectedRarities}
+                            valueLabelMap={{
+                                'very-common': 'Muito Comum',
+                                'common': 'Comum',
+                                'uncommon': 'Pouco Comum',
+                                'rare': 'Rara'
+                            }}
+                        />
                     </div>
 
                     {/* Bottom Row: Endangered & New Species Toggles & Clear Button */}
                     <div className="col-span-1 md:col-span-2 lg:col-span-4 flex flex-col md:flex-row items-start md:items-center justify-between mt-2 gap-4">
                         <div className="flex flex-col md:flex-row gap-4">
-                            <label className="relative inline-flex items-center cursor-pointer group">
+                            <label className="relative inline-flex items-start cursor-pointer group">
                                 <input
                                     type="checkbox"
                                     checked={onlyEndangered}
@@ -237,10 +254,10 @@ const Filters = ({
                                     className="sr-only peer"
                                 />
                                 <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#2d6a4f]/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#2d6a4f]"></div>
-                                <span className="ml-3 text-sm font-medium text-gray-700 group-hover:text-forest-green transition-colors">Apenas Espécies Ameaçadas</span>
+                                <span className="ml-3 text-sm font-medium text-gray-700 group-hover:text-forest-green transition-colors mt-0.5">Apenas Espécies Ameaçadas</span>
                             </label>
 
-                            <label className={`relative inline-flex items-center group ${!selectedMonth ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer'}`}>
+                            <label className={`relative inline-flex items-start group ${!selectedMonth ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer'}`}>
                                 <input
                                     type="checkbox"
                                     checked={onlyNewSpecies}
@@ -249,7 +266,7 @@ const Filters = ({
                                     className="sr-only peer"
                                 />
                                 <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#2d6a4f]/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#2d6a4f]"></div>
-                                <span className="ml-3 text-sm font-medium text-gray-700 group-hover:text-forest-green transition-colors">
+                                <span className="ml-3 text-sm font-medium text-gray-700 group-hover:text-forest-green transition-colors mt-0.5">
                                     Novas Espécies do Mês
                                     {!selectedMonth && <span className="text-[10px] block font-normal text-gray-400 normal-case">Selecione um mês primeiro</span>}
                                 </span>

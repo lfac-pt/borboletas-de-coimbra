@@ -49,6 +49,16 @@ const SpeciesCard = ({ species }: SpeciesCardProps) => {
         }
     };
 
+    const getRarityConfig = (rarity: string) => {
+        switch (rarity) {
+            case 'very-common': return { label: 'Muito Comum', className: 'bg-emerald-100 text-emerald-800 border-emerald-200' };
+            case 'common': return { label: 'Comum', className: 'bg-green-100 text-green-800 border-green-200' };
+            case 'uncommon': return { label: 'Pouco Comum', className: 'bg-amber-100 text-amber-800 border-amber-200' };
+            case 'rare': return { label: 'Rara', className: 'bg-rose-100 text-rose-800 border-rose-200' };
+            default: return { label: 'Desconhecido', className: 'bg-gray-100 text-gray-800 border-gray-200' };
+        }
+    };
+
     return (
         <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col md:flex-row group transition-all hover:shadow-md h-full">
             {/* Left Photo */}
@@ -85,6 +95,14 @@ const SpeciesCard = ({ species }: SpeciesCardProps) => {
                     <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold border border-blue-100">
                         {species.family}
                     </span>
+                    {species.details?.rarity && (() => {
+                        const config = getRarityConfig(species.details.rarity);
+                        return (
+                            <span className={`px-3 py-1 rounded-full text-xs font-bold border ${config.className}`}>
+                                {config.label}
+                            </span>
+                        );
+                    })()}
                     {statusPT && (
                         <span className={`px-3 py-1 rounded-full text-xs font-bold border ${getStatusColor(statusPT)}`}>
                             PT: {statusPT}

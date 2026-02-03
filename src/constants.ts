@@ -368,6 +368,7 @@ export interface SpeciesEcology {
 }
 
 export interface SpeciesDetails {
+    rarity: 'very-common' | 'common' | 'uncommon' | 'rare';
     sizeCategory: "pequena" | "média" | "grande" | "";
     predominantColor: string | string[];
     months: string[];

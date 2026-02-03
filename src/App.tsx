@@ -10,6 +10,10 @@ import { isNewSpeciesInMonth } from './utils/filterUtils';
 const App = () => {
   // State initialization from URL
   const getUrlParam = (key: string) => new URLSearchParams(window.location.search).get(key);
+  const getArrayFromUrl = (key: string): string[] => {
+    const param = getUrlParam(key);
+    return param ? param.split(',') : [];
+  };
 
   const [speciesList, setSpeciesList] = useState<Species[]>([]);
   const [loading, setLoading] = useState(true);
@@ -17,13 +21,14 @@ const App = () => {
   const [sortBy, setSortBy] = useState<'taxonomy' | 'size' | 'color'>((getUrlParam('sort') as any) || 'taxonomy');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>((getUrlParam('order') as any) || 'asc');
 
-  // Advanced filters
+  // Advanced filters (Multi-select)
   const [selectedSize, setSelectedSize] = useState<string | null>(getUrlParam('size'));
-  const [selectedColor, setSelectedColor] = useState<string | null>(getUrlParam('color'));
-  const [selectedHabitat, setSelectedHabitat] = useState<string | null>(getUrlParam('habitat'));
-  const [selectedHostFamily, setSelectedHostFamily] = useState<string | null>(getUrlParam('plant'));
+  const [selectedColors, setSelectedColors] = useState<string[]>(getArrayFromUrl('color'));
+  const [selectedHabitats, setSelectedHabitats] = useState<string[]>(getArrayFromUrl('habitat'));
+  const [selectedHostFamilies, setSelectedHostFamilies] = useState<string[]>(getArrayFromUrl('plant'));
   const [onlyEndangered, setOnlyEndangered] = useState(getUrlParam('endangered') === 'true');
   const [onlyNewSpecies, setOnlyNewSpecies] = useState(getUrlParam('new') === 'true');
+  const [selectedRarities, setSelectedRarities] = useState<string[]>(getArrayFromUrl('rarity'));
 
   // Sync state to URL
   useEffect(() => {
@@ -32,15 +37,16 @@ const App = () => {
     if (sortBy !== 'taxonomy') params.set('sort', sortBy);
     if (sortOrder !== 'asc') params.set('order', sortOrder);
     if (selectedSize) params.set('size', selectedSize);
-    if (selectedColor) params.set('color', selectedColor);
-    if (selectedHabitat) params.set('habitat', selectedHabitat);
-    if (selectedHostFamily) params.set('plant', selectedHostFamily);
+    if (selectedColors.length > 0) params.set('color', selectedColors.join(','));
+    if (selectedHabitats.length > 0) params.set('habitat', selectedHabitats.join(','));
+    if (selectedHostFamilies.length > 0) params.set('plant', selectedHostFamilies.join(','));
     if (onlyEndangered) params.set('endangered', 'true');
     if (onlyNewSpecies && selectedMonth) params.set('new', 'true');
+    if (selectedRarities.length > 0) params.set('rarity', selectedRarities.join(','));
 
     const newRelativePathQuery = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
     window.history.replaceState(null, '', newRelativePathQuery);
-  }, [selectedMonth, sortBy, sortOrder, selectedSize, selectedColor, selectedHabitat, selectedHostFamily, onlyEndangered, onlyNewSpecies]);
+  }, [selectedMonth, sortBy, sortOrder, selectedSize, selectedColors, selectedHabitats, selectedHostFamilies, onlyEndangered, onlyNewSpecies, selectedRarities]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -88,29 +94,37 @@ const App = () => {
       list = list.filter(s => s.details?.sizeCategory === selectedSize);
     }
 
-    if (selectedColor) {
+    if (selectedColors.length > 0) {
       list = list.filter(s => {
         if (!s.details?.predominantColor) return false;
-        const colors = Array.isArray(s.details.predominantColor)
+        const speciesColors = Array.isArray(s.details.predominantColor)
           ? s.details.predominantColor
           : [s.details.predominantColor];
-        return colors.includes(selectedColor);
+        // Check if ANY of the selected colors match any of the species colors
+        return selectedColors.some(selectedColor => speciesColors.includes(selectedColor));
       });
     }
 
-    if (selectedHabitat) {
+    if (selectedHabitats.length > 0) {
       list = list.filter(s => {
         const habitatTypeTrans = s.ecology?.habitatType ? (HABITAT_TRANSLATIONS[s.ecology.habitatType] || s.ecology.habitatType) : (HABITAT_TRANSLATIONS['Generalist'] || 'Generalista');
-        return habitatTypeTrans === selectedHabitat;
+        return selectedHabitats.includes(habitatTypeTrans);
       });
     }
 
-    if (selectedHostFamily) {
-      list = list.filter(s => s.ecology?.hostPlantFamilies.includes(selectedHostFamily));
+    if (selectedHostFamilies.length > 0) {
+      list = list.filter(s => {
+        if (!s.ecology?.hostPlantFamilies) return false;
+        return selectedHostFamilies.some(family => s.ecology!.hostPlantFamilies.includes(family));
+      });
     }
 
     if (onlyEndangered) {
       list = list.filter(s => endangered_pt[s.latinName] || endangered_eu[s.latinName]);
+    }
+
+    if (selectedRarities.length > 0) {
+      list = list.filter(s => s.details?.rarity && selectedRarities.includes(s.details.rarity));
     }
 
     if (onlyNewSpecies && selectedMonth) {
@@ -147,7 +161,7 @@ const App = () => {
     });
 
     return list;
-  }, [speciesList, selectedMonth, sortBy, sortOrder, selectedSize, selectedColor, selectedHabitat, selectedHostFamily, onlyEndangered]);
+  }, [speciesList, selectedMonth, sortBy, sortOrder, selectedSize, selectedColors, selectedHabitats, selectedHostFamilies, onlyEndangered, selectedRarities]);
 
   const filterOptions = useMemo(() => {
     const colors = new Set<string>();
@@ -270,16 +284,18 @@ const App = () => {
           // Advanced filter props
           selectedSize={selectedSize}
           setSelectedSize={setSelectedSize}
-          selectedColor={selectedColor}
-          setSelectedColor={setSelectedColor}
-          selectedHabitat={selectedHabitat}
-          setSelectedHabitat={setSelectedHabitat}
-          selectedHostFamily={selectedHostFamily}
-          setSelectedHostFamily={setSelectedHostFamily}
+          selectedColors={selectedColors}
+          setSelectedColors={setSelectedColors}
+          selectedHabitats={selectedHabitats}
+          setSelectedHabitats={setSelectedHabitats}
+          selectedHostFamilies={selectedHostFamilies}
+          setSelectedHostFamilies={setSelectedHostFamilies}
           onlyEndangered={onlyEndangered}
           setOnlyEndangered={setOnlyEndangered}
           onlyNewSpecies={onlyNewSpecies}
           setOnlyNewSpecies={setOnlyNewSpecies}
+          selectedRarities={selectedRarities}
+          setSelectedRarities={setSelectedRarities}
           filterOptions={filterOptions}
         />
 
