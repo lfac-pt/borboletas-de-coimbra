@@ -3,7 +3,9 @@
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
     "months": [
-      "Abril"
+      "Abril",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -39,7 +41,9 @@
   "Hesperia comma": {
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
-    "months": [],
+    "months": [
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -54,7 +58,9 @@
     "sizeCategory": "small",
     "predominantColor": "Preto",
     "months": [
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "uncommon"
@@ -78,7 +84,8 @@
     "predominantColor": "",
     "months": [
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho"
     ],
     "similarSpecies": [],
     "rarity": "uncommon"
@@ -101,8 +108,9 @@
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
     "months": [
+      "Abril",
       "Maio",
-      "Abril"
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "uncommon"
@@ -111,8 +119,10 @@
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
     "months": [
+      "Abril",
       "Maio",
-      "Abril"
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -128,7 +138,9 @@
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
     "months": [
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -140,9 +152,11 @@
       "Azul"
     ],
     "months": [
-      "Maio",
       "Março",
-      "Abril"
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -158,9 +172,11 @@
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
     "months": [
-      "Maio",
       "Março",
-      "Abril"
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -192,7 +208,9 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -224,7 +242,9 @@
   "Favonius quercus": {
     "sizeCategory": "small",
     "predominantColor": "",
-    "months": [],
+    "months": [
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -239,9 +259,9 @@
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
     "months": [
+      "Março",
       "Abril",
-      "Maio",
-      "Março"
+      "Maio"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -257,8 +277,10 @@
     "sizeCategory": "small",
     "predominantColor": "Castanho",
     "months": [
+      "Abril",
       "Maio",
-      "Abril"
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -269,7 +291,9 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -279,7 +303,9 @@
     "predominantColor": "Castanho",
     "months": [
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -288,8 +314,10 @@
     "sizeCategory": "small",
     "predominantColor": "Preto",
     "months": [
+      "Abril",
       "Maio",
-      "Abril"
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "uncommon"
@@ -297,7 +325,9 @@
   "Lycaena bleusei": {
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
-    "months": [],
+    "months": [
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -305,9 +335,11 @@
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
     "months": [
-      "Abril",
       "Março",
-      "Maio"
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -333,7 +365,9 @@
     "predominantColor": "Castanho",
     "months": [
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "uncommon"
@@ -349,8 +383,10 @@
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
     "months": [
+      "Abril",
       "Maio",
-      "Abril"
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -360,7 +396,9 @@
     "predominantColor": "Castanho",
     "months": [
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "very-common"
@@ -406,7 +444,9 @@
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
     "months": [
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -421,14 +461,20 @@
   "Satyrium spini": {
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
-    "months": [],
+    "months": [
+      "Junho",
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
   "Thecla betulae": {
     "sizeCategory": "small",
     "predominantColor": "",
-    "months": [],
+    "months": [
+      "Junho",
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -444,14 +490,18 @@
   "Zizeeria knysna": {
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
-    "months": [],
+    "months": [
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
   "Aglais io": {
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
-    "months": [],
+    "months": [
+      "Junho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -466,7 +516,9 @@
     "sizeCategory": "medium",
     "predominantColor": "Branco",
     "months": [
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "rare"
@@ -475,7 +527,9 @@
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
     "months": [
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -483,7 +537,10 @@
   "Argynnis paphia": {
     "sizeCategory": "large",
     "predominantColor": "Castanho",
-    "months": [],
+    "months": [
+      "Junho",
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -533,7 +590,9 @@
     "sizeCategory": "large",
     "predominantColor": "Cinzento",
     "months": [
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -548,7 +607,9 @@
   "Danaus plexippus": {
     "sizeCategory": "medium",
     "predominantColor": "",
-    "months": [],
+    "months": [
+      "Junho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -556,9 +617,10 @@
     "sizeCategory": "medium",
     "predominantColor": "Castanho",
     "months": [
-      "Maio",
       "Março",
-      "Abril"
+      "Abril",
+      "Maio",
+      "Junho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -573,7 +635,10 @@
   "Fabriciana adippe": {
     "sizeCategory": "medium",
     "predominantColor": "Castanho",
-    "months": [],
+    "months": [
+      "Junho",
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -588,8 +653,10 @@
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
     "months": [
+      "Abril",
       "Maio",
-      "Abril"
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -613,7 +680,9 @@
   "Limenitis reducta": {
     "sizeCategory": "medium",
     "predominantColor": "",
-    "months": [],
+    "months": [
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -637,9 +706,11 @@
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
     "months": [
-      "Maio",
       "Março",
-      "Abril"
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -647,7 +718,10 @@
   "Melitaea didyma": {
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
-    "months": [],
+    "months": [
+      "Junho",
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -655,7 +729,9 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -671,8 +747,9 @@
     "sizeCategory": "medium",
     "predominantColor": "Preto",
     "months": [
+      "Abril",
       "Maio",
-      "Abril"
+      "Junho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -680,7 +757,10 @@
   "Melitaea trivia": {
     "sizeCategory": "medium",
     "predominantColor": "",
-    "months": [],
+    "months": [
+      "Junho",
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -688,9 +768,11 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Abril",
       "Março",
-      "Maio"
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "rare"
@@ -699,9 +781,11 @@
     "sizeCategory": "large",
     "predominantColor": "Cinzento",
     "months": [
-      "Maio",
       "Março",
-      "Abril"
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -710,9 +794,11 @@
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
     "months": [
-      "Abril",
       "Março",
-      "Maio"
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "uncommon"
@@ -730,7 +816,9 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -739,9 +827,11 @@
     "sizeCategory": "medium",
     "predominantColor": "Castanho",
     "months": [
-      "Abril",
       "Março",
-      "Maio"
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -751,7 +841,9 @@
     "predominantColor": "Cinzento",
     "months": [
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -762,7 +854,9 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -773,7 +867,9 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "very-common"
@@ -784,7 +880,8 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -793,8 +890,8 @@
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
     "months": [
-      "Abril",
       "Março",
+      "Abril",
       "Maio"
     ],
     "similarSpecies": [],
@@ -811,9 +908,10 @@
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
     "months": [
-      "Abril",
       "Março",
-      "Maio"
+      "Abril",
+      "Maio",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "rare"
@@ -824,7 +922,9 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "very-common"
@@ -833,8 +933,8 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Maio",
-      "Março"
+      "Março",
+      "Maio"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -862,7 +962,9 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -873,7 +975,9 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -882,8 +986,10 @@
     "sizeCategory": "medium",
     "predominantColor": "Castanho",
     "months": [
+      "Março",
       "Abril",
-      "Março"
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -894,7 +1000,9 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -905,7 +1013,9 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -916,7 +1026,9 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "very-common"
@@ -925,8 +1037,10 @@
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
     "months": [
+      "Abril",
       "Maio",
-      "Abril"
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -942,7 +1056,9 @@
     "sizeCategory": "medium",
     "predominantColor": "",
     "months": [
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "uncommon"
@@ -951,7 +1067,9 @@
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
     "months": [
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -959,7 +1077,10 @@
   "Coenonympha dorus": {
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
-    "months": [],
+    "months": [
+      "Junho",
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -974,7 +1095,9 @@
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
     "months": [
-      "Abril"
+      "Abril",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "uncommon"
@@ -989,14 +1112,19 @@
   "Hipparchia fidia": {
     "sizeCategory": "medium",
     "predominantColor": "Castanho",
-    "months": [],
+    "months": [
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
   "Hipparchia hermione": {
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
-    "months": [],
+    "months": [
+      "Junho",
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -1004,7 +1132,9 @@
     "sizeCategory": "medium",
     "predominantColor": "Preto",
     "months": [
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "uncommon"
@@ -1012,7 +1142,9 @@
   "Hipparchia statilinus": {
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
-    "months": [],
+    "months": [
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
@@ -1043,7 +1175,9 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "very-common"
@@ -1053,7 +1187,9 @@
     "predominantColor": "Cinzento",
     "months": [
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "very-common"
@@ -1063,7 +1199,8 @@
     "predominantColor": "Cinzento",
     "months": [
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho"
     ],
     "similarSpecies": [],
     "rarity": "uncommon"
@@ -1072,7 +1209,9 @@
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
     "months": [
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "common"
@@ -1100,7 +1239,9 @@
     "months": [
       "Março",
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "very-common"
@@ -1110,7 +1251,8 @@
     "predominantColor": "Cinzento",
     "months": [
       "Abril",
-      "Maio"
+      "Maio",
+      "Junho"
     ],
     "similarSpecies": [],
     "rarity": "very-common"
@@ -1119,7 +1261,9 @@
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
     "months": [
-      "Maio"
+      "Maio",
+      "Junho",
+      "Julho"
     ],
     "similarSpecies": [],
     "rarity": "very-common"
@@ -1127,7 +1271,10 @@
   "Pyronia tithonus": {
     "sizeCategory": "medium",
     "predominantColor": "Cinzento",
-    "months": [],
+    "months": [
+      "Junho",
+      "Julho"
+    ],
     "similarSpecies": [],
     "rarity": "common"
   },
