@@ -5,3 +5,4 @@
 8) Add attribution to photos
 9) Add missing photos
 10) Add the section with similar butterflies in the dialog
+11) icons are not aligned in the dialog
