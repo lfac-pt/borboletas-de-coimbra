@@ -16,12 +16,14 @@ interface SpeciesModalProps {
 
 const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev }: SpeciesModalProps) => {
     const [imgError, setImgError] = useState(false);
+    const [prevLatinName, setPrevLatinName] = useState(species.latinName);
     const modalRef = useRef<HTMLDivElement>(null);
 
     // Reset image error state when species changes
-    useEffect(() => {
+    if (species.latinName !== prevLatinName) {
+        setPrevLatinName(species.latinName);
         setImgError(false);
-    }, [species.latinName]);
+    }
 
     // Keyboard navigation
     useEffect(() => {

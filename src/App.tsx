@@ -19,8 +19,17 @@ const App = () => {
   const [speciesList, setSpeciesList] = useState<Species[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedMonth, setSelectedMonth] = useState<string | null>(getUrlParam('month'));
-  const [sortBy, setSortBy] = useState<'taxonomy' | 'size' | 'color'>((getUrlParam('sort') as any) || 'taxonomy');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>((getUrlParam('order') as any) || 'asc');
+
+  const initialSort = getUrlParam('sort');
+  const [sortBy, setSortBy] = useState<'taxonomy' | 'size' | 'color'>(
+    (initialSort === 'taxonomy' || initialSort === 'size' || initialSort === 'color') ? initialSort : 'taxonomy'
+  );
+
+  const initialOrder = getUrlParam('order');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>(
+    (initialOrder === 'asc' || initialOrder === 'desc') ? initialOrder : 'asc'
+  );
+
   const [selectedSpecies, setSelectedSpecies] = useState<Species | null>(null);
 
   // Advanced filters (Multi-select)
