@@ -237,6 +237,7 @@
     "predominantColor": "Cinzento",
     "months": [
       "Março",
+      "Abril",
       "Maio"
     ],
     "similarSpecies": []
@@ -423,7 +424,7 @@
     "similarSpecies": []
   },
   "Argynnis paphia": {
-    "sizeCategory": "medium",
+    "sizeCategory": "large",
     "predominantColor": "Castanho",
     "months": [],
     "similarSpecies": []

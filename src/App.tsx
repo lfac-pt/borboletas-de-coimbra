@@ -5,6 +5,7 @@ import { HABITAT_TYPE_SPRITES } from './utils/habitatTypeIcons';
 import type { Species, SpeciesEcology, SpeciesDetails } from './constants';
 import SpeciesCard from './components/SpeciesCard';
 import Filters from './components/Filters';
+import { isNewSpeciesInMonth } from './utils/filterUtils';
 
 const App = () => {
   // State initialization from URL
@@ -22,6 +23,7 @@ const App = () => {
   const [selectedHabitat, setSelectedHabitat] = useState<string | null>(getUrlParam('habitat'));
   const [selectedHostFamily, setSelectedHostFamily] = useState<string | null>(getUrlParam('plant'));
   const [onlyEndangered, setOnlyEndangered] = useState(getUrlParam('endangered') === 'true');
+  const [onlyNewSpecies, setOnlyNewSpecies] = useState(getUrlParam('new') === 'true');
 
   // Sync state to URL
   useEffect(() => {
@@ -34,10 +36,11 @@ const App = () => {
     if (selectedHabitat) params.set('habitat', selectedHabitat);
     if (selectedHostFamily) params.set('plant', selectedHostFamily);
     if (onlyEndangered) params.set('endangered', 'true');
+    if (onlyNewSpecies && selectedMonth) params.set('new', 'true');
 
     const newRelativePathQuery = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
     window.history.replaceState(null, '', newRelativePathQuery);
-  }, [selectedMonth, sortBy, sortOrder, selectedSize, selectedColor, selectedHabitat, selectedHostFamily, onlyEndangered]);
+  }, [selectedMonth, sortBy, sortOrder, selectedSize, selectedColor, selectedHabitat, selectedHostFamily, onlyEndangered, onlyNewSpecies]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -110,6 +113,10 @@ const App = () => {
       list = list.filter(s => endangered_pt[s.latinName] || endangered_eu[s.latinName]);
     }
 
+    if (onlyNewSpecies && selectedMonth) {
+      list = list.filter(s => isNewSpeciesInMonth(s.details?.months, selectedMonth));
+    }
+
     list.sort((a, b) => {
       let result = 0;
       if (sortBy === 'taxonomy') {
@@ -177,14 +184,22 @@ const App = () => {
     allMonths.forEach(m => counts[m] = 0);
 
     speciesList.forEach(s => {
-      s.details?.months.forEach(m => {
-        if (counts[m] !== undefined) {
-          counts[m]++;
-        }
-      });
+      if (onlyNewSpecies) {
+        allMonths.forEach(m => {
+          if (isNewSpeciesInMonth(s.details?.months, m)) {
+            counts[m]++;
+          }
+        });
+      } else {
+        s.details?.months.forEach(m => {
+          if (counts[m] !== undefined) {
+            counts[m]++;
+          }
+        });
+      }
     });
     return counts;
-  }, [speciesList]);
+  }, [speciesList, onlyNewSpecies]);
 
   if (loading) {
     return (
@@ -263,6 +278,8 @@ const App = () => {
           setSelectedHostFamily={setSelectedHostFamily}
           onlyEndangered={onlyEndangered}
           setOnlyEndangered={setOnlyEndangered}
+          onlyNewSpecies={onlyNewSpecies}
+          setOnlyNewSpecies={setOnlyNewSpecies}
           filterOptions={filterOptions}
         />
 
