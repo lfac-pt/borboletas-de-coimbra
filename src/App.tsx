@@ -163,7 +163,25 @@ const App = () => {
     });
 
     return list;
-  }, [speciesList, selectedMonth, sortBy, sortOrder, selectedSize, selectedColors, selectedHabitats, selectedHostFamilies, onlyEndangered, selectedRarities]);
+  }, [speciesList, selectedMonth, sortBy, sortOrder, selectedSize, selectedColors, selectedHabitats, selectedHostFamilies, onlyEndangered, selectedRarities, onlyNewSpecies]);
+
+  const handleNextSpecies = () => {
+    if (!selectedSpecies) return;
+    const currentIndex = filteredSpecies.findIndex(s => s.latinName === selectedSpecies.latinName);
+    if (currentIndex !== -1 && currentIndex < filteredSpecies.length - 1) {
+      setSelectedSpecies(filteredSpecies[currentIndex + 1]);
+    }
+  };
+
+  const handlePrevSpecies = () => {
+    if (!selectedSpecies) return;
+    const currentIndex = filteredSpecies.findIndex(s => s.latinName === selectedSpecies.latinName);
+    if (currentIndex > 0) {
+      setSelectedSpecies(filteredSpecies[currentIndex - 1]);
+    }
+  };
+
+  const selectedSpeciesIndex = selectedSpecies ? filteredSpecies.findIndex(s => s.latinName === selectedSpecies.latinName) : -1;
 
   const filterOptions = useMemo(() => {
     const colors = new Set<string>();
@@ -361,6 +379,10 @@ const App = () => {
         <SpeciesModal
           species={selectedSpecies}
           onClose={() => setSelectedSpecies(null)}
+          hasNext={selectedSpeciesIndex !== -1 && selectedSpeciesIndex < filteredSpecies.length - 1}
+          hasPrev={selectedSpeciesIndex > 0}
+          onNext={handleNextSpecies}
+          onPrev={handlePrevSpecies}
         />
       )}
     </div>

@@ -8,24 +8,35 @@ import { endangered_pt, endangered_eu } from '../constants';
 interface SpeciesModalProps {
     species: Species;
     onClose: () => void;
+    hasNext: boolean;
+    hasPrev: boolean;
+    onNext: () => void;
+    onPrev: () => void;
 }
 
-const SpeciesModal = ({ species, onClose }: SpeciesModalProps) => {
+const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev }: SpeciesModalProps) => {
     const [imgError, setImgError] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null);
 
-    // Close on escape key
+    // Reset image error state when species changes
     useEffect(() => {
-        const handleEscape = (e: KeyboardEvent) => {
+        setImgError(false);
+    }, [species.latinName]);
+
+    // Keyboard navigation
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === 'Escape') onClose();
+            if (e.key === 'ArrowRight' && hasNext) onNext();
+            if (e.key === 'ArrowLeft' && hasPrev) onPrev();
         };
-        document.addEventListener('keydown', handleEscape);
+        document.addEventListener('keydown', handleKeyDown);
         document.body.style.overflow = 'hidden'; // Lock scroll
         return () => {
-            document.removeEventListener('keydown', handleEscape);
+            document.removeEventListener('keydown', handleKeyDown);
             document.body.style.overflow = 'unset'; // Unlock scroll
         };
-    }, [onClose]);
+    }, [onClose, hasNext, hasPrev, onNext, onPrev]);
 
     // Close on backdrop click
     const handleBackdropClick = (e: React.MouseEvent) => {
@@ -110,6 +121,31 @@ const SpeciesModal = ({ species, onClose }: SpeciesModalProps) => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
+                    {/* Left Arrow (Desktop inside image area or overlay) */}
+                    {hasPrev && (
+                        <button
+                            onClick={(e) => { e.stopPropagation(); onPrev(); }}
+                            className="absolute left-4 bottom-4 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full backdrop-blur-md transition-all hidden md:flex"
+                            title="Espécie anterior"
+                        >
+                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                    )}
+
+                    {/* Right Arrow (Desktop inside image area or overlay) */}
+                    {hasNext && (
+                        <button
+                            onClick={(e) => { e.stopPropagation(); onNext(); }}
+                            className="absolute right-4 bottom-4 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full backdrop-blur-md transition-all hidden md:flex"
+                            title="Próxima espécie"
+                        >
+                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    )}
                 </div>
 
                 {/* Details Section */}
@@ -256,8 +292,8 @@ const SpeciesModal = ({ species, onClose }: SpeciesModalProps) => {
                                         <span
                                             key={month}
                                             className={`px-2 py-1 text-[10px] uppercase font-bold rounded ${isFlying
-                                                    ? 'bg-forest-green/10 text-forest-green border border-forest-green/20'
-                                                    : 'bg-gray-50 text-gray-300 border border-transparent'
+                                                ? 'bg-forest-green/10 text-forest-green border border-forest-green/20'
+                                                : 'bg-gray-50 text-gray-300 border border-transparent'
                                                 }`}
                                         >
                                             {month.substring(0, 3)}
@@ -268,6 +304,32 @@ const SpeciesModal = ({ species, onClose }: SpeciesModalProps) => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            {/* Mobile Navigation Arrows (Fixed to screen edges) */}
+            <div className="md:hidden fixed inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 pointer-events-none z-50">
+                {hasPrev && (
+                    <button
+                        onClick={(e) => { e.stopPropagation(); onPrev(); }}
+                        className="p-3 bg-black/40 text-white rounded-full backdrop-blur-sm pointer-events-auto"
+                    >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                )}
+                {!hasPrev && <div></div>} {/* Spacer */}
+
+                {hasNext && (
+                    <button
+                        onClick={(e) => { e.stopPropagation(); onNext(); }}
+                        className="p-3 bg-black/40 text-white rounded-full backdrop-blur-sm pointer-events-auto"
+                    >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                )}
             </div>
         </div>
     );

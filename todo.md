@@ -6,4 +6,3 @@
 9) Add missing photos
 10) Allow to expand the species card into a dialog
     1) Add the section with similar butterflies
-    2) Allow to go back and forward between species
