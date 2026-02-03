@@ -4,5 +4,4 @@
 6) Review host plant info (show more in a tooltip)
 8) Add attribution to photos
 9) Add missing photos
-10) Allow to expand the species card into a dialog
-    1) Add the section with similar butterflies
+10) Add the section with similar butterflies in the dialog

@@ -198,7 +198,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev }: Sp
                         <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100">
                             <div className="w-16 h-16 shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-200">
                                 <div
-                                    className="w-full h-full grayscale"
+                                    className="w-full h-full"
                                     style={{
                                         backgroundImage: 'url("imgs/habitats.jpg")',
                                         backgroundPosition: `${habitatPos.x * (64 / 88)}px ${habitatPos.y * (64 / 88)}px`, // Scale fix roughly
@@ -216,7 +216,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev }: Sp
                             <div className="w-16 h-16 shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex items-center justify-center">
                                 {plantPos ? (
                                     <div
-                                        className="w-full h-full grayscale"
+                                        className="w-full h-full"
                                         style={{
                                             backgroundImage: 'url("imgs/plant_family_sprite.png")',
                                             backgroundPosition: `${plantPos.x * (64 / 88)}px ${plantPos.y * (64 / 88)}px`,
@@ -239,7 +239,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev }: Sp
                             <div className="w-16 h-16 shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex items-center justify-center">
                                 {sizePos ? (
                                     <div
-                                        className="w-full h-full grayscale"
+                                        className="w-full h-full"
                                         style={{
                                             backgroundImage: 'url("imgs/sizes.png")',
                                             backgroundPosition: `${sizePos.x * (64 / 88)}px ${sizePos.y * (64 / 88)}px`,
