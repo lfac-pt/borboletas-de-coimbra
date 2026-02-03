@@ -7,9 +7,10 @@ import type { Species } from '../constants';
 
 interface SpeciesCardProps {
     species: Species;
+    onExpand: () => void;
 }
 
-const SpeciesCard = ({ species }: SpeciesCardProps) => {
+const SpeciesCard = ({ species, onExpand }: SpeciesCardProps) => {
     const [imgError, setImgError] = useState(false);
 
     const getImagePath = (latinName: string, family: string) => {
@@ -78,10 +79,21 @@ const SpeciesCard = ({ species }: SpeciesCardProps) => {
                         <span className="text-[10px] uppercase tracking-widest font-bold opacity-40 text-center">Imagem em breve</span>
                     </div>
                 )}
+
+                {/* Expand Button Overlay */}
+                <button
+                    onClick={onExpand}
+                    className="absolute bottom-3 right-3 w-8 h-8 bg-white/90 hover:bg-white text-gray-700 rounded-full shadow-sm flex items-center justify-center backdrop-blur-sm transition-all hover:scale-110 opacity-0 group-hover:opacity-100 focus:opacity-100"
+                    title="Expandir detalhes"
+                >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                    </svg>
+                </button>
             </div>
 
             {/* Right Content */}
-            <div className="p-6 md:p-8 flex-1 flex flex-col min-w-0">
+            <div className="p-6 md:p-8 flex-1 flex flex-col min-w-0 cursor-pointer" onClick={onExpand}>
                 <div className="mb-4">
                     <h3 className="serif-title text-2xl md:text-3xl text-gray-800 italic mb-1 truncate">
                         {species.latinName}

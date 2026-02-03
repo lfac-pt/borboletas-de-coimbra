@@ -5,6 +5,7 @@ import { HABITAT_TYPE_SPRITES } from './utils/habitatTypeIcons';
 import type { Species, SpeciesEcology, SpeciesDetails } from './constants';
 import SpeciesCard from './components/SpeciesCard';
 import Filters from './components/Filters';
+import SpeciesModal from './components/SpeciesModal';
 import { isNewSpeciesInMonth } from './utils/filterUtils';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
   const [selectedMonth, setSelectedMonth] = useState<string | null>(getUrlParam('month'));
   const [sortBy, setSortBy] = useState<'taxonomy' | 'size' | 'color'>((getUrlParam('sort') as any) || 'taxonomy');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>((getUrlParam('order') as any) || 'asc');
+  const [selectedSpecies, setSelectedSpecies] = useState<Species | null>(null);
 
   // Advanced filters (Multi-select)
   const [selectedSize, setSelectedSize] = useState<string | null>(getUrlParam('size'));
@@ -300,22 +302,67 @@ const App = () => {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-          {filteredSpecies.map(species => (
-            <SpeciesCard key={species.latinName} species={species} />
-          ))}
+          {loading ? (
+            <div className="col-span-full h-64 flex flex-col items-center justify-center text-gray-400 gap-4">
+              <div className="w-8 h-8 border-2 border-forest-green/30 border-t-forest-green rounded-full animate-spin"></div>
+              <p className="animate-pulse">A carregar espécies...</p>
+            </div>
+          ) : filteredSpecies.length === 0 ? (
+            <div className="col-span-full h-64 flex flex-col items-center justify-center text-gray-400 gap-4 bg-gray-50 rounded-2xl border border-gray-100 border-dashed">
+              <svg className="w-12 h-12 opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p>Nenhuma espécie encontrada com os filtros selecionados.</p>
+              <button
+                onClick={() => {
+                  setSelectedMonth(null);
+                  setSelectedSize(null);
+                  setSelectedColors([]);
+                  setSelectedHabitats([]);
+                  setSelectedHostFamilies([]);
+                  setSelectedRarities([]);
+                  setOnlyEndangered(false);
+                  setOnlyNewSpecies(false);
+                }}
+                className="text-forest-green hover:underline text-sm font-medium"
+              >
+                Limpar todos os filtros
+              </button>
+            </div>
+          ) : (
+            filteredSpecies.map(species => (
+              <SpeciesCard
+                key={species.latinName}
+                species={species}
+                onExpand={() => setSelectedSpecies(species)}
+              />
+            ))
+          )}
         </div>
-
-        {filteredSpecies.length === 0 && (
-          <div className="text-center py-20 bg-white/50 rounded-2xl border border-dashed border-gray-200">
-            <p className="text-xl text-gray-400 italic">Nenhuma espécie encontrada para os filtros selecionados.</p>
-          </div>
-        )}
       </main>
 
-      <footer className="py-12 border-t border-gray-200 text-center text-gray-400 text-sm bg-white">
-        <p className="mb-2">&copy; 2026 Luís Cardoso</p>
-        <p className="text-gray-300">Guia para fins educativos e científicos.</p>
+      {/* Footer */}
+      <footer className="bg-[#1b2621] text-white py-12 md:py-20 mt-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <div className="space-y-2">
+            <h2 className="serif-title text-2xl md:text-3xl italic">Borboletas de Coimbra</h2>
+            <p className="text-gray-400 text-sm max-w-xl mx-auto">
+              Um guia digital dedicado à identificação e preservação da biodiversidade de lepidópteros na região de Coimbra.
+            </p>
+          </div>
+          <div className="pt-8 border-t border-white/10 text-xs text-gray-500">
+            <p>&copy; {new Date().getFullYear()} Borboletas de Coimbra. Todos os direitos reservados.</p>
+          </div>
+        </div>
       </footer>
+
+      {/* Species Detail Modal */}
+      {selectedSpecies && (
+        <SpeciesModal
+          species={selectedSpecies}
+          onClose={() => setSelectedSpecies(null)}
+        />
+      )}
     </div>
   );
 };
