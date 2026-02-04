@@ -67,7 +67,16 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Thymelicus acteon",
+        "distinction": ""
+      },
+      {
+        "name": "Thymelicus sylvestris",
+        "distinction": ""
+      }
+    ],
     "rarity": "uncommon"
   },
   "Pyrgus alveus": {
@@ -131,7 +140,16 @@
       "Junho",
       "Julho"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Ochlodes sylvanus",
+        "distinction": ""
+      },
+      {
+        "name": "Thymelicus sylvestris",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Thymelicus lineola": {
@@ -149,7 +167,16 @@
       "Junho",
       "Julho"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Thymelicus acteon",
+        "distinction": ""
+      },
+      {
+        "name": "Ochlodes sylvanus",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Aricia cramera": {
@@ -167,7 +194,12 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Polyommatus icarus/celina",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Aricia montensis": {
@@ -199,7 +231,12 @@
       "Abril",
       "Maio"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Callophrys rubi",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Callophrys rubi": {
@@ -210,7 +247,12 @@
       "Abril",
       "Maio"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Callophrys avis",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Celastrina argiolus": {
@@ -312,7 +354,12 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Leptotes pirithous",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Leptotes pirithous": {
@@ -326,7 +373,12 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Lampides boeticus",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Lycaena alciphron": {
@@ -436,7 +488,12 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Aricia cramera",
+        "distinction": ""
+      }
+    ],
     "rarity": "very-common"
   },
   "Cyaniris semiargus": {
@@ -898,7 +955,12 @@
       "Julho",
       "Agosto"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Vanessa virginiensis",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Vanessa virginiensis": {
@@ -912,7 +974,12 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Vanessa cardui",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Iphiclides feisthamelii": {
@@ -1037,7 +1104,12 @@
       "Abril",
       "Maio"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Pontia daplidice",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Euchloe tagis": {
@@ -1059,7 +1131,12 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Gonepteryx rhamni",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Gonepteryx rhamni ": {
@@ -1074,7 +1151,12 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Gonepteryx cleopatra",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Leptidea sinapis": {
@@ -1087,7 +1169,16 @@
       "Julho",
       "Agosto"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Pieris brassicae",
+        "distinction": ""
+      },
+      {
+        "name": "Pieris rapae",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Pieris brassicae ": {
@@ -1105,7 +1196,16 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Pieris rapae",
+        "distinction": ""
+      },
+      {
+        "name": "Leptidea sinapis",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Pieris napi": {
@@ -1140,7 +1240,16 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Pieris brassicae",
+        "distinction": ""
+      },
+      {
+        "name": "Leptidea sinapis",
+        "distinction": ""
+      }
+    ],
     "rarity": "very-common"
   },
   "Pontia daplidice": {
@@ -1157,7 +1266,12 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Euchloe crameri",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Arethusana arethusa": {
@@ -1191,7 +1305,12 @@
       "Junho",
       "Julho"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Coenonympha dorus",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Coenonympha dorus": {
@@ -1203,7 +1322,12 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Coenonympha arcania",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Coenonympha glycerion iphioides": {
@@ -1240,7 +1364,20 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Hipparchia hermione",
+        "distinction": ""
+      },
+      {
+        "name": "Hipparchia semele",
+        "distinction": ""
+      },
+      {
+        "name": "Hipparchia statilinus",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Hipparchia hermione": {
@@ -1251,7 +1388,20 @@
       "Julho",
       "Agosto"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Hipparchia fidia",
+        "distinction": ""
+      },
+      {
+        "name": "Hipparchia semele",
+        "distinction": ""
+      },
+      {
+        "name": "Hipparchia statilinus",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Hipparchia semele": {
@@ -1264,7 +1414,20 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Hipparchia fidia",
+        "distinction": ""
+      },
+      {
+        "name": "Hipparchia hermione",
+        "distinction": ""
+      },
+      {
+        "name": "Hipparchia statilinus",
+        "distinction": ""
+      }
+    ],
     "rarity": "uncommon"
   },
   "Hipparchia statilinus": {
@@ -1275,7 +1438,20 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Hipparchia fidia",
+        "distinction": ""
+      },
+      {
+        "name": "Hipparchia hermione",
+        "distinction": ""
+      },
+      {
+        "name": "Hipparchia semele",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Hyponephele lupinus": {
@@ -1325,7 +1501,12 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Pyronia cecilia",
+        "distinction": ""
+      }
+    ],
     "rarity": "very-common"
   },
   "Melanargia ines": {
@@ -1339,7 +1520,16 @@
       "Maio",
       "Junho"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Melanargia lachesis",
+        "distinction": ""
+      },
+      {
+        "name": "Melanargia occitanica",
+        "distinction": ""
+      }
+    ],
     "rarity": "uncommon"
   },
   "Melanargia lachesis": {
@@ -1354,7 +1544,16 @@
       "Julho",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Melanargia ines",
+        "distinction": ""
+      },
+      {
+        "name": "Melanargia occitanica",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Melanargia occitanica": {
@@ -1367,7 +1566,16 @@
       "Abril",
       "Maio"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Melanargia ines",
+        "distinction": ""
+      },
+      {
+        "name": "Melanargia lachesis",
+        "distinction": ""
+      }
+    ],
     "rarity": "common"
   },
   "Melanargia russiae": {
@@ -1413,7 +1621,12 @@
       "Agosto",
       "Setembro"
     ],
-    "similarSpecies": [],
+    "similarSpecies": [
+      {
+        "name": "Maniola jurtina",
+        "distinction": ""
+      }
+    ],
     "rarity": "very-common"
   },
   "Pyronia tithonus": {
