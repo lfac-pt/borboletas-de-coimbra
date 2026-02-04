@@ -99,7 +99,7 @@ const SpeciesCard = ({ species, onExpand }: SpeciesCardProps) => {
             </div>
 
             {/* Right Content */}
-            <div className="p-6 md:p-8 flex-1 flex flex-col min-w-0 cursor-pointer" onClick={onExpand}>
+            <div className="p-6 md:p-8 flex-1 flex flex-col min-w-0">
                 <div className="mb-4">
                     <h3 className="serif-title text-2xl md:text-3xl text-gray-800 italic mb-1 truncate">
                         {species.latinName}
