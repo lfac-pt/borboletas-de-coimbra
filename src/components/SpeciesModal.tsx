@@ -114,6 +114,12 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev }: Sp
                         </div>
                     )}
 
+                    {species.attribution && !imgError && (
+                        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-black/40 backdrop-blur-sm rounded-md text-xs text-white/90 font-medium tracking-wide z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            © {species.attribution}
+                        </div>
+                    )}
+
                     {/* Close Button Mobile (Absolute) */}
                     <button
                         onClick={onClose}

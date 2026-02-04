@@ -384,4 +384,5 @@ export interface Species {
     family: string;
     ecology?: SpeciesEcology;
     details?: SpeciesDetails;
+    attribution?: string;
 }

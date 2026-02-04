@@ -62,24 +62,31 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [commonNamesRes, ecologyRes, detailsRes] = await Promise.all([
+        const [commonNamesRes, ecologyRes, detailsRes, attributionsRes] = await Promise.all([
           fetch('data/common-names.json'),
           fetch('data/species-ecology.json'),
-          fetch('data/species-details.json')
+          fetch('data/species-details.json'),
+          fetch('data/attributions.json')
         ]);
 
         const commonNames: Record<string, string> = await commonNamesRes.json();
         const ecology: Record<string, SpeciesEcology> = await ecologyRes.json();
         const details: Record<string, SpeciesDetails> = await detailsRes.json();
+        const attributions: Record<string, string> = await attributionsRes.json();
 
         const combined: Species[] = Object.keys(commonNames).map(key => {
           const latinName = key.trim();
+          const family = SPECIES_FAMILIES[latinName] || 'Desconhecida';
+          const formattedName = latinName.replace(/\//g, '_');
+          const imageKey = `${family}/${formattedName}.jpg`;
+
           return {
             latinName,
             commonName: commonNames[key],
-            family: SPECIES_FAMILIES[latinName] || 'Desconhecida',
+            family,
             ecology: ecology[latinName] || ecology[key],
-            details: details[latinName] || details[key]
+            details: details[latinName] || details[key],
+            attribution: attributions[imageKey]
           };
         });
 
