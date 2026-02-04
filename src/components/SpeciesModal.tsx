@@ -12,9 +12,11 @@ interface SpeciesModalProps {
     hasPrev: boolean;
     onNext: () => void;
     onPrev: () => void;
+    allSpecies: Species[];
+    onSelectSpecies: (species: Species) => void;
 }
 
-const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev }: SpeciesModalProps) => {
+const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allSpecies, onSelectSpecies }: SpeciesModalProps) => {
     const [imgError, setImgError] = useState(false);
     const [prevLatinName, setPrevLatinName] = useState(species.latinName);
     const modalRef = useRef<HTMLDivElement>(null);
@@ -95,140 +97,147 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev }: Sp
     const plantCommonName = plantFamily ? getPlantFamilyCommonName(plantFamily) : null;
     const sizePos = species.details?.sizeCategory ? getSizeSpritePosition(species.details.sizeCategory) : null;
 
+    const similarSpeciesList = species.details?.similarSpecies?.map(sim => {
+        const found = allSpecies.find(s => s.latinName === sim.name);
+        return found ? { ...found } : null; // Pass entire species object if found
+    }).filter(Boolean) as Species[];
+
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={handleBackdropClick}>
-            <div ref={modalRef} className="bg-white rounded-2xl shadow-2xl w-full max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row animate-in fade-in zoom-in-95 duration-200">
+            <div ref={modalRef} className="bg-white rounded-2xl shadow-2xl w-full max-w-5xl h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200">
 
-                {/* Image Section - Large and Prominent */}
-                <div className="w-full md:w-1/2 min-h-[300px] md:h-auto bg-gray-100 relative group">
-                    {!imgError ? (
-                        <img
-                            src={getImagePath(species.latinName, species.family)}
-                            alt={species.latinName}
-                            className="w-full h-full object-cover"
-                            onError={() => setImgError(true)}
-                        />
-                    ) : (
-                        <div className="w-full h-full flex items-center justify-center text-gray-400">
-                            <span className="text-sm">Imagem indisponível</span>
-                        </div>
-                    )}
+                <div className="flex flex-col md:flex-row min-h-full">
+                    {/* Image Section - Large and Prominent */}
+                    <div className="w-full md:w-1/2 min-h-[300px] md:h-auto bg-gray-100 relative group">
+                        {!imgError ? (
+                            <img
+                                src={getImagePath(species.latinName, species.family)}
+                                alt={species.latinName}
+                                className="w-full h-full object-cover"
+                                onError={() => setImgError(true)}
+                            />
+                        ) : (
+                            <div className="w-full h-full flex items-center justify-center text-gray-400">
+                                <span className="text-sm">Imagem indisponível</span>
+                            </div>
+                        )}
 
-                    {species.attribution && !imgError && (
-                        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-black/40 backdrop-blur-sm rounded-md text-xs text-white/90 font-medium tracking-wide z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            © {species.attribution}
-                        </div>
-                    )}
+                        {species.attribution && !imgError && (
+                            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-black/40 backdrop-blur-sm rounded-md text-xs text-white/90 font-medium tracking-wide z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                © {species.attribution}
+                            </div>
+                        )}
 
-                    {/* Close Button Mobile (Absolute) */}
-                    <button
-                        onClick={onClose}
-                        className="md:hidden absolute top-4 right-4 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors backdrop-blur-sm"
-                    >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    {/* Left Arrow (Desktop inside image area or overlay) */}
-                    {hasPrev && (
+                        {/* Close Button Mobile (Absolute) */}
                         <button
-                            onClick={(e) => { e.stopPropagation(); onPrev(); }}
-                            className="absolute left-4 bottom-4 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full backdrop-blur-md transition-all hidden md:flex"
-                            title="Espécie anterior"
+                            onClick={onClose}
+                            className="md:hidden absolute top-4 right-4 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors backdrop-blur-sm"
                         >
-                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
-                    )}
+                        {/* Left Arrow (Desktop inside image area or overlay) */}
+                        {hasPrev && (
+                            <button
+                                onClick={(e) => { e.stopPropagation(); onPrev(); }}
+                                className="absolute left-4 bottom-4 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full backdrop-blur-md transition-all hidden md:flex"
+                                title="Espécie anterior"
+                            >
+                                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                        )}
 
-                    {/* Right Arrow (Desktop inside image area or overlay) */}
-                    {hasNext && (
-                        <button
-                            onClick={(e) => { e.stopPropagation(); onNext(); }}
-                            className="absolute right-4 bottom-4 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full backdrop-blur-md transition-all hidden md:flex"
-                            title="Próxima espécie"
-                        >
-                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
-                    )}
-                </div>
-
-                {/* Details Section */}
-                <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col relative">
-                    {/* Close Button Desktop */}
-                    <button
-                        onClick={onClose}
-                        className="hidden md:block absolute top-6 right-6 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors"
-                    >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-
-                    <div className="mb-6 pr-8">
-                        <h2 className="serif-title text-3xl md:text-4xl text-gray-900 italic mb-2">
-                            {species.latinName}
-                        </h2>
-                        <h3 className="text-xl text-gray-500 font-medium">
-                            {species.commonName}
-                        </h3>
+                        {/* Right Arrow (Desktop inside image area or overlay) */}
+                        {hasNext && (
+                            <button
+                                onClick={(e) => { e.stopPropagation(); onNext(); }}
+                                className="absolute right-4 bottom-4 p-3 bg-white/20 hover:bg-white/40 text-white rounded-full backdrop-blur-md transition-all hidden md:flex"
+                                title="Próxima espécie"
+                            >
+                                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        )}
                     </div>
 
-                    <div className="flex flex-wrap gap-2 mb-8">
-                        <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold border border-blue-100">
-                            {species.family}
-                        </span>
-                        {species.details?.rarity && (() => {
-                            const config = getRarityConfig(species.details.rarity);
-                            return (
-                                <span className={`px-3 py-1 rounded-full text-xs font-bold border ${config.className}`}>
-                                    {config.label}
+                    {/* Details Section */}
+                    <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col relative">
+                        {/* Close Button Desktop */}
+                        <button
+                            onClick={onClose}
+                            className="hidden md:block absolute top-6 right-6 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        <div className="mb-6 pr-8">
+                            <h2 className="serif-title text-3xl md:text-4xl text-gray-900 italic mb-2">
+                                {species.latinName}
+                            </h2>
+                            <h3 className="text-xl text-gray-500 font-medium">
+                                {species.commonName}
+                            </h3>
+                        </div>
+
+                        <div className="flex flex-wrap gap-2 mb-8">
+                            <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold border border-blue-100">
+                                {species.family}
+                            </span>
+                            {species.details?.rarity && (() => {
+                                const config = getRarityConfig(species.details.rarity);
+                                return (
+                                    <span className={`px-3 py-1 rounded-full text-xs font-bold border ${config.className}`}>
+                                        {config.label}
+                                    </span>
+                                );
+                            })()}
+                            {statusPT && (
+                                <span className={`px-3 py-1 rounded-full text-xs font-bold border ${getStatusColor(statusPT)}`}>
+                                    PT: {statusPT}
                                 </span>
-                            );
-                        })()}
-                        {statusPT && (
-                            <span className={`px-3 py-1 rounded-full text-xs font-bold border ${getStatusColor(statusPT)}`}>
-                                PT: {statusPT}
-                            </span>
-                        )}
-                        {statusEU && (
-                            <span className={`px-3 py-1 rounded-full text-xs font-bold border ${getStatusColor(statusEU)}`}>
-                                EU: {statusEU}
-                            </span>
-                        )}
-                    </div>
+                            )}
+                            {statusEU && (
+                                <span className={`px-3 py-1 rounded-full text-xs font-bold border ${getStatusColor(statusEU)}`}>
+                                    EU: {statusEU}
+                                </span>
+                            )}
+                        </div>
 
-                    <div className="grid grid-cols-1 gap-6 mb-8">
-                        {/* Stats with Labels */}
-                        <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100">
-                            <div className="w-16 h-16 shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-200">
+                        {/* Icons Row */}
+                        <div className="flex flex-wrap gap-4 mb-6">
+                            {/* Habitat Icon */}
+                            <div
+                                className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 transition-all duration-300 relative group/icon"
+                                title={`Habitat: ${species.ecology?.habitatType || 'Inconhecido'}`}
+                            >
                                 <div
                                     className="w-full h-full"
                                     style={{
                                         backgroundImage: 'url("imgs/habitats.jpg")',
-                                        backgroundPosition: `${habitatPos.x * (64 / 88)}px ${habitatPos.y * (64 / 88)}px`, // Scale fix roughly
-                                        backgroundSize: `${352 * (64 / 88)}px ${192 * (64 / 88)}px`,
+                                        backgroundPosition: `${habitatPos.x}px ${habitatPos.y}px`,
+                                        backgroundSize: '352px 192px',
                                     }}
                                 />
                             </div>
-                            <div>
-                                <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-0.5">Habitat</span>
-                                <span className="text-gray-700 font-medium">{species.ecology?.habitatType || 'Inconhecido'}</span>
-                            </div>
-                        </div>
 
-                        <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100">
-                            <div className="w-16 h-16 shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex items-center justify-center">
+                            {/* Plant Icon */}
+                            <div
+                                className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex items-center justify-center transition-all duration-300 relative group/icon"
+                                title={`Planta Hospedeira: ${plantCommonName || species.ecology?.hostPlantFamilies[0] || 'N/A'}`}
+                            >
                                 {plantPos ? (
                                     <div
                                         className="w-full h-full"
                                         style={{
                                             backgroundImage: 'url("imgs/plant_family_sprite.png")',
-                                            backgroundPosition: `${plantPos.x * (64 / 88)}px ${plantPos.y * (64 / 88)}px`,
-                                            backgroundSize: `${352 * (64 / 88)}px ${768 * (64 / 88)}px`,
+                                            backgroundPosition: `${plantPos.x}px ${plantPos.y}px`,
+                                            backgroundSize: '352px 768px',
                                         }}
                                     />
                                 ) : (
@@ -237,21 +246,19 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev }: Sp
                                     </svg>
                                 )}
                             </div>
-                            <div>
-                                <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-0.5">Planta Hospedeira</span>
-                                <span className="text-gray-700 font-medium">{plantCommonName || species.ecology?.hostPlantFamilies[0] || 'N/A'}</span>
-                            </div>
-                        </div>
 
-                        <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100">
-                            <div className="w-16 h-16 shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex items-center justify-center">
+                            {/* Size Icon */}
+                            <div
+                                className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex items-center justify-center transition-all duration-300 relative group/icon"
+                                title={`Porte: ${species.details?.sizeCategory || 'N/A'}`}
+                            >
                                 {sizePos ? (
                                     <div
                                         className="w-full h-full"
                                         style={{
                                             backgroundImage: 'url("imgs/sizes.png")',
-                                            backgroundPosition: `${sizePos.x * (64 / 88)}px ${sizePos.y * (64 / 88)}px`,
-                                            backgroundSize: `${352 * (64 / 88)}px ${192 * (64 / 88)}px`,
+                                            backgroundPosition: `${sizePos.x}px ${sizePos.y}px`,
+                                            backgroundSize: '352px 192px',
                                         }}
                                     />
                                 ) : (
@@ -260,86 +267,110 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev }: Sp
                                     </svg>
                                 )}
                             </div>
-                            <div>
-                                <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-0.5">Porte</span>
-                                <span className="text-gray-700 font-medium capitalize">{species.details?.sizeCategory || 'N/A'}</span>
-                            </div>
                         </div>
-                    </div>
 
-                    <div className="mt-auto pt-6 border-t border-gray-100 space-y-4">
-                        <div>
-                            <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">Cor Predominante</span>
-                            <div className="flex items-center gap-3">
-                                <div className="flex -space-x-2">
-                                    {(Array.isArray(species.details?.predominantColor)
-                                        ? species.details.predominantColor
-                                        : [species.details?.predominantColor || '']
-                                    ).map((color, idx) => (
+                        {/* Similar Species Section (Moved to Right Column) */}
+                        {similarSpeciesList && similarSpeciesList.length > 0 && (
+                            <div className="mb-8">
+                                <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-3">Espécies Semelhantes</h4>
+                                <div className="grid grid-cols-3 gap-3">
+                                    {similarSpeciesList.map((sim, idx) => (
                                         <div
                                             key={idx}
-                                            className={`w-6 h-6 rounded-full shadow-sm border ring-2 ring-white ${getColorClass(color)}`}
-                                        />
+                                            className="group/sim cursor-pointer bg-white rounded-lg border border-gray-100 hover:border-forest-green/30 hover:shadow-md transition-all p-1.5"
+                                            onClick={() => onSelectSpecies(sim)}
+                                            title={sim.commonName}
+                                        >
+                                            <div className="aspect-square rounded-md overflow-hidden bg-gray-100 mb-1.5">
+                                                <img
+                                                    src={getImagePath(sim.latinName, sim.family)}
+                                                    alt={sim.latinName}
+                                                    className="w-full h-full object-cover group-hover/sim:scale-105 transition-transform duration-500"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                            <p className="text-[10px] leading-tight text-gray-800 font-medium truncate">{sim.latinName}</p>
+                                        </div>
                                     ))}
                                 </div>
-                                <span className="text-gray-700 text-sm">
-                                    {Array.isArray(species.details?.predominantColor)
-                                        ? species.details.predominantColor.join(' / ')
-                                        : species.details?.predominantColor || 'Inconhecida'}
-                                </span>
                             </div>
-                        </div>
+                        )}
 
-                        {/* Flight Months */}
-                        <div>
-                            <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">Período de Voo</span>
-                            <div className="flex flex-wrap gap-1">
-                                {['Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro'].map(month => {
-                                    const isFlying = species.details?.months.includes(month);
-                                    return (
-                                        <span
-                                            key={month}
-                                            className={`px-2 py-1 text-[10px] uppercase font-bold rounded ${isFlying
-                                                ? 'bg-forest-green/10 text-forest-green border border-forest-green/20'
-                                                : 'bg-gray-50 text-gray-300 border border-transparent'
-                                                }`}
-                                        >
-                                            {month.substring(0, 3)}
-                                        </span>
-                                    );
-                                })}
+                        <div className="mt-auto pt-6 border-t border-gray-100 space-y-4">
+                            <div>
+                                <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">Cor Predominante</span>
+                                <div className="flex items-center gap-3">
+                                    <div className="flex -space-x-2">
+                                        {(Array.isArray(species.details?.predominantColor)
+                                            ? species.details.predominantColor
+                                            : [species.details?.predominantColor || '']
+                                        ).map((color, idx) => (
+                                            <div
+                                                key={idx}
+                                                className={`w-6 h-6 rounded-full shadow-sm border ring-2 ring-white ${getColorClass(color)}`}
+                                            />
+                                        ))}
+                                    </div>
+                                    <span className="text-gray-700 text-sm">
+                                        {Array.isArray(species.details?.predominantColor)
+                                            ? species.details.predominantColor.join(' / ')
+                                            : species.details?.predominantColor || 'Inconhecida'}
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* Flight Months */}
+                            <div>
+                                <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">Período de Voo</span>
+                                <div className="flex flex-wrap gap-1">
+                                    {['Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro'].map(month => {
+                                        const isFlying = species.details?.months.includes(month);
+                                        return (
+                                            <span
+                                                key={month}
+                                                className={`px-2 py-1 text-[10px] uppercase font-bold rounded ${isFlying
+                                                    ? 'bg-forest-green/10 text-forest-green border border-forest-green/20'
+                                                    : 'bg-gray-50 text-gray-300 border border-transparent'
+                                                    }`}
+                                            >
+                                                {month.substring(0, 3)}
+                                            </span>
+                                        );
+                                    })}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Mobile Navigation Arrows (Fixed to screen edges) */}
-            <div className="md:hidden fixed inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 pointer-events-none z-50">
-                {hasPrev && (
-                    <button
-                        onClick={(e) => { e.stopPropagation(); onPrev(); }}
-                        className="p-3 bg-black/40 text-white rounded-full backdrop-blur-sm pointer-events-auto"
-                    >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-                )}
-                {!hasPrev && <div></div>} {/* Spacer */}
+                {/* Mobile Navigation Arrows (Fixed to screen edges) */}
+                <div className="md:hidden fixed inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 pointer-events-none z-50">
+                    {hasPrev && (
+                        <button
+                            onClick={(e) => { e.stopPropagation(); onPrev(); }}
+                            className="p-3 bg-black/40 text-white rounded-full backdrop-blur-sm pointer-events-auto"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                    )}
+                    {!hasPrev && <div></div>} {/* Spacer */}
 
-                {hasNext && (
-                    <button
-                        onClick={(e) => { e.stopPropagation(); onNext(); }}
-                        className="p-3 bg-black/40 text-white rounded-full backdrop-blur-sm pointer-events-auto"
-                    >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
-                )}
+                    {hasNext && (
+                        <button
+                            onClick={(e) => { e.stopPropagation(); onNext(); }}
+                            className="p-3 bg-black/40 text-white rounded-full backdrop-blur-sm pointer-events-auto"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    )}
+                </div>
             </div>
         </div>
+
     );
 };
 

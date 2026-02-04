@@ -399,6 +399,8 @@ const App = () => {
           hasPrev={selectedSpeciesIndex > 0}
           onNext={handleNextSpecies}
           onPrev={handlePrevSpecies}
+          allSpecies={speciesList}
+          onSelectSpecies={setSelectedSpecies}
         />
       )}
     </div>

@@ -131,14 +131,6 @@ const SpeciesCard = ({ species, onExpand }: SpeciesCardProps) => {
                             EU: {statusEU}
                         </span>
                     )}
-                    {species.details?.similarSpecies && species.details.similarSpecies.length > 0 && (
-                        <button className="flex items-center gap-1 px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-semibold hover:bg-gray-200 transition-colors">
-                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            Espécies similares ({species.details.similarSpecies.length})
-                        </button>
-                    )}
                 </div>
 
                 {/* Stats Row */}
