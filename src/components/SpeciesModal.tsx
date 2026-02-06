@@ -213,7 +213,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                         <div className="flex flex-wrap gap-4 mb-6">
                             {/* Habitat Icon */}
                             <div
-                                className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 transition-all duration-300 relative group/icon"
+                                className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 transition-all duration-300 relative group/icon"
                                 title={`Habitat: ${species.ecology?.habitatType || 'Inconhecido'}`}
                             >
                                 <div
@@ -228,7 +228,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
 
                             {/* Plant Icon */}
                             <div
-                                className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex items-center justify-center transition-all duration-300 relative group/icon"
+                                className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center transition-all duration-300 relative group/icon"
                                 title={`Planta Hospedeira: ${plantCommonName || species.ecology?.hostPlantFamilies[0] || 'N/A'}`}
                             >
                                 {plantPos ? (
