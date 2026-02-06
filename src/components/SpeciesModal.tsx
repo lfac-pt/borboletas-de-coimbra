@@ -92,9 +92,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
     const statusPT = endangered_pt[species.latinName as keyof typeof endangered_pt];
     const statusEU = endangered_eu[species.latinName as keyof typeof endangered_eu];
     const habitatPos = species.ecology?.habitatType ? getHabitatSpritePosition(species.ecology.habitatType) : getHabitatSpritePosition('Generalist');
-    const plantFamily = species.ecology?.hostPlantFamilies[0];
-    const plantPos = plantFamily ? getPlantFamilySpritePosition(plantFamily) : null;
-    const plantCommonName = plantFamily ? getPlantFamilyCommonName(plantFamily) : null;
+
     const sizePos = species.details?.sizeCategory ? getSizeSpritePosition(species.details.sizeCategory) : null;
 
     const similarSpeciesList = species.details?.similarSpecies?.map(sim => {
@@ -104,7 +102,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={handleBackdropClick}>
-            <div ref={modalRef} className="bg-white rounded-2xl shadow-2xl w-full max-w-5xl h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200">
+            <div ref={modalRef} className="bg-white rounded-2xl shadow-2xl w-full max-w-6xl h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200">
 
                 <div className="flex flex-col md:flex-row min-h-full">
                     {/* Image Section - Large and Prominent */}
@@ -226,27 +224,6 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                                 />
                             </div>
 
-                            {/* Plant Icon */}
-                            <div
-                                className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center transition-all duration-300 relative group/icon"
-                                title={`Planta Hospedeira: ${plantCommonName || species.ecology?.hostPlantFamilies[0] || 'N/A'}`}
-                            >
-                                {plantPos ? (
-                                    <div
-                                        className="w-full h-full"
-                                        style={{
-                                            backgroundImage: 'url("imgs/plant_family_sprite.png")',
-                                            backgroundPosition: `${plantPos.x}px ${plantPos.y}px`,
-                                            backgroundSize: '352px 768px',
-                                        }}
-                                    />
-                                ) : (
-                                    <svg className="w-8 h-8 text-green-700/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                    </svg>
-                                )}
-                            </div>
-
                             {/* Size Icon */}
                             <div
                                 className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex items-center justify-center transition-all duration-300 relative group/icon"
@@ -267,6 +244,34 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                                     </svg>
                                 )}
                             </div>
+
+                            {/* Plant Icons */}
+                            {(species.ecology?.hostPlantFamilies || []).map((family, idx) => {
+                                const plantPos = getPlantFamilySpritePosition(family);
+                                const plantCommonName = getPlantFamilyCommonName(family);
+                                return (
+                                    <div
+                                        key={idx}
+                                        className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center transition-all duration-300 relative group/icon"
+                                        title={`Planta Hospedeira: ${plantCommonName || family}`}
+                                    >
+                                        {plantPos ? (
+                                            <div
+                                                className="w-full h-full"
+                                                style={{
+                                                    backgroundImage: 'url("imgs/plant_family_sprite.png")',
+                                                    backgroundPosition: `${plantPos.x}px ${plantPos.y}px`,
+                                                    backgroundSize: '352px 768px',
+                                                }}
+                                            />
+                                        ) : (
+                                            <svg className="w-8 h-8 text-green-700/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                            </svg>
+                                        )}
+                                    </div>
+                                );
+                            })}
                         </div>
 
                         {/* Similar Species Section (Moved to Right Column) */}
@@ -296,8 +301,8 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                             </div>
                         )}
 
-                        <div className="mt-auto pt-6 border-t border-gray-100 space-y-4">
-                            <div>
+                        <div className="mt-auto pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-6">
+                            <div className="w-full sm:w-1/3">
                                 <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">Cor Predominante</span>
                                 <div className="flex items-center gap-3">
                                     <div className="flex -space-x-2">
@@ -320,7 +325,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                             </div>
 
                             {/* Flight Months */}
-                            <div>
+                            <div className="flex-1">
                                 <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">Período de Voo</span>
                                 <div className="flex flex-wrap gap-1">
                                     {['Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro'].map(month => {
@@ -368,8 +373,8 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                         </button>
                     )}
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
 
     );
 };
