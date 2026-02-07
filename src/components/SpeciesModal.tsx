@@ -102,21 +102,24 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={handleBackdropClick}>
-            <div ref={modalRef} className="bg-white rounded-2xl shadow-2xl w-full max-w-6xl h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200">
+            <div ref={modalRef} className="bg-white rounded-2xl shadow-2xl w-full max-w-[94vw] max-h-[94vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200">
 
-                <div className="flex flex-col md:flex-row min-h-full">
+                <div className="flex flex-col md:flex-row min-h-full items-stretch">
                     {/* Image Section - Large and Prominent */}
-                    <div className="w-full md:w-1/2 min-h-[300px] md:h-auto bg-gray-100 relative group">
+                    <div className="w-full md:w-1/2 bg-gray-100 relative group flex-shrink-0">
                         {!imgError ? (
                             <img
                                 src={getImagePath(species.latinName, species.family)}
                                 alt={species.latinName}
-                                className="w-full h-full object-cover"
+                                className="w-full h-auto block object-contain"
                                 onError={() => setImgError(true)}
                             />
                         ) : (
-                            <div className="w-full h-full flex items-center justify-center text-gray-400">
-                                <span className="text-sm">Imagem indisponível</span>
+                            <div className="w-full aspect-square flex flex-col items-center justify-center text-gray-400 bg-gray-50 border-r border-gray-100">
+                                <svg className="w-16 h-16 mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span className="text-sm font-medium">Imagem indisponível</span>
                             </div>
                         )}
 
@@ -226,7 +229,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
 
                             {/* Size Icon */}
                             <div
-                                className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex items-center justify-center transition-all duration-300 relative group/icon"
+                                className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 transition-all duration-300 relative group/icon"
                                 title={`Porte: ${species.details?.sizeCategory || 'N/A'}`}
                             >
                                 {sizePos ? (
