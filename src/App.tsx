@@ -43,6 +43,8 @@ const App = () => {
 
   // Sync state to URL
   useEffect(() => {
+    if (loading) return; // DON'T sync URL while loading, or it might wipe out deep links
+
     const params = new URLSearchParams();
     if (selectedMonth) params.set('month', selectedMonth);
     if (sortBy !== 'taxonomy') params.set('sort', sortBy);
@@ -54,10 +56,32 @@ const App = () => {
     if (onlyEndangered) params.set('endangered', 'true');
     if (onlyNewSpecies && selectedMonth) params.set('new', 'true');
     if (selectedRarities.length > 0) params.set('rarity', selectedRarities.join(','));
+    if (selectedSpecies) params.set('species', selectedSpecies.latinName);
 
     const newRelativePathQuery = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
     window.history.replaceState(null, '', newRelativePathQuery);
-  }, [selectedMonth, sortBy, sortOrder, selectedSize, selectedColors, selectedHabitats, selectedHostFamilies, onlyEndangered, onlyNewSpecies, selectedRarities]);
+  }, [selectedMonth, sortBy, sortOrder, selectedSize, selectedColors, selectedHabitats, selectedHostFamilies, onlyEndangered, onlyNewSpecies, selectedRarities, selectedSpecies, loading]);
+
+  // Handle Initial Species Popstate
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const speciesParam = params.get('species');
+      if (speciesParam) {
+        const decodedParam = decodeURIComponent(speciesParam.replace(/\+/g, ' '));
+        const found = speciesList.find(s =>
+          s.latinName.toLowerCase() === speciesParam.toLowerCase() ||
+          s.latinName.toLowerCase() === decodedParam.toLowerCase()
+        );
+        if (found) setSelectedSpecies(found);
+      } else {
+        setSelectedSpecies(null);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [speciesList]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -91,6 +115,18 @@ const App = () => {
         });
 
         setSpeciesList(combined);
+
+        // Check for deep link on initial load
+        const initialSpeciesParam = new URLSearchParams(window.location.search).get('species');
+        if (initialSpeciesParam) {
+          const decodedParam = decodeURIComponent(initialSpeciesParam.replace(/\+/g, ' '));
+          const found = combined.find(s =>
+            s.latinName.toLowerCase() === initialSpeciesParam.toLowerCase() ||
+            s.latinName.toLowerCase() === decodedParam.toLowerCase()
+          );
+          if (found) setSelectedSpecies(found);
+        }
+
       } catch (error) {
         console.error('Erro ao carregar dados:', error);
       } finally {
@@ -181,11 +217,27 @@ const App = () => {
     return list;
   }, [speciesList, selectedMonth, sortBy, sortOrder, selectedSize, selectedColors, selectedHabitats, selectedHostFamilies, onlyEndangered, selectedRarities, onlyNewSpecies]);
 
+  // Use this function to change species so we push to history
+  const handleSetSelectedSpecies = (species: Species | null) => {
+    setSelectedSpecies(species);
+
+    // We construct the next URL manually here to push to history.
+    // The useEffect above will also run, but 'replaceState' on the same URL is harmless.
+    const params = new URLSearchParams(window.location.search);
+    if (species) {
+      params.set('species', species.latinName);
+    } else {
+      params.delete('species');
+    }
+    const newRelativePathQuery = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+    window.history.pushState(null, '', newRelativePathQuery);
+  };
+
   const handleNextSpecies = () => {
     if (!selectedSpecies) return;
     const currentIndex = filteredSpecies.findIndex(s => s.latinName === selectedSpecies.latinName);
     if (currentIndex !== -1 && currentIndex < filteredSpecies.length - 1) {
-      setSelectedSpecies(filteredSpecies[currentIndex + 1]);
+      handleSetSelectedSpecies(filteredSpecies[currentIndex + 1]);
     }
   };
 
@@ -193,7 +245,7 @@ const App = () => {
     if (!selectedSpecies) return;
     const currentIndex = filteredSpecies.findIndex(s => s.latinName === selectedSpecies.latinName);
     if (currentIndex > 0) {
-      setSelectedSpecies(filteredSpecies[currentIndex - 1]);
+      handleSetSelectedSpecies(filteredSpecies[currentIndex - 1]);
     }
   };
 
@@ -368,7 +420,7 @@ const App = () => {
               <SpeciesCard
                 key={species.latinName}
                 species={species}
-                onExpand={() => setSelectedSpecies(species)}
+                onExpand={() => handleSetSelectedSpecies(species)}
               />
             ))
           )}
@@ -394,13 +446,13 @@ const App = () => {
       {selectedSpecies && (
         <SpeciesModal
           species={selectedSpecies}
-          onClose={() => setSelectedSpecies(null)}
+          onClose={() => handleSetSelectedSpecies(null)}
           hasNext={selectedSpeciesIndex !== -1 && selectedSpeciesIndex < filteredSpecies.length - 1}
           hasPrev={selectedSpeciesIndex > 0}
           onNext={handleNextSpecies}
           onPrev={handlePrevSpecies}
           allSpecies={speciesList}
-          onSelectSpecies={setSelectedSpecies}
+          onSelectSpecies={handleSetSelectedSpecies}
         />
       )}
     </div>
