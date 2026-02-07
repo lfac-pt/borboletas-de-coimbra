@@ -193,7 +193,10 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                             {species.details?.rarity && (() => {
                                 const config = getRarityConfig(species.details.rarity);
                                 return (
-                                    <span className={`px-3 py-1 rounded-full text-xs font-bold border ${config.className}`}>
+                                    <span
+                                        className={`px-3 py-1 rounded-full text-xs font-bold border ${config.className}`}
+                                        title="Dados baseados em biodiversity4all.org e na experiência de campo do autor"
+                                    >
                                         {config.label}
                                     </span>
                                 );
