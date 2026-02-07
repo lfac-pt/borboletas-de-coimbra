@@ -348,6 +348,47 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                                 </div>
                             </div>
                         </div>
+
+                        {/* Data Sources */}
+                        <div className="mt-4 pt-4 border-t border-gray-100">
+                            <div className="text-[10px] text-gray-400 leading-relaxed">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    {species.ecology?.sources && species.ecology.sources.length > 0 ? (
+                                        <div>
+                                            <span className="font-medium text-gray-500">Fontes Habitat e Plantas: </span>
+                                            {species.ecology.sources.map((source, idx, arr) => (
+                                                <span key={idx}>
+                                                    <a
+                                                        href={source}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="hover:text-forest-green underline transition-colors"
+                                                        title={source}
+                                                    >
+                                                        {source.replace(/^https?:\/\/(www\.)?/, '').split('/')[0]}
+                                                    </a>
+                                                    {idx < arr.length - 1 && ", "}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        null
+                                    )}
+
+                                    <div>
+                                        <span className="font-medium text-gray-500">Fontes Período de Voo: </span>
+                                        <a
+                                            href="https://www.biodiversity4all.org/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="hover:text-forest-green underline transition-colors"
+                                        >
+                                            Biodiversity4All
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
