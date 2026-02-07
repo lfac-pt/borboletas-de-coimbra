@@ -97,8 +97,8 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
 
     const similarSpeciesList = species.details?.similarSpecies?.map(sim => {
         const found = allSpecies.find(s => s.latinName === sim.name);
-        return found ? { ...found } : null; // Pass entire species object if found
-    }).filter(Boolean) as Species[];
+        return found ? { ...found, distinction: sim.distinction } : null;
+    }).filter(Boolean) as (Species & { distinction?: string })[];
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={handleBackdropClick}>
@@ -281,15 +281,15 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                         {similarSpeciesList && similarSpeciesList.length > 0 && (
                             <div className="mb-8">
                                 <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-3">Espécies Semelhantes</h4>
-                                <div className="grid grid-cols-3 gap-3">
+                                <div className="flex flex-col gap-3">
                                     {similarSpeciesList.map((sim, idx) => (
                                         <div
                                             key={idx}
-                                            className="group/sim cursor-pointer bg-white rounded-lg border border-gray-100 hover:border-forest-green/30 hover:shadow-md transition-all p-1.5"
+                                            className="group/sim cursor-pointer bg-white rounded-lg border border-gray-100 hover:border-forest-green/30 hover:shadow-md transition-all p-2 flex gap-3 items-center"
                                             onClick={() => onSelectSpecies(sim)}
                                             title={sim.commonName}
                                         >
-                                            <div className="aspect-square rounded-md overflow-hidden bg-gray-100 mb-1.5">
+                                            <div className="w-48 h-48 shrink-0 aspect-square rounded-md overflow-hidden bg-gray-100 border border-gray-100">
                                                 <img
                                                     src={getImagePath(sim.latinName, sim.family)}
                                                     alt={sim.latinName}
@@ -297,7 +297,17 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                                                     loading="lazy"
                                                 />
                                             </div>
-                                            <p className="text-[10px] leading-tight text-gray-800 font-medium truncate">{sim.latinName}</p>
+                                            <div className="flex flex-col min-w-0 py-1 justify-center h-full">
+                                                <p className="text-sm font-semibold text-gray-800 truncate mb-1 group-hover/sim:text-forest-green transition-colors">{sim.latinName}</p>
+                                                {sim.distinction ? (
+                                                    <p className="text-xs leading-relaxed text-gray-500 line-clamp-4">
+                                                        <span className="font-medium text-gray-400">vs. </span>
+                                                        {sim.distinction}
+                                                    </p>
+                                                ) : (
+                                                    <p className="text-xs text-gray-400 italic">Sem distinção registada</p>
+                                                )}
+                                            </div>
                                         </div>
                                     ))}
                                 </div>
