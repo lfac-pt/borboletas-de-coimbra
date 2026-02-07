@@ -315,17 +315,13 @@ const App = () => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Header */}
-      <header className="bg-[#2d6a4f] pt-16 pb-32 px-6 relative overflow-hidden">
+      <header className="bg-[#2d6a4f] pt-4 pb-26 px-6 relative overflow-hidden">
         {/* Decorative Circles */}
         <div className="absolute top-10 left-10 w-32 h-32 rounded-full border border-white/10 opacity-20"></div>
         <div className="absolute bottom-20 right-10 w-64 h-64 rounded-full border border-white/10 opacity-10"></div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10 text-white">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 mb-6 backdrop-blur-sm border border-white/20">
-            <svg className="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 20s-2-2-2-5 2-4 2-4 2 1 2 4-2 5-2 5ZM10 13c-3 0-5 1-5 4s2 4 5-1ZM14 13c3 0 5 1 5 4s-2 4-5-1ZM10 13c-3 0-5-2-5-5s2-5 5 1ZM14 13c3 0 5-2 5-5s-2-5-5 1ZM12 7l1-2m-2 2l-1-2" />
-            </svg>
-          </div>
+          <img src="/logo.png" alt="Logo" className="w-32 h-32 object-contain mx-auto" />
 
           <h1 className="serif-title text-5xl md:text-7xl mb-4 font-bold leading-tight uppercase tracking-tight">
             Borboletas Diurnas <br /> <span className="text-white/80 font-normal normal-case">de Coimbra</span>
