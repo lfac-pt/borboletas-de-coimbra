@@ -21,8 +21,8 @@ const App = () => {
   const [selectedMonth, setSelectedMonth] = useState<string | null>(getUrlParam('month'));
 
   const initialSort = getUrlParam('sort');
-  const [sortBy, setSortBy] = useState<'taxonomy' | 'size' | 'color'>(
-    (initialSort === 'taxonomy' || initialSort === 'size' || initialSort === 'color') ? initialSort : 'taxonomy'
+  const [sortBy, setSortBy] = useState<'taxonomy' | 'size' | 'rarity'>(
+    (initialSort === 'taxonomy' || initialSort === 'size' || initialSort === 'rarity') ? initialSort : 'taxonomy'
   );
 
   const initialOrder = getUrlParam('order');
@@ -205,10 +205,11 @@ const App = () => {
         // Size is naturally descending (large to small) in the original code, 
         // but we'll normalize it to respect sortOrder
         result = sizeA - sizeB || a.latinName.localeCompare(b.latinName);
-      } else if (sortBy === 'color') {
-        const colorA = Array.isArray(a.details?.predominantColor) ? a.details.predominantColor[0] : (a.details?.predominantColor || '');
-        const colorB = Array.isArray(b.details?.predominantColor) ? b.details.predominantColor[0] : (b.details?.predominantColor || '');
-        result = colorA.localeCompare(colorB) || a.latinName.localeCompare(b.latinName);
+      } else if (sortBy === 'rarity') {
+        const rarities: Record<string, number> = { 'very-common': 1, 'common': 2, 'uncommon': 3, 'rare': 4 };
+        const rarityA = rarities[a.details?.rarity || ''] || 0;
+        const rarityB = rarities[b.details?.rarity || ''] || 0;
+        result = rarityA - rarityB || a.latinName.localeCompare(b.latinName);
       }
 
       return sortOrder === 'asc' ? result : -result;

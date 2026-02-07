@@ -3,7 +3,7 @@ import MultiSelect from './ui/MultiSelect';
 
 interface FiltersProps {
     onMonthChange: (month: string | null) => void;
-    onSortChange: (sort: 'taxonomy' | 'size' | 'color') => void;
+    onSortChange: (sort: 'taxonomy' | 'size' | 'rarity') => void;
     onOrderChange: () => void;
     selectedMonth: string | null;
     selectedSort: string;
@@ -132,12 +132,12 @@ const Filters = ({
                     <div className="flex items-center gap-1 w-full md:w-auto">
                         <select
                             value={selectedSort}
-                            onChange={(e) => onSortChange(e.target.value as 'taxonomy' | 'size' | 'color')}
+                            onChange={(e) => onSortChange(e.target.value as 'taxonomy' | 'size' | 'rarity')}
                             className="bg-gray-50 border border-gray-200 text-gray-700 rounded-lg px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-[#2d6a4f] w-full md:w-48 cursor-pointer"
                         >
                             <option value="taxonomy">Taxonomia</option>
                             <option value="size">Tamanho</option>
-                            <option value="color">Cor Predominante</option>
+                            <option value="rarity">Raridade</option>
                         </select>
 
                         <button
