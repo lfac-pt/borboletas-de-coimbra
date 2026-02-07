@@ -437,7 +437,7 @@ const App = () => {
             </p>
           </div>
           <div className="pt-8 border-t border-white/10 text-xs text-gray-500">
-            <p>&copy; {new Date().getFullYear()} Borboletas de Coimbra. Todos os direitos reservados.</p>
+            <p>&copy; {new Date().getFullYear()} <a href="https://www.instagram.com/lfac_pt/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Luís Cardoso</a>. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
