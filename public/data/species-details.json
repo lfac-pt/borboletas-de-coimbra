@@ -48,7 +48,7 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Muschampia proto": {
     "sizeCategory": "small",
@@ -237,7 +237,7 @@
         "distinction": "Anel ocular e topo das antenas cor de ferrugem; linha branca quebrada."
       }
     ],
-    "rarity": "common"
+    "rarity": "rare"
   },
   "Callophrys rubi": {
     "sizeCategory": "small",
@@ -302,7 +302,7 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "rare"
   },
   "Glaucopsyche alexis": {
     "sizeCategory": "small",
@@ -320,7 +320,7 @@
       "Maio"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Hamearis lucina": {
     "sizeCategory": "small",
@@ -340,7 +340,7 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Lampides boeticus": {
     "sizeCategory": "small",
@@ -401,7 +401,7 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "rare"
   },
   "Lycaena phlaeas": {
     "sizeCategory": "small",
@@ -562,7 +562,7 @@
       "Julho"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Thecla betulae": {
     "sizeCategory": "small",
@@ -573,7 +573,7 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "rare"
   },
   "Tomares ballus": {
     "sizeCategory": "small",
@@ -582,7 +582,7 @@
       "Abril"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "rare"
   },
   "Zizeeria knysna": {
     "sizeCategory": "small",
@@ -602,7 +602,7 @@
       "Junho"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "rare"
   },
   "Aglais urticae ": {
     "sizeCategory": "medium",
@@ -649,7 +649,7 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Boloria dia": {
     "sizeCategory": "medium",
@@ -720,7 +720,7 @@
       "Junho"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "rare"
   },
   "Euphydryas aurinia": {
     "sizeCategory": "medium",
@@ -732,7 +732,7 @@
       "Junho"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Euphydryas desfontainii": {
     "sizeCategory": "medium",
@@ -750,7 +750,7 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Fabriciana niobe": {
     "sizeCategory": "medium",
@@ -796,7 +796,7 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "rare"
   },
   "Melitaea aetherie": {
     "sizeCategory": "medium",
@@ -812,7 +812,7 @@
       "Maio"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "rare"
   },
   "Melitaea deione": {
     "sizeCategory": "medium",
@@ -837,7 +837,7 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Melitaea celadussa": {
     "sizeCategory": "medium",
@@ -848,7 +848,7 @@
       "Julho"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "rare"
   },
   "Melitaea parthenoides": {
     "sizeCategory": "medium",
@@ -867,7 +867,7 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Melitaea trivia": {
     "sizeCategory": "medium",
@@ -877,7 +877,7 @@
       "Julho"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Nymphalis antiopa": {
     "sizeCategory": "large",
@@ -905,7 +905,7 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Polygonia c-album": {
     "sizeCategory": "medium",
@@ -980,7 +980,7 @@
         "distinction": "2 grandes ocelos na asa posterior; mancha laranja no ápice negro."
       }
     ],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Iphiclides feisthamelii": {
     "sizeCategory": "large",
@@ -1092,7 +1092,7 @@
       "Maio"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Euchloe crameri": {
     "sizeCategory": "medium",
@@ -1137,7 +1137,7 @@
         "distinction": "Machos com grande mancha laranja na asa anterior."
       }
     ],
-    "rarity": "common"
+    "rarity": "very-common"
   },
   "Gonepteryx rhamni ": {
     "sizeCategory": "medium",
@@ -1206,7 +1206,7 @@
         "distinction": "L. sinapis é muito menor, mais frágil e com asas ovais."
       }
     ],
-    "rarity": "common"
+    "rarity": "very-common"
   },
   "Pieris napi": {
     "sizeCategory": "medium",
@@ -1311,7 +1311,7 @@
         "distinction": "Faixa branca larga no verso da asa posterior; ocelos redondos."
       }
     ],
-    "rarity": "common"
+    "rarity": "rare"
   },
   "Coenonympha dorus": {
     "sizeCategory": "medium",
@@ -1328,7 +1328,7 @@
         "distinction": "Linha de ocelos em ziguezague no verso da asa posterior."
       }
     ],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Coenonympha glycerion iphioides": {
     "sizeCategory": "",
@@ -1402,7 +1402,7 @@
         "distinction": "Faixa branca larga e difusa; sem os dois pontos brancos."
       }
     ],
-    "rarity": "common"
+    "rarity": "uncommon"
   },
   "Hipparchia semele": {
     "sizeCategory": "medium",

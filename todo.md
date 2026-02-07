@@ -1,2 +1,1 @@
-5) Review habitat info
-9) Add missing photos
+1) Add missing photos

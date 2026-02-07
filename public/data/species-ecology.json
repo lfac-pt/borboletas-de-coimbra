@@ -1,6 +1,6 @@
 {
   "Aglais io": {
-    "habitatType": "Woodland",
+    "habitatType": "Generalist",
     "hostPlantFamilies": [
       "Urticaceae"
     ],
@@ -45,7 +45,7 @@
     ]
   },
   "Aporia crataegi": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Rosaceae"
     ],
@@ -63,7 +63,7 @@
     ]
   },
   "Argynnis pandora": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Violaceae"
     ],
@@ -81,7 +81,7 @@
     ]
   },
   "Aricia cramera": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Cistaceae",
       "Geraniaceae"
@@ -165,7 +165,7 @@
     ]
   },
   "Cacyreus marshalli": {
-    "habitatType": "Wetland",
+    "habitatType": "Urban/Agricultural",
     "hostPlantFamilies": [
       "Geraniaceae"
     ],
@@ -174,7 +174,7 @@
     ]
   },
   "Callophrys avis": {
-    "habitatType": "Woodland",
+    "habitatType": "Scrubland",
     "hostPlantFamilies": [
       "Ericaceae",
       "Coriariaceae"
@@ -184,7 +184,7 @@
     ]
   },
   "Callophrys rubi": {
-    "habitatType": "Grassland",
+    "habitatType": "Scrubland",
     "hostPlantFamilies": [
       "Fabaceae",
       "Cistaceae",
@@ -234,7 +234,7 @@
     ]
   },
   "Charaxes jasius": {
-    "habitatType": "Coastal",
+    "habitatType": "Woodland",
     "hostPlantFamilies": [
       "Ericaceae",
       "Santalaceae",
@@ -245,7 +245,7 @@
     ]
   },
   "Coenonympha arcania": {
-    "habitatType": "Wetland",
+    "habitatType": "Rocky/Mountain",
     "hostPlantFamilies": [
       "Poaceae"
     ],
@@ -290,7 +290,7 @@
     ]
   },
   "Cupido lorquinii": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Scrubland",
     "hostPlantFamilies": [
       "Fabaceae"
     ],
@@ -328,7 +328,7 @@
     ]
   },
   "Danaus plexippus": {
-    "habitatType": "Urban/Agricultural",
+    "habitatType": "Coastal",
     "hostPlantFamilies": [
       "Asclepiadaceae",
       "Apocynaceae"
@@ -357,7 +357,7 @@
     ]
   },
   "Euchloe belemia": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Brassicaceae"
     ],
@@ -505,7 +505,7 @@
     ]
   },
   "Hipparchia fidia": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Poaceae"
     ],
@@ -523,7 +523,7 @@
     ]
   },
   "Hipparchia semele": {
-    "habitatType": "Coastal",
+    "habitatType": "Rocky/Mountain",
     "hostPlantFamilies": [
       "Poaceae"
     ],
@@ -559,7 +559,7 @@
     ]
   },
   "Iphiclides feisthamelii": {
-    "habitatType": "Woodland",
+    "habitatType": "Urban/Agricultural",
     "hostPlantFamilies": [
       "Rosaceae"
     ],
@@ -568,7 +568,7 @@
     ]
   },
   "Issoria lathonia": {
-    "habitatType": "Woodland",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Violaceae"
     ],
@@ -604,7 +604,7 @@
     ]
   },
   "Lasiommata megera": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Generalist",
     "hostPlantFamilies": [
       "Poaceae"
     ],
@@ -613,7 +613,7 @@
     ]
   },
   "Leptidea sinapis": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Wetland",
     "hostPlantFamilies": [
       "Fabaceae"
     ],
@@ -723,7 +723,7 @@
     ]
   },
   "Melanargia ines": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Poaceae"
     ],
@@ -786,7 +786,7 @@
     ]
   },
   "Melitaea deione": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Plantaginaceae"
     ],
@@ -825,7 +825,7 @@
     ]
   },
   "Melitaea trivia": {
-    "habitatType": "Woodland",
+    "habitatType": "Rocky/Mountain",
     "hostPlantFamilies": [
       "Scrophulariaceae"
     ],
@@ -865,7 +865,7 @@
     ]
   },
   "Ochlodes sylvanus": {
-    "habitatType": "Wetland",
+    "habitatType": "Woodland",
     "hostPlantFamilies": [
       "Poaceae"
     ],
@@ -874,7 +874,7 @@
     ]
   },
   "Papilio machaon": {
-    "habitatType": "Urban/Agricultural",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Apiaceae",
       "Rutaceae"
@@ -884,7 +884,7 @@
     ]
   },
   "Pararge aegeria": {
-    "habitatType": "Grassland",
+    "habitatType": "Generalist",
     "hostPlantFamilies": [
       "Poaceae"
     ],
@@ -921,7 +921,7 @@
     ]
   },
   "Pieris rapae": {
-    "habitatType": "Woodland",
+    "habitatType": "Urban/Agricultural",
     "hostPlantFamilies": [
       "Brassicaceae",
       "Resedaceae"
@@ -973,7 +973,7 @@
     ]
   },
   "Pontia daplidice": {
-    "habitatType": "Coastal",
+    "habitatType": "Generalist",
     "hostPlantFamilies": [
       "Brassicaceae",
       "Resedaceae"
@@ -1001,7 +1001,7 @@
     ]
   },
   "Pseudophilotes panoptes": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Lamiaceae"
     ],
@@ -1059,7 +1059,7 @@
     ]
   },
   "Pyronia bathseba": {
-    "habitatType": "Woodland",
+    "habitatType": "Scrubland",
     "hostPlantFamilies": [
       "Poaceae"
     ],
@@ -1068,7 +1068,7 @@
     ]
   },
   "Pyronia cecilia": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Scrubland",
     "hostPlantFamilies": [
       "Poaceae"
     ],
@@ -1086,7 +1086,7 @@
     ]
   },
   "Satyrium esculi": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Fagaceae"
     ],
@@ -1104,7 +1104,7 @@
     ]
   },
   "Satyrium spini": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Rhamnaceae"
     ],
@@ -1132,7 +1132,7 @@
     ]
   },
   "Spialia sertorius": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Rosaceae"
     ],
@@ -1150,7 +1150,7 @@
     ]
   },
   "Thymelicus acteon": {
-    "habitatType": "Wetland",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Poaceae"
     ],
@@ -1168,7 +1168,7 @@
     ]
   },
   "Thymelicus sylvestris": {
-    "habitatType": "Wetland",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Poaceae"
     ],
@@ -1177,7 +1177,7 @@
     ]
   },
   "Tomares ballus": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Fabaceae"
     ],
@@ -1209,7 +1209,7 @@
     ]
   },
   "Vanessa virginiensis": {
-    "habitatType": "Coastal",
+    "habitatType": "Grassland",
     "hostPlantFamilies": [
       "Asteraceae"
     ],
