@@ -178,7 +178,7 @@ const SpeciesCard = ({ species, onExpand }: SpeciesCardProps) => {
                                 style={{
                                     backgroundImage: 'url("imgs/plant_family_sprite.png")',
                                     backgroundPosition: `${plantPos.x}px ${plantPos.y}px`,
-                                    backgroundSize: '352px 768px',
+                                    backgroundSize: '352px 1250px',
                                 }}
                                 title={`Plantas: ${plantCommonName || plantFamily || 'N/A'}`}
                             >

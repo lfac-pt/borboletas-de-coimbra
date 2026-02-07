@@ -215,7 +215,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                                 title={`Habitat: ${species.ecology?.habitatType || 'Inconhecido'}`}
                             >
                                 <div
-                                    className="w-full h-full"
+                                    className="w-[88px] h-[88px] shrink-0 rounded-lg"
                                     style={{
                                         backgroundImage: 'url("imgs/habitats.jpg")',
                                         backgroundPosition: `${habitatPos.x}px ${habitatPos.y}px`,
@@ -231,7 +231,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                             >
                                 {sizePos ? (
                                     <div
-                                        className="w-full h-full"
+                                        className="w-[88px] h-[88px] shrink-0 rounded-lg"
                                         style={{
                                             backgroundImage: 'url("imgs/sizes.png")',
                                             backgroundPosition: `${sizePos.x}px ${sizePos.y}px`,
@@ -253,15 +253,15 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                                     <div
                                         key={idx}
                                         className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center transition-all duration-300 relative group/icon"
-                                        title={`Planta Hospedeira: ${plantCommonName || family}`}
+                                        title={`Plantas: ${plantCommonName || family || 'N/A'}`}
                                     >
                                         {plantPos ? (
                                             <div
-                                                className="w-full h-full"
+                                                className="w-[88px] h-[88px] shrink-0 rounded-lg"
                                                 style={{
                                                     backgroundImage: 'url("imgs/plant_family_sprite.png")',
                                                     backgroundPosition: `${plantPos.x}px ${plantPos.y}px`,
-                                                    backgroundSize: '352px 768px',
+                                                    backgroundSize: '352px 1250px',
                                                 }}
                                             />
                                         ) : (
