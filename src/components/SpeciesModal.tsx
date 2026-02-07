@@ -281,15 +281,15 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                         {similarSpeciesList && similarSpeciesList.length > 0 && (
                             <div className="mb-8">
                                 <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-3">Espécies Semelhantes</h4>
-                                <div className="flex flex-col gap-3">
+                                <div className="grid grid-cols-3 gap-3">
                                     {similarSpeciesList.map((sim, idx) => (
                                         <div
                                             key={idx}
-                                            className="group/sim cursor-pointer bg-white rounded-lg border border-gray-100 hover:border-forest-green/30 hover:shadow-md transition-all p-2 flex gap-3 items-center"
+                                            className="group/sim cursor-pointer bg-white rounded-lg border border-gray-100 hover:border-forest-green/30 hover:shadow-md transition-all overflow-hidden flex flex-col"
                                             onClick={() => onSelectSpecies(sim)}
                                             title={sim.commonName}
                                         >
-                                            <div className="w-48 h-48 shrink-0 aspect-square rounded-md overflow-hidden bg-gray-100 border border-gray-100">
+                                            <div className="aspect-square w-full bg-gray-100 relative overflow-hidden border-b border-gray-100">
                                                 <img
                                                     src={getImagePath(sim.latinName, sim.family)}
                                                     alt={sim.latinName}
@@ -297,15 +297,16 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                                                     loading="lazy"
                                                 />
                                             </div>
-                                            <div className="flex flex-col min-w-0 py-1 justify-center h-full">
-                                                <p className="text-sm font-semibold text-gray-800 truncate mb-1 group-hover/sim:text-forest-green transition-colors">{sim.latinName}</p>
+                                            <div className="p-3 flex flex-col gap-1">
+                                                <p className="text-xs font-bold text-gray-800 group-hover/sim:text-forest-green transition-colors truncate">
+                                                    {sim.latinName}
+                                                </p>
                                                 {sim.distinction ? (
-                                                    <p className="text-xs leading-relaxed text-gray-500 line-clamp-4">
-                                                        <span className="font-medium text-gray-400">vs. </span>
+                                                    <p className="text-[11px] leading-snug text-gray-500 line-clamp-3">
                                                         {sim.distinction}
                                                     </p>
                                                 ) : (
-                                                    <p className="text-xs text-gray-400 italic">Sem distinção registada</p>
+                                                    <p className="text-[10px] text-gray-400 italic">Sem distinção registada</p>
                                                 )}
                                             </div>
                                         </div>
