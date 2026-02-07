@@ -70,11 +70,11 @@
     "similarSpecies": [
       {
         "name": "Thymelicus acteon",
-        "distinction": ""
+        "distinction": "O. sylvanus é maior, com asas anteriores pontiagudas e machos com marca androconial grossa."
       },
       {
         "name": "Thymelicus sylvestris",
-        "distinction": ""
+        "distinction": "O. sylvanus tem manchas claras nas asas posteriores; face inferior da ponta da antena não é laranja."
       }
     ],
     "rarity": "uncommon"
@@ -143,11 +143,11 @@
     "similarSpecies": [
       {
         "name": "Ochlodes sylvanus",
-        "distinction": ""
+        "distinction": "T. acteon é menor, com asas arredondadas e manchas douradas em semicírculo (fêmeas)."
       },
       {
         "name": "Thymelicus sylvestris",
-        "distinction": ""
+        "distinction": "T. acteon tem semicírculo de manchas douradas; T. sylvestris tem ponta da antena laranja por baixo."
       }
     ],
     "rarity": "common"
@@ -170,11 +170,11 @@
     "similarSpecies": [
       {
         "name": "Thymelicus acteon",
-        "distinction": ""
+        "distinction": "T. sylvestris não tem manchas douradas em semicírculo; ponta da antena laranja por baixo."
       },
       {
         "name": "Ochlodes sylvanus",
-        "distinction": ""
+        "distinction": "T. sylvestris é menor, sem manchas claras nas asas posteriores; ponta da antena laranja por baixo."
       }
     ],
     "rarity": "common"
@@ -197,7 +197,7 @@
     "similarSpecies": [
       {
         "name": "Polyommatus icarus/celina",
-        "distinction": ""
+        "distinction": "Pontos na asa posterior formam um 'dois pontos' (:), sem mancha celular na asa anterior."
       }
     ],
     "rarity": "common"
@@ -234,7 +234,7 @@
     "similarSpecies": [
       {
         "name": "Callophrys rubi",
-        "distinction": ""
+        "distinction": "Anel ocular e topo das antenas cor de ferrugem; linha branca quebrada."
       }
     ],
     "rarity": "common"
@@ -250,7 +250,7 @@
     "similarSpecies": [
       {
         "name": "Callophrys avis",
-        "distinction": ""
+        "distinction": "Anel ocular branco; antenas pretas; linha branca reduzida a pontos."
       }
     ],
     "rarity": "common"
@@ -357,7 +357,7 @@
     "similarSpecies": [
       {
         "name": "Leptotes pirithous",
-        "distinction": ""
+        "distinction": "L. boeticus é maior; faixa branca larga e contínua na face inferior da asa posterior."
       }
     ],
     "rarity": "common"
@@ -376,7 +376,7 @@
     "similarSpecies": [
       {
         "name": "Lampides boeticus",
-        "distinction": ""
+        "distinction": "L. pirithous é menor; padrão marmoreado sem faixa branca contínua."
       }
     ],
     "rarity": "common"
@@ -491,7 +491,7 @@
     "similarSpecies": [
       {
         "name": "Aricia cramera",
-        "distinction": ""
+        "distinction": "Possui mancha celular na asa anterior; machos azul-celeste."
       }
     ],
     "rarity": "very-common"
@@ -958,7 +958,7 @@
     "similarSpecies": [
       {
         "name": "Vanessa virginiensis",
-        "distinction": ""
+        "distinction": "4 pequenos ocelos na asa posterior; mancha branca no ápice negro."
       }
     ],
     "rarity": "common"
@@ -977,7 +977,7 @@
     "similarSpecies": [
       {
         "name": "Vanessa cardui",
-        "distinction": ""
+        "distinction": "2 grandes ocelos na asa posterior; mancha laranja no ápice negro."
       }
     ],
     "rarity": "common"
@@ -1107,7 +1107,7 @@
     "similarSpecies": [
       {
         "name": "Pontia daplidice",
-        "distinction": ""
+        "distinction": "Manchas verdes no verso mais irregulares e 'esborratadas', sem linhas geométricas."
       }
     ],
     "rarity": "common"
@@ -1134,7 +1134,7 @@
     "similarSpecies": [
       {
         "name": "Gonepteryx rhamni",
-        "distinction": ""
+        "distinction": "Machos com grande mancha laranja na asa anterior."
       }
     ],
     "rarity": "common"
@@ -1154,7 +1154,7 @@
     "similarSpecies": [
       {
         "name": "Gonepteryx cleopatra",
-        "distinction": ""
+        "distinction": "Quase impossível de distinguir em voo de G. cleopatra fêmea."
       }
     ],
     "rarity": "common"
@@ -1172,11 +1172,11 @@
     "similarSpecies": [
       {
         "name": "Pieris brassicae",
-        "distinction": ""
+        "distinction": "P. brassicae é muito maior e mais robusta, com manchas apicais negras bem marcadas."
       },
       {
         "name": "Pieris rapae",
-        "distinction": ""
+        "distinction": "P. rapae é maior e mais robusta, com asas menos ovais."
       }
     ],
     "rarity": "common"
@@ -1199,11 +1199,11 @@
     "similarSpecies": [
       {
         "name": "Pieris rapae",
-        "distinction": ""
+        "distinction": "P. rapae é menor e tem a mancha apical negra mais reduzida."
       },
       {
         "name": "Leptidea sinapis",
-        "distinction": ""
+        "distinction": "L. sinapis é muito menor, mais frágil e com asas ovais."
       }
     ],
     "rarity": "common"
@@ -1243,11 +1243,11 @@
     "similarSpecies": [
       {
         "name": "Pieris brassicae",
-        "distinction": ""
+        "distinction": "A P. brassicae é maior e tem uma mancha apical negra mais extensa e em forma de foice."
       },
       {
         "name": "Leptidea sinapis",
-        "distinction": ""
+        "distinction": "Asas com formato mais oval e alongado; aspecto mais frágil e delicado."
       }
     ],
     "rarity": "very-common"
@@ -1269,7 +1269,7 @@
     "similarSpecies": [
       {
         "name": "Euchloe crameri",
-        "distinction": ""
+        "distinction": "Manchas verdes no verso mais geométricas, densas e definidas."
       }
     ],
     "rarity": "common"
@@ -1308,7 +1308,7 @@
     "similarSpecies": [
       {
         "name": "Coenonympha dorus",
-        "distinction": ""
+        "distinction": "Faixa branca larga no verso da asa posterior; ocelos redondos."
       }
     ],
     "rarity": "common"
@@ -1325,7 +1325,7 @@
     "similarSpecies": [
       {
         "name": "Coenonympha arcania",
-        "distinction": ""
+        "distinction": "Linha de ocelos em ziguezague no verso da asa posterior."
       }
     ],
     "rarity": "common"
@@ -1367,15 +1367,15 @@
     "similarSpecies": [
       {
         "name": "Hipparchia hermione",
-        "distinction": ""
+        "distinction": "H. fidia tem linha discal em 'V' pronunciada e serrilhada."
       },
       {
         "name": "Hipparchia semele",
-        "distinction": ""
+        "distinction": "Linha discal em 'V' serrilhada; cor geral mais pálida e contrastada."
       },
       {
         "name": "Hipparchia statilinus",
-        "distinction": ""
+        "distinction": "Linha discal em 'V' serrilhada; sem os dois pontos brancos entre ocelos."
       }
     ],
     "rarity": "common"
@@ -1391,15 +1391,15 @@
     "similarSpecies": [
       {
         "name": "Hipparchia fidia",
-        "distinction": ""
+        "distinction": "Sem linha em 'V' serrilhada; faixa branca larga e difusa."
       },
       {
         "name": "Hipparchia semele",
-        "distinction": ""
+        "distinction": "Faixa branca larga na asa posterior; geralmente maior."
       },
       {
         "name": "Hipparchia statilinus",
-        "distinction": ""
+        "distinction": "Faixa branca larga e difusa; sem os dois pontos brancos."
       }
     ],
     "rarity": "common"
@@ -1417,15 +1417,15 @@
     "similarSpecies": [
       {
         "name": "Hipparchia fidia",
-        "distinction": ""
+        "distinction": "Sem linha em 'V' serrilhada; coloração críptica mais uniforme."
       },
       {
         "name": "Hipparchia hermione",
-        "distinction": ""
+        "distinction": "Menor que H. hermione; área basal não tão escura em contraste com a faixa clara."
       },
       {
         "name": "Hipparchia statilinus",
-        "distinction": ""
+        "distinction": "Sem os dois pontos brancos distintos entre os ocelos da asa anterior."
       }
     ],
     "rarity": "uncommon"
@@ -1441,15 +1441,15 @@
     "similarSpecies": [
       {
         "name": "Hipparchia fidia",
-        "distinction": ""
+        "distinction": "Dois pontos brancos entre ocelos da asa anterior; sem linha em 'V'."
       },
       {
         "name": "Hipparchia hermione",
-        "distinction": ""
+        "distinction": "Dois pontos brancos entre ocelos; menos contrastada."
       },
       {
         "name": "Hipparchia semele",
-        "distinction": ""
+        "distinction": "Dois pontos brancos entre os ocelos da asa anterior."
       }
     ],
     "rarity": "common"
@@ -1504,7 +1504,7 @@
     "similarSpecies": [
       {
         "name": "Pyronia cecilia",
-        "distinction": ""
+        "distinction": "M. jurtina é maior; fêmea com mancha laranja menos definida e sem 'cerca' escura."
       }
     ],
     "rarity": "very-common"
@@ -1523,11 +1523,11 @@
     "similarSpecies": [
       {
         "name": "Melanargia lachesis",
-        "distinction": ""
+        "distinction": "Ocelos castanhos na face inferior da asa posterior."
       },
       {
         "name": "Melanargia occitanica",
-        "distinction": ""
+        "distinction": "Barra negra na célula da asa anterior não atinge a veia."
       }
     ],
     "rarity": "uncommon"
@@ -1547,11 +1547,11 @@
     "similarSpecies": [
       {
         "name": "Melanargia ines",
-        "distinction": ""
+        "distinction": "Célula da asa anterior branca, sem barra negra."
       },
       {
         "name": "Melanargia occitanica",
-        "distinction": ""
+        "distinction": "Célula da asa anterior branca, sem barra negra."
       }
     ],
     "rarity": "common"
@@ -1569,11 +1569,11 @@
     "similarSpecies": [
       {
         "name": "Melanargia ines",
-        "distinction": ""
+        "distinction": "Veias dos ocelos azuladas; barra negra na célula atinge a veia."
       },
       {
         "name": "Melanargia lachesis",
-        "distinction": ""
+        "distinction": "Possui barra negra na célula da asa anterior."
       }
     ],
     "rarity": "common"
@@ -1624,7 +1624,7 @@
     "similarSpecies": [
       {
         "name": "Maniola jurtina",
-        "distinction": ""
+        "distinction": "Menor que M. jurtina; mancha laranja bem delimitada por borda escura ('cercada')."
       }
     ],
     "rarity": "very-common"
