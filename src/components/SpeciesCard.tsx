@@ -70,6 +70,7 @@ const SpeciesCard = ({ species, onExpand }: SpeciesCardProps) => {
                         src={getImagePath(species.latinName, species.family)}
                         alt={species.latinName}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading="lazy"
                         onError={() => setImgError(true)}
                     />
                 ) : (

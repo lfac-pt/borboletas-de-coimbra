@@ -1,12 +1,13 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, Suspense, lazy } from 'react';
 import './App.css';
 import { SPECIES_FAMILIES, endangered_eu, endangered_pt, HABITAT_TRANSLATIONS } from './constants';
 import { HABITAT_TYPE_SPRITES } from './utils/habitatTypeIcons';
 import type { Species, SpeciesEcology, SpeciesDetails } from './constants';
 import SpeciesCard from './components/SpeciesCard';
 import Filters from './components/Filters';
-import SpeciesModal from './components/SpeciesModal';
 import { isNewSpeciesInMonth } from './utils/filterUtils';
+
+const SpeciesModal = lazy(() => import('./components/SpeciesModal'));
 
 const App = () => {
   // State initialization from URL
@@ -102,7 +103,7 @@ const App = () => {
           const latinName = key.trim();
           const family = SPECIES_FAMILIES[latinName] || 'Desconhecida';
           const formattedName = latinName.replace(/\//g, '_');
-          const imageKey = `${family}/${formattedName}.jpg`;
+          const imageKey = `${family}/${formattedName}.webp`;
 
           return {
             latinName,
@@ -452,18 +453,20 @@ const App = () => {
       </footer>
 
       {/* Species Detail Modal */}
-      {selectedSpecies && (
-        <SpeciesModal
-          species={selectedSpecies}
-          onClose={() => handleSetSelectedSpecies(null)}
-          hasNext={selectedSpeciesIndex !== -1 && selectedSpeciesIndex < filteredSpecies.length - 1}
-          hasPrev={selectedSpeciesIndex > 0}
-          onNext={handleNextSpecies}
-          onPrev={handlePrevSpecies}
-          allSpecies={speciesList}
-          onSelectSpecies={handleSetSelectedSpecies}
-        />
-      )}
+      <Suspense fallback={null}>
+        {selectedSpecies && (
+          <SpeciesModal
+            species={selectedSpecies}
+            onClose={() => handleSetSelectedSpecies(null)}
+            hasNext={selectedSpeciesIndex !== -1 && selectedSpeciesIndex < filteredSpecies.length - 1}
+            hasPrev={selectedSpeciesIndex > 0}
+            onNext={handleNextSpecies}
+            onPrev={handlePrevSpecies}
+            allSpecies={speciesList}
+            onSelectSpecies={handleSetSelectedSpecies}
+          />
+        )}
+      </Suspense>
     </div>
   );
 };
