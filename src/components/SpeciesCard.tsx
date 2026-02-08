@@ -177,21 +177,25 @@ const SpeciesCard = ({ species, onExpand }: SpeciesCardProps) => {
                     {/* Plant Icon */}
                     <div className="flex items-center justify-center sm:justify-start">
                         {plantPos ? (
-                            <div
-                                className="w-[88px] h-[88px] shrink-0 grayscale hover:grayscale-0 transition-all duration-300 rounded-lg"
+                            <a
+                                href={`https://flora-on.pt/#/1${plantFamily}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-[88px] h-[88px] shrink-0 grayscale hover:grayscale-0 transition-all duration-300 rounded-lg block relative"
                                 style={{
                                     backgroundImage: 'url("imgs/plant_family_sprite.webp")',
                                     backgroundPosition: `${plantPos.x}px ${plantPos.y}px`,
                                     backgroundSize: '352px 1250px',
                                 }}
-                                title={`Plantas: ${plantCommonName || plantFamily || 'N/A'}`}
+                                title={`Plantas: ${plantCommonName || plantFamily || 'N/A'} (Ver no Flora-On)`}
+                                onClick={(e) => e.stopPropagation()}
                             >
                                 {plantFamilyCount > 1 && (
                                     <div className="absolute -top-2 -right-2 bg-white text-forest-green text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm border border-green-200 z-10">
                                         +{plantFamilyCount - 1}
                                     </div>
                                 )}
-                            </div>
+                            </a>
                         ) : (
                             <div className="w-[88px] h-[88px] rounded-lg bg-green-50 flex items-center justify-center text-green-700 shrink-0" title="Plantas: N/A">
                                 <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
