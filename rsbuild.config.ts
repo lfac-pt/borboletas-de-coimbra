@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [pluginReact()],
   html: {
     title: 'Borboletas de Coimbra',
-    favicon: './public/favicon.png',
+    favicon: './public/favicon.webp',
   },
   output: {
     assetPrefix: process.env.NODE_ENV === 'production' ? '/borboletas-de-coimbra/' : '/',

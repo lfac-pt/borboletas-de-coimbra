@@ -321,7 +321,7 @@ const App = () => {
         <div className="absolute bottom-20 right-10 w-64 h-64 rounded-full border border-white/10 opacity-10"></div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10 text-white">
-          <img src="logo.png" alt="Logo" className="w-32 h-32 object-contain mx-auto" />
+          <img src="logo.webp" alt="Logo" className="w-32 h-32 object-contain mx-auto" />
 
           <h1 className="serif-title text-5xl md:text-7xl mb-4 font-bold leading-tight uppercase tracking-tight">
             Borboletas Diurnas <br /> <span className="text-white/80 font-normal normal-case">de Coimbra</span>
