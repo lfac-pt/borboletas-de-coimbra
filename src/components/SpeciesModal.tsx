@@ -186,7 +186,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                             </h3>
                         </div>
 
-                        <div className="flex flex-wrap gap-2 mb-8">
+                        <div className="flex flex-wrap gap-2 mb-4">
                             <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold border border-blue-100">
                                 {species.family}
                             </span>
@@ -214,7 +214,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                         </div>
 
                         {/* Icons Row */}
-                        <div className="flex flex-wrap gap-4 mb-6">
+                        <div className="flex flex-wrap gap-4 mb-4">
                             {/* Habitat Icon */}
                             <div
                                 className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 transition-all duration-300 relative group/icon"
@@ -252,38 +252,58 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                             </div>
 
                             {/* Plant Icons */}
-                            {(species.ecology?.hostPlantFamilies || []).map((family, idx) => {
-                                const plantPos = getPlantFamilySpritePosition(family);
-                                const plantCommonName = getPlantFamilyCommonName(family);
+                            {(() => {
+                                const families = species.ecology?.hostPlantFamilies || [];
+                                const hasTooMany = families.length > 4;
+                                const displayed = hasTooMany ? families.slice(0, 3) : families;
+                                const hidden = hasTooMany ? families.slice(3) : [];
+
                                 return (
-                                    <div
-                                        key={idx}
-                                        className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center transition-all duration-300 relative group/icon"
-                                        title={`Plantas: ${plantCommonName || family || 'N/A'}`}
-                                    >
-                                        {plantPos ? (
+                                    <>
+                                        {displayed.map((family, idx) => {
+                                            const plantPos = getPlantFamilySpritePosition(family);
+                                            const plantCommonName = getPlantFamilyCommonName(family);
+                                            return (
+                                                <div
+                                                    key={idx}
+                                                    className="w-[88px] h-[88px] shrink-0 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center transition-all duration-300 relative group/icon"
+                                                    title={`Plantas: ${plantCommonName || family || 'N/A'}`}
+                                                >
+                                                    {plantPos ? (
+                                                        <div
+                                                            className="w-[88px] h-[88px] shrink-0 rounded-lg"
+                                                            style={{
+                                                                backgroundImage: 'url("imgs/plant_family_sprite.png")',
+                                                                backgroundPosition: `${plantPos.x}px ${plantPos.y}px`,
+                                                                backgroundSize: '352px 1250px',
+                                                            }}
+                                                        />
+                                                    ) : (
+                                                        <svg className="w-8 h-8 text-green-700/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                                        </svg>
+                                                    )}
+                                                </div>
+                                            );
+                                        })}
+                                        {hidden.length > 0 && (
                                             <div
-                                                className="w-[88px] h-[88px] shrink-0 rounded-lg"
-                                                style={{
-                                                    backgroundImage: 'url("imgs/plant_family_sprite.png")',
-                                                    backgroundPosition: `${plantPos.x}px ${plantPos.y}px`,
-                                                    backgroundSize: '352px 1250px',
-                                                }}
-                                            />
-                                        ) : (
-                                            <svg className="w-8 h-8 text-green-700/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                            </svg>
+                                                className="w-[88px] h-[88px] shrink-0 rounded-lg bg-emerald-50/50 border border-emerald-100/50 flex flex-col items-center justify-center text-emerald-700 group/icon hover:bg-emerald-50 transition-colors cursor-help"
+                                                title={`Outras famílias: ${hidden.map(f => getPlantFamilyCommonName(f) || f).join(', ')}`}
+                                            >
+                                                <span className="text-xl font-bold leading-none">+{hidden.length}</span>
+                                                <span className="text-[10px] font-bold uppercase tracking-tight mt-1 opacity-60">Famílias</span>
+                                            </div>
                                         )}
-                                    </div>
+                                    </>
                                 );
-                            })}
+                            })()}
                         </div>
 
                         {/* Similar Species Section (Moved to Right Column) */}
                         {similarSpeciesList && similarSpeciesList.length > 0 && (
-                            <div className="mb-8">
-                                <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-3">Espécies Semelhantes</h4>
+                            <div className="mb-4">
+                                <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">Espécies Semelhantes</h4>
                                 <div className="grid grid-cols-3 gap-3">
                                     {similarSpeciesList.map((sim, idx) => (
                                         <div
@@ -318,7 +338,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                             </div>
                         )}
 
-                        <div className="mt-auto pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-6">
+                        <div className="mt-auto flex flex-col sm:flex-row gap-6">
                             <div className="w-full sm:w-1/3">
                                 <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">Cor Predominante</span>
                                 <div className="flex items-center gap-3">
@@ -359,47 +379,6 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                                             </span>
                                         );
                                     })}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Data Sources */}
-                        <div className="mt-4 pt-4 border-t border-gray-100">
-                            <div className="text-[10px] text-gray-400 leading-relaxed">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    {species.ecology?.sources && species.ecology.sources.length > 0 ? (
-                                        <div>
-                                            <span className="font-medium text-gray-500">Fontes Habitat e Plantas: </span>
-                                            {species.ecology.sources.map((source, idx, arr) => (
-                                                <span key={idx}>
-                                                    <a
-                                                        href={source}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="hover:text-forest-green underline transition-colors"
-                                                        title={source}
-                                                    >
-                                                        {source.replace(/^https?:\/\/(www\.)?/, '').split('/')[0]}
-                                                    </a>
-                                                    {idx < arr.length - 1 && ", "}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    ) : (
-                                        null
-                                    )}
-
-                                    <div>
-                                        <span className="font-medium text-gray-500">Fontes Período de Voo: </span>
-                                        <a
-                                            href="https://www.biodiversity4all.org/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="hover:text-forest-green underline transition-colors"
-                                        >
-                                            Biodiversity4All
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>

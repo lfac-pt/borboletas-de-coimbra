@@ -433,6 +433,18 @@ const App = () => {
               Um guia digital dedicado à identificação e preservação da biodiversidade de lepidópteros na região de Coimbra.
             </p>
           </div>
+
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] uppercase tracking-widest text-gray-500 font-bold">
+            <div className="flex flex-col gap-1 items-center">
+              <span className="text-gray-600 text-[9px]">Fontes de Dados:</span>
+              <div className="flex gap-4">
+                <a href="https://www.biodiversity4all.org/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Biodiversity4All</a>
+                <a href="http://www.naturdata.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Naturdata</a>
+                <a href="https://www.pyrgus.de/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Pyrgus.de</a>
+                <a href="https://www.eurobutterflies.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">EuroButterflies</a>
+              </div>
+            </div>
+          </div>
           <div className="pt-8 border-t border-white/10 text-xs text-gray-500">
             <p>&copy; {new Date().getFullYear()} <a href="https://www.instagram.com/lfac_pt/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Luís Cardoso</a>. Todos os direitos reservados.</p>
           </div>
