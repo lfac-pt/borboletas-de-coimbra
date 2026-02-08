@@ -177,7 +177,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                             </svg>
                         </button>
 
-                        <div className="mb-6 pr-8">
+                        <div className="mb-5 pr-8">
                             <h2 className="serif-title text-3xl md:text-4xl text-gray-900 italic mb-2">
                                 {species.latinName}
                             </h2>
@@ -303,7 +303,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                         {/* Similar Species Section (Moved to Right Column) */}
                         {similarSpeciesList && similarSpeciesList.length > 0 && (
                             <div className="mb-4">
-                                <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">Espécies Semelhantes</h4>
+                                <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-1">Espécies Semelhantes</h4>
                                 <div className="grid grid-cols-3 gap-3">
                                     {similarSpeciesList.map((sim, idx) => (
                                         <div
@@ -338,7 +338,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                             </div>
                         )}
 
-                        <div className="mt-auto flex flex-col sm:flex-row gap-6">
+                        <div className="mt-auto pt-2 border-t border-gray-100 flex flex-col sm:flex-row gap-6">
                             <div className="w-full sm:w-1/3">
                                 <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">Cor Predominante</span>
                                 <div className="flex items-center gap-3">
