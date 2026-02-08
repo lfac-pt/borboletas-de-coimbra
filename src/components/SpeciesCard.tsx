@@ -15,7 +15,7 @@ const SpeciesCard = ({ species, onExpand }: SpeciesCardProps) => {
 
     const getImagePath = (latinName: string, family: string) => {
         const formattedName = latinName.replace(/\//g, '_');
-        return `imgs/sp/${family}/${formattedName}.jpg`;
+        return `imgs/sp/${family}/${formattedName}.webp`;
     };
     const statusPT = endangered_pt[species.latinName as keyof typeof endangered_pt];
     const statusEU = endangered_eu[species.latinName as keyof typeof endangered_eu];
@@ -144,7 +144,7 @@ const SpeciesCard = ({ species, onExpand }: SpeciesCardProps) => {
                         <div
                             className="w-[88px] h-[88px] shrink-0 grayscale hover:grayscale-0 transition-all duration-300 rounded-lg"
                             style={{
-                                backgroundImage: 'url("imgs/habitats.jpg")',
+                                backgroundImage: 'url("imgs/habitats.webp")',
                                 backgroundPosition: `${habitatPos.x}px ${habitatPos.y}px`,
                                 backgroundSize: '352px 192px',
                             }}
@@ -158,7 +158,7 @@ const SpeciesCard = ({ species, onExpand }: SpeciesCardProps) => {
                             <div
                                 className="w-[88px] h-[88px] shrink-0 grayscale hover:grayscale-0 transition-all duration-300 rounded-lg"
                                 style={{
-                                    backgroundImage: 'url("imgs/sizes.png")',
+                                    backgroundImage: 'url("imgs/sizes.webp")',
                                     backgroundPosition: `${sizePos.x}px ${sizePos.y}px`,
                                     backgroundSize: '352px 192px',
                                 }}
@@ -179,7 +179,7 @@ const SpeciesCard = ({ species, onExpand }: SpeciesCardProps) => {
                             <div
                                 className="w-[88px] h-[88px] shrink-0 grayscale hover:grayscale-0 transition-all duration-300 rounded-lg"
                                 style={{
-                                    backgroundImage: 'url("imgs/plant_family_sprite.png")',
+                                    backgroundImage: 'url("imgs/plant_family_sprite.webp")',
                                     backgroundPosition: `${plantPos.x}px ${plantPos.y}px`,
                                     backgroundSize: '352px 1250px',
                                 }}

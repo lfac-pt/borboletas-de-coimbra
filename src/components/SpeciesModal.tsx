@@ -51,7 +51,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
 
     const getImagePath = (latinName: string, family: string) => {
         const formattedName = latinName.replace(/\//g, '_');
-        return `imgs/sp/${family}/${formattedName}.jpg`;
+        return `imgs/sp/${family}/${formattedName}.webp`;
     };
 
     const getStatusColor = (status: string) => {
@@ -223,7 +223,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                                 <div
                                     className="w-[88px] h-[88px] shrink-0 rounded-lg"
                                     style={{
-                                        backgroundImage: 'url("imgs/habitats.jpg")',
+                                        backgroundImage: 'url("imgs/habitats.webp")',
                                         backgroundPosition: `${habitatPos.x}px ${habitatPos.y}px`,
                                         backgroundSize: '352px 192px',
                                     }}
@@ -239,7 +239,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                                     <div
                                         className="w-[88px] h-[88px] shrink-0 rounded-lg"
                                         style={{
-                                            backgroundImage: 'url("imgs/sizes.png")',
+                                            backgroundImage: 'url("imgs/sizes.webp")',
                                             backgroundPosition: `${sizePos.x}px ${sizePos.y}px`,
                                             backgroundSize: '352px 192px',
                                         }}
@@ -273,7 +273,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                                                         <div
                                                             className="w-[88px] h-[88px] shrink-0 rounded-lg"
                                                             style={{
-                                                                backgroundImage: 'url("imgs/plant_family_sprite.png")',
+                                                                backgroundImage: 'url("imgs/plant_family_sprite.webp")',
                                                                 backgroundPosition: `${plantPos.x}px ${plantPos.y}px`,
                                                                 backgroundSize: '352px 1250px',
                                                             }}

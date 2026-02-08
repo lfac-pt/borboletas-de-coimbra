@@ -1,5 +1,5 @@
 // Sprite positions for plant families
-// The plant_family_sprite.png is 2816px × 10000px (4 columns × 13 rows approx)
+// The plant_family_sprite.webp is 2816px × 10000px (4 columns × 13 rows approx)
 // Each cell is 704px × 768px
 // Scaled to 88px icons: backgroundSize is 352px × 1250px, each cell is 88px × 96px
 
