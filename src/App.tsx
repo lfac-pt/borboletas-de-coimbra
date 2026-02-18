@@ -6,6 +6,7 @@ import type { Species, SpeciesEcology, SpeciesDetails } from './constants';
 import SpeciesCard from './components/SpeciesCard';
 import Filters from './components/Filters';
 import { isNewSpeciesInMonth } from './utils/filterUtils';
+import SEO from './components/SEO';
 
 const SpeciesModal = lazy(() => import('./components/SpeciesModal'));
 
@@ -315,6 +316,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO />
       {/* Hero Header */}
       <header className="bg-[#2d6a4f] pt-4 pb-26 px-6 relative overflow-hidden">
         {/* Decorative Circles */}

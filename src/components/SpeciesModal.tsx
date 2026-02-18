@@ -4,6 +4,7 @@ import { getPlantFamilySpritePosition, getPlantFamilyCommonName } from '../utils
 import { getHabitatSpritePosition } from '../utils/habitatTypeIcons';
 import { getSizeSpritePosition } from '../utils/sizeTypeIcons';
 import { endangered_pt, endangered_eu } from '../constants';
+import SEO from './SEO';
 
 interface SpeciesModalProps {
     species: Species;
@@ -102,6 +103,12 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={handleBackdropClick}>
+            <SEO
+                title={`${species.latinName} - Borboletas de Coimbra`}
+                description={`Conheça a ${species.latinName} (${species.commonName || 'Nome comum desconhecido'}). Pertence à família ${species.family}.`}
+                image={getImagePath(species.latinName, species.family)}
+                type="article"
+            />
             <div ref={modalRef} className="bg-white rounded-2xl shadow-2xl w-full max-w-[94vw] max-h-[94vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200">
 
                 <div className="flex flex-col md:flex-row min-h-full items-stretch">

@@ -21,6 +21,9 @@ export default defineConfig({
         },
       ]
       : [],
+    meta: {
+      description: 'Um guia digital dedicado à identificação e preservação da biodiversidade de borboletas na região de Coimbra.',
+    },
   },
   output: {
     assetPrefix: isProd ? '/borboletas-de-coimbra/' : '/',
