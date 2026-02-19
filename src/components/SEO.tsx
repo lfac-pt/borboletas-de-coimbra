@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+
 
 interface SEOProps {
     title?: string;
@@ -20,7 +20,7 @@ const SEO = ({
     const fullImage = image.startsWith('http') ? image : `${siteUrl}${image.startsWith('/') ? '' : '/'}${image}`;
 
     return (
-        <Helmet>
+        <>
             {/* Standard metadata */}
             <title>{title}</title>
             <meta name='description' content={description} />
@@ -39,7 +39,7 @@ const SEO = ({
             <meta name='twitter:title' content={title} />
             <meta name='twitter:description' content={description} />
             <meta name='twitter:image' content={fullImage} />
-        </Helmet>
+        </>
     );
 };
 
