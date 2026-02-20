@@ -376,6 +376,7 @@ export interface SpeciesDetails {
         name: string;
         distinction: string;
     }[];
+    identificationTips?: string;
 }
 
 export interface Species {

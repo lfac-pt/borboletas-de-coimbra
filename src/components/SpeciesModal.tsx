@@ -20,12 +20,14 @@ interface SpeciesModalProps {
 const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allSpecies, onSelectSpecies }: SpeciesModalProps) => {
     const [imgError, setImgError] = useState(false);
     const [prevLatinName, setPrevLatinName] = useState(species.latinName);
+    const [activeTab, setActiveTab] = useState<'tips' | 'similar'>('tips');
     const modalRef = useRef<HTMLDivElement>(null);
 
     // Reset image error state when species changes
     if (species.latinName !== prevLatinName) {
         setPrevLatinName(species.latinName);
         setImgError(false);
+        setActiveTab(species.details?.identificationTips ? 'tips' : 'similar');
     }
 
     // Keyboard navigation
@@ -310,41 +312,93 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                             })()}
                         </div>
 
-                        {/* Similar Species Section (Moved to Right Column) */}
-                        {similarSpeciesList && similarSpeciesList.length > 0 && (
-                            <div className="mb-4">
-                                <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-1">Espécies Semelhantes</h4>
-                                <div className="grid grid-cols-3 gap-3">
-                                    {similarSpeciesList.map((sim, idx) => (
-                                        <div
-                                            key={idx}
-                                            className="group/sim cursor-pointer bg-white rounded-lg border border-gray-100 hover:border-forest-green/30 hover:shadow-md transition-all overflow-hidden flex flex-col"
-                                            onClick={() => onSelectSpecies(sim)}
-                                            title={sim.commonName}
+                        {/* Tabs Section for Identification Tips and Similar Species */}
+                        {((species.details?.identificationTips) || (similarSpeciesList && similarSpeciesList.length > 0)) && (
+                            <div className="mb-6">
+                                {(species.details?.identificationTips && similarSpeciesList && similarSpeciesList.length > 0) ? (
+                                    <div className="flex space-x-2 border-b border-gray-200 mb-4">
+                                        <button
+                                            className={`pb-2 px-1 text-sm font-semibold border-b-2 transition-colors flex items-center gap-2 ${activeTab === 'tips'
+                                                ? 'border-amber-500 text-amber-700'
+                                                : 'border-transparent text-gray-400 hover:text-gray-600 hover:border-gray-300'
+                                                }`}
+                                            onClick={() => setActiveTab('tips')}
                                         >
-                                            <div className="aspect-square w-full bg-gray-100 relative overflow-hidden border-b border-gray-100">
-                                                <img
-                                                    src={getImagePath(sim.latinName, sim.family)}
-                                                    alt={sim.latinName}
-                                                    className="w-full h-full object-cover group-hover/sim:scale-105 transition-transform duration-500"
-                                                    loading="lazy"
-                                                />
-                                            </div>
-                                            <div className="p-3 flex flex-col gap-1">
-                                                <p className="text-xs font-bold text-gray-800 group-hover/sim:text-forest-green transition-colors truncate">
-                                                    {sim.latinName}
-                                                </p>
-                                                {sim.distinction ? (
-                                                    <p className="text-[11px] leading-snug text-gray-500 line-clamp-3">
-                                                        {sim.distinction}
-                                                    </p>
-                                                ) : (
-                                                    <p className="text-[10px] text-gray-400 italic">Sem distinção registada</p>
-                                                )}
-                                            </div>
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            Como Identificar
+                                        </button>
+                                        <button
+                                            className={`pb-2 px-1 text-sm font-semibold border-b-2 transition-colors flex items-center gap-2 ml-4 ${activeTab === 'similar'
+                                                ? 'border-forest-green text-forest-green'
+                                                : 'border-transparent text-gray-400 hover:text-gray-600 hover:border-gray-300'
+                                                }`}
+                                            onClick={() => setActiveTab('similar')}
+                                        >
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                            </svg>
+                                            Espécies Semelhantes
+                                        </button>
+                                    </div>
+                                ) : null}
+
+                                {/* Content for Tips */}
+                                {(activeTab === 'tips' || !(similarSpeciesList && similarSpeciesList.length > 0)) && species.details?.identificationTips && (
+                                    <div>
+                                        {!(similarSpeciesList && similarSpeciesList.length > 0) && (
+                                            <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-2">
+                                                Como Identificar
+                                            </h4>
+                                        )}
+                                        <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-line">
+                                            {species.details.identificationTips}
+                                        </p>
+                                    </div>
+                                )}
+
+                                {/* Content for Similar Species */}
+                                {(activeTab === 'similar' || !species.details?.identificationTips) && similarSpeciesList && similarSpeciesList.length > 0 && (
+                                    <div>
+                                        {!(species.details?.identificationTips) && (
+                                            <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-3">
+                                                Espécies Semelhantes
+                                            </h4>
+                                        )}
+                                        <div className="grid grid-cols-3 gap-3">
+                                            {similarSpeciesList.map((sim, idx) => (
+                                                <div
+                                                    key={idx}
+                                                    className="group/sim cursor-pointer bg-white rounded-lg border border-gray-100 hover:border-forest-green/30 hover:shadow-md transition-all overflow-hidden flex flex-col"
+                                                    onClick={() => onSelectSpecies(sim)}
+                                                    title={sim.commonName}
+                                                >
+                                                    <div className="aspect-square w-full bg-gray-100 relative overflow-hidden border-b border-gray-100">
+                                                        <img
+                                                            src={getImagePath(sim.latinName, sim.family)}
+                                                            alt={sim.latinName}
+                                                            className="w-full h-full object-cover group-hover/sim:scale-105 transition-transform duration-500"
+                                                            loading="lazy"
+                                                        />
+                                                    </div>
+                                                    <div className="p-3 flex flex-col gap-1">
+                                                        <p className="text-xs font-bold text-gray-800 group-hover/sim:text-forest-green transition-colors truncate">
+                                                            {sim.latinName}
+                                                        </p>
+                                                        {sim.distinction ? (
+                                                            <p className="text-[11px] leading-snug text-gray-500 line-clamp-3">
+                                                                {sim.distinction}
+                                                            </p>
+                                                        ) : (
+                                                            <p className="text-[10px] text-gray-400 italic">Sem distinção registada</p>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            ))}
                                         </div>
-                                    ))}
-                                </div>
+                                    </div>
+                                )}
                             </div>
                         )}
 

@@ -10,7 +10,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Pequeno hesperídeo de coloração castanha e cinzenta com padrão marmoreado. Face inferior das asas posteriores com tons esverdeados ou castanhos."
   },
   "Carcharodus baeticus": {
     "sizeCategory": "small",
@@ -48,7 +49,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Fundo alaranjado com bordas escuras. Apresenta manchas branco-prateadas bem definidas ('vírgulas') na face inferior das asas posteriores."
   },
   "Muschampia proto": {
     "sizeCategory": "small",
@@ -77,7 +79,8 @@
         "distinction": "O. sylvanus tem manchas claras nas asas posteriores; face inferior da ponta da antena não é laranja."
       }
     ],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Coloração fulva (laranja). Os machos distinguem-se pela marca androconial negra e espessa na asa anterior. Face inferior esverdeada com manchas amareladas difusas."
   },
   "Pyrgus alveus": {
     "sizeCategory": "small",
@@ -103,7 +106,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Padrão axadrezado preto e branco típico do género Pyrgus. Distinção segura de espécies semelhantes muitas vezes requer exame da genitália."
   },
   "Pyrgus onopordi": {
     "sizeCategory": "small",
@@ -129,7 +133,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Castanha escura com pequenas manchas brancas. Característica face inferior das asas posteriores avermelhada com manchas brancas."
   },
   "Thymelicus acteon": {
     "sizeCategory": "small",
@@ -150,7 +155,8 @@
         "distinction": "T. acteon tem semicírculo de manchas douradas; T. sylvestris tem ponta da antena laranja por baixo."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Pequena, asas laranja-acastanhadas. Fêmeas com semicírculo de manchas douradas na asa anterior (semelhante a raios de sol)."
   },
   "Thymelicus lineola": {
     "sizeCategory": "small",
@@ -177,7 +183,8 @@
         "distinction": "T. sylvestris é menor, sem manchas claras nas asas posteriores; ponta da antena laranja por baixo."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Asas de cor laranja uniforme com margens escuras. Ponta das antenas é laranja na parte inferior (face ventral), distinguindo-se de T. lineola."
   },
   "Aricia cramera": {
     "sizeCategory": "small",
@@ -200,7 +207,8 @@
         "distinction": "Pontos na asa posterior formam um 'dois pontos' (:), sem mancha celular na asa anterior."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Borboleta pequena, castanha com lúnulas laranjas na margem das asas. Face inferior castanha com padrão de pontos pretos rodeados de branco."
   },
   "Aricia montensis": {
     "sizeCategory": "small",
@@ -222,7 +230,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Borboleta pequena com caudas filamentosas longas nas asas posteriores. Face inferior com padrão complexo de faixas castanhas e brancas."
   },
   "Callophrys avis": {
     "sizeCategory": "small",
@@ -237,7 +246,8 @@
         "distinction": "Anel ocular e topo das antenas cor de ferrugem; linha branca quebrada."
       }
     ],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Face inferior verde. Distingue-se de C. rubi pela linha branca fragmentada e 'cabeça' avermelhada (anel ocular ferrugem). Muito localizada."
   },
   "Callophrys rubi": {
     "sizeCategory": "small",
@@ -253,7 +263,8 @@
         "distinction": "Anel ocular branco; antenas pretas; linha branca reduzida a pontos."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Pequena, inconfundível pela cor verde esmeralda na face inferior das asas. Sem caudas."
   },
   "Celastrina argiolus": {
     "sizeCategory": "small",
@@ -268,7 +279,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Azul celeste pálido (machos) ou com margens pretas largas (fêmeas). Face inferior branco-azulada com pequenos traços pretos."
   },
   "Cupido lorquinii": {
     "sizeCategory": "small",
@@ -278,7 +290,8 @@
       "Maio"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Muito pequena. Machos azul-escuro, fêmeas castanhas. Face inferior cinzenta pálida com pequenos pontos pretos."
   },
   "Cupido minimus": {
     "sizeCategory": "small",
@@ -302,7 +315,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Asas de cor escura, com reflexo azul-púrpura nos machos e manchas púrpuras nas fêmeas. Face inferior cinzenta com linha branca."
   },
   "Glaucopsyche alexis": {
     "sizeCategory": "small",
@@ -320,7 +334,8 @@
       "Maio"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Azul violeta. Face inferior caraterística com grandes pontos pretos rodeados de branco na asa anterior ('Melanops' = olhos negros)."
   },
   "Hamearis lucina": {
     "sizeCategory": "small",
@@ -340,7 +355,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Asas castanho-escuras com reflexo violeta. Margens com manchas laranjas. Face inferior com linha submarginal laranja."
   },
   "Lampides boeticus": {
     "sizeCategory": "small",
@@ -360,7 +376,8 @@
         "distinction": "L. boeticus é maior; faixa branca larga e contínua na face inferior da asa posterior."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Azul-violeta (machos) ou castanha com azul (fêmeas). Cauda longa na asa posterior. Face inferior com faixas onduladas brancas e castanhas."
   },
   "Leptotes pirithous": {
     "sizeCategory": "small",
@@ -379,7 +396,8 @@
         "distinction": "L. pirithous é menor; padrão marmoreado sem faixa branca contínua."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Pequena, azulada. Face inferior com padrão marmoreado complexo (típico 'zebra'). Cauda pequena na asa posterior."
   },
   "Lycaena alciphron": {
     "sizeCategory": "small",
@@ -391,7 +409,8 @@
       "Julho"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Machos laranja-acobreado com forte reflexo violeta e manchas pretas. Fêmeas castanhas com manchas laranja e pretas."
   },
   "Lycaena bleusei": {
     "sizeCategory": "small",
@@ -401,7 +420,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Endemismo ibérico semelhante a L. alciphron, mas com coloração e distribuição distintas."
   },
   "Lycaena phlaeas": {
     "sizeCategory": "small",
@@ -416,7 +436,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Asas anteriores de cor laranja vibrante/cobre com manchas pretas e borda escura. Asas posteriores castanhas com banda marginal laranja."
   },
   "Lycaena tityrus": {
     "sizeCategory": "small",
@@ -425,7 +446,8 @@
       "Maio"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Machos castanhos com pontos pretos e ligeiro reflexo esverdeado. Fêmeas laranja com manchas pretas. Face inferior amarelada/cinzenta."
   },
   "Lycaena virgaureae": {
     "sizeCategory": "small",
@@ -448,7 +470,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Machos de azul celeste brilhante inconfundível. Fêmeas castanhas. Margens das asas (fímbrias) axadrezadas de branco e preto."
   },
   "Phengaris alcon": {
     "sizeCategory": "small",
@@ -472,7 +495,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Machos azul-escuro com margem negra larga. Fêmeas castanhas. Espinha na tíbia das patas anteriores (difícil observação)."
   },
   "Polyommatus icarus/celina": {
     "sizeCategory": "small",
@@ -494,7 +518,8 @@
         "distinction": "Possui mancha celular na asa anterior; machos azul-celeste."
       }
     ],
-    "rarity": "very-common"
+    "rarity": "very-common",
+    "identificationTips": "Machos azul-violeta comum. Fêmeas castanhas com ou sem azul. Ponto na célula da face inferior da asa anterior geralmente ausente (presente em P. icarus, variável)."
   },
   "Cyaniris semiargus": {
     "sizeCategory": "small",
@@ -534,7 +559,8 @@
       "Abril"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Muito pequena. Azul-acinzentado com fímbrias axadrezadas. Face inferior cinzenta com grandes pontos pretos."
   },
   "Satyrium esculi": {
     "sizeCategory": "small",
@@ -545,7 +571,8 @@
       "Julho"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Castanha uniforme. Face inferior castanha clara com fina linha branca descontínua. Sem cauda evidente."
   },
   "Satyrium ilicis": {
     "sizeCategory": "small",
@@ -562,7 +589,8 @@
       "Julho"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Castanha. Face inferior com mancha azul no canto anal e linha branca em forma de 'W' bem marcada. Pequena cauda."
   },
   "Thecla betulae": {
     "sizeCategory": "small",
@@ -573,7 +601,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Asas castanhas. Fêmeas com grande mancha laranja na asa anterior. Face inferior laranja vivo com linhas brancas transversais."
   },
   "Tomares ballus": {
     "sizeCategory": "small",
@@ -582,7 +611,8 @@
       "Abril"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Face inferior inconfundível: asa posterior verde marginada de castanho. Face superior laranja (fêmeas) ou escura (machos)."
   },
   "Zizeeria knysna": {
     "sizeCategory": "small",
@@ -593,7 +623,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Pequena, azul-violáceo com largas margens escuras. Face inferior cinzenta monótona com pequenos pontos. Voa baixo junto à relva."
   },
   "Aglais io": {
     "sizeCategory": "medium",
@@ -602,7 +633,8 @@
       "Junho"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Inconfundível pelos grandes ocelos coloridos em cada asa sobre um fundo vermelho-tijolo ('Peacock')."
   },
   "Aglais urticae ": {
     "sizeCategory": "medium",
@@ -625,7 +657,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Grande. Asas castanhas com reflexo azul metalizado (machos). Ocelo laranja característico na asa anterior."
   },
   "Argynnis pandora": {
     "sizeCategory": "medium",
@@ -638,7 +671,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Grande. Face superior laranja com manchas pretas e esverdeada. Face inferior da asa anterior vermelho-rosado e posterior verde com finas linhas prateadas."
   },
   "Argynnis paphia": {
     "sizeCategory": "large",
@@ -649,7 +683,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Grande. Laranja com padrão de manchas pretas. Face inferior da asa posterior esverdeada com faixas prateadas."
   },
   "Boloria dia": {
     "sizeCategory": "medium",
@@ -704,7 +739,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "A única borboleta europeia com duas caudas em cada asa posterior. Asas castanhas com margens laranja e azul."
   },
   "Danaus chrysippus": {
     "sizeCategory": "medium",
@@ -720,7 +756,8 @@
       "Junho"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Grande, inconfundível. Laranja com veias pretas marcadas e margem preta com pontos brancos (Monarca)."
   },
   "Euphydryas aurinia": {
     "sizeCategory": "medium",
@@ -732,7 +769,8 @@
       "Junho"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Padrão em mosaico de manchas laranjas, amarelas e pretas ('damier'). Sem manchas prateadas na face inferior."
   },
   "Euphydryas desfontainii": {
     "sizeCategory": "medium",
@@ -750,7 +788,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Laranja com manchas pretas. Face inferior com manchas nacaradas (prateadas) e uma série de ocelos pós-discais com centro metalizado."
   },
   "Fabriciana niobe": {
     "sizeCategory": "medium",
@@ -770,7 +809,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Asas angulosas, laranja com manchas pretas. Face inferior com grandes manchas prateadas (espelhos) muito visíveis."
   },
   "Libythea celtis": {
     "sizeCategory": "medium",
@@ -779,7 +819,8 @@
       "Maio"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Asas com contorno irregular e 'recortado'. Palpos muito longos projetados para a frente ('snout butterfly')."
   },
   "Limenitis camilla": {
     "sizeCategory": "medium",
@@ -796,7 +837,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Preta com uma faixa branca transversal e reflexo azulado. Face inferior castanha-avermelhada com faixa branca."
   },
   "Melitaea aetherie": {
     "sizeCategory": "medium",
@@ -812,7 +854,8 @@
       "Maio"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Laranja com padrão reticulado preto típico. Banda marginal da face inferior das asas posteriores com pontos pretos nítidos."
   },
   "Melitaea deione": {
     "sizeCategory": "medium",
@@ -826,7 +869,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Semelhante a outras Melitaea. Face inferior com nervuras menos marcadas a negro que M. cinxia."
   },
   "Melitaea didyma": {
     "sizeCategory": "medium",
@@ -837,7 +881,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Machos de cor laranja-avermelhado intenso, fêmeas mais variáveis. Manchas pretas redondas e dispersas."
   },
   "Melitaea celadussa": {
     "sizeCategory": "medium",
@@ -848,7 +893,8 @@
       "Julho"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Laranja escura com padrão negro reticulado denso. Distinção por genitália da M. athalia."
   },
   "Melitaea parthenoides": {
     "sizeCategory": "medium",
@@ -867,7 +913,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Maior que outras Melitaea. Mancha marginal em forma de crescente na asa anterior distintamente maior que as restantes."
   },
   "Melitaea trivia": {
     "sizeCategory": "medium",
@@ -877,7 +924,8 @@
       "Julho"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Banda marginal da asa posterior contendo uma série de pontos triangulares característicos."
   },
   "Nymphalis antiopa": {
     "sizeCategory": "large",
@@ -891,7 +939,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Inconfundível. Asas castanho-púrpura escuro com larga margem amarelo-creme e uma fila de pontos azuis submarginais."
   },
   "Nymphalis polychloros": {
     "sizeCategory": "large",
@@ -905,7 +954,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Laranja com manchas pretas e bordas escuras. Sem mancha branca no ápice da asa anterior (diferença para Aglais urticae)."
   },
   "Polygonia c-album": {
     "sizeCategory": "medium",
@@ -920,7 +970,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Contorno das asas muito irregular, lembrando uma folha seca. Marca branca em forma de 'C' na face inferior das asas posteriores."
   },
   "Speyeria aglaja": {
     "sizeCategory": "medium",
@@ -942,7 +993,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Asas pretas com uma banda vermelha transversal nas anteriores e margem vermelha nas posteriores. Ápice com manchas brancas."
   },
   "Vanessa cardui ": {
     "sizeCategory": "medium",
@@ -961,7 +1013,8 @@
         "distinction": "4 pequenos ocelos na asa posterior; mancha branca no ápice negro."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Laranja-rosado com padrão preto e ápice da asa anterior preto com manchas brancas. Cosmopolita."
   },
   "Vanessa virginiensis": {
     "sizeCategory": "medium",
@@ -980,7 +1033,8 @@
         "distinction": "2 grandes ocelos na asa posterior; mancha laranja no ápice negro."
       }
     ],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Semelhante a V. cardui, mas com dois grandes ocelos na face inferior da asa posterior (em vez de vários pequenos)."
   },
   "Iphiclides feisthamelii": {
     "sizeCategory": "large",
@@ -998,7 +1052,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Grande, branca com riscas pretas longitudinais (zebra). Caudas longas. Ocelo azul e laranja na asa posterior."
   },
   "Papilio machaon": {
     "sizeCategory": "large",
@@ -1016,7 +1071,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "very-common"
+    "rarity": "very-common",
+    "identificationTips": "Grande, amarela com padrão reticulado preto. Mancha vermelha e azul (ocelo) na asa posterior. Caudas presentes."
   },
   "Zerynthia rumina": {
     "sizeCategory": "medium",
@@ -1031,7 +1087,8 @@
       "Junho"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Padrão complexo de manchas amarelas, pretas e vermelhas ('Arlequim'). Sem caudas."
   },
   "Anthocharis cardamines": {
     "sizeCategory": "medium",
@@ -1042,7 +1099,8 @@
       "Maio"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Asas brancas. Machos com a metade distal da asa anterior laranja vivo. Face inferior marmoreada de verde."
   },
   "Anthocharis euphenoides": {
     "sizeCategory": "medium",
@@ -1064,7 +1122,8 @@
       "Julho"
     ],
     "similarSpecies": [],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Grande e branca com veias pretas muito marcadas. Sem manchas pretas adicionais."
   },
   "Colias crocea": {
     "sizeCategory": "medium",
@@ -1079,7 +1138,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "very-common"
+    "rarity": "very-common",
+    "identificationTips": "Amarelo-alaranjado intenso (açafrão) com largas bordas pretas. Mancha laranja na face inferior da asa posterior."
   },
   "Euchloe belemia": {
     "sizeCategory": "medium",
@@ -1092,7 +1152,8 @@
       "Maio"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Branca com ápice preto manchado. Face inferior das asas posteriores com faixas verdes longitudinais ('zebra')."
   },
   "Euchloe crameri": {
     "sizeCategory": "medium",
@@ -1110,7 +1171,8 @@
         "distinction": "Manchas verdes no verso mais irregulares e 'esborratadas', sem linhas geométricas."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Branca com manchas pretas no ápice. Face inferior com manchas verdes irregulares/nacaradas."
   },
   "Euchloe tagis": {
     "sizeCategory": "medium",
@@ -1137,7 +1199,8 @@
         "distinction": "Machos com grande mancha laranja na asa anterior."
       }
     ],
-    "rarity": "very-common"
+    "rarity": "very-common",
+    "identificationTips": "Forma de folha. Machos amarelo-limão com grande mancha laranja na asa anterior."
   },
   "Gonepteryx rhamni ": {
     "sizeCategory": "medium",
@@ -1157,7 +1220,8 @@
         "distinction": "Quase impossível de distinguir em voo de G. cleopatra fêmea."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Forma de folha. Machos amarelo-limão uniforme, fêmeas branco-esverdeadas. Sem mancha laranja evidente."
   },
   "Leptidea sinapis": {
     "sizeCategory": "medium",
@@ -1179,7 +1243,8 @@
         "distinction": "P. rapae é maior e mais robusta, com asas menos ovais."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Branca, corpo frágil e alongado. Mancha cinzenta arredondada no ápice da asa anterior. Voo lento."
   },
   "Pieris brassicae ": {
     "sizeCategory": "medium",
@@ -1206,7 +1271,8 @@
         "distinction": "L. sinapis é muito menor, mais frágil e com asas ovais."
       }
     ],
-    "rarity": "very-common"
+    "rarity": "very-common",
+    "identificationTips": "Grande e branca. Mancha apical preta estende-se pela margem em forma de foice."
   },
   "Pieris napi": {
     "sizeCategory": "medium",
@@ -1223,7 +1289,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Branca. Veias da face inferior das asas marcadas a verde-acinzentado."
   },
   "Pieris rapae": {
     "sizeCategory": "medium",
@@ -1250,7 +1317,8 @@
         "distinction": "Asas com formato mais oval e alongado; aspecto mais frágil e delicado."
       }
     ],
-    "rarity": "very-common"
+    "rarity": "very-common",
+    "identificationTips": "Branca. Mancha apical preta pequena, não se estende muito pela margem. Menor que P. brassicae."
   },
   "Pontia daplidice": {
     "sizeCategory": "medium",
@@ -1272,7 +1340,8 @@
         "distinction": "Manchas verdes no verso mais geométricas, densas e definidas."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Branca com padrão axadrezado preto. Face inferior com padrão polígono verde e branco característico."
   },
   "Arethusana arethusa": {
     "sizeCategory": "medium",
@@ -1295,7 +1364,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Grande e preta com uma larga banda branca transversal em todas as asas. Face inferior críptica com banda branca visível."
   },
   "Coenonympha arcania": {
     "sizeCategory": "medium",
@@ -1311,7 +1381,8 @@
         "distinction": "Faixa branca larga no verso da asa posterior; ocelos redondos."
       }
     ],
-    "rarity": "rare"
+    "rarity": "rare",
+    "identificationTips": "Asa anterior laranja com borda escura. Face inferior com banda branca e um ocelo apical com anel amarelo."
   },
   "Coenonympha dorus": {
     "sizeCategory": "medium",
@@ -1328,7 +1399,8 @@
         "distinction": "Linha de ocelos em ziguezague no verso da asa posterior."
       }
     ],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Face inferior da asa posterior com uma linha de ocelos bem marcados e bordo metálico."
   },
   "Coenonympha glycerion iphioides": {
     "sizeCategory": "",
@@ -1347,7 +1419,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Pequena, laranja pálido. Pequeno ocelo no ápice da asa anterior, por vezes pouco visível."
   },
   "Erebia triarius": {
     "sizeCategory": "medium",
@@ -1378,7 +1451,8 @@
         "distinction": "Linha discal em 'V' serrilhada; sem os dois pontos brancos entre ocelos."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Castanha. Face inferior muito contrastada com linhas em zig-zag pretas e brancas ('Striped Grayling')."
   },
   "Hipparchia hermione": {
     "sizeCategory": "medium",
@@ -1402,7 +1476,8 @@
         "distinction": "Faixa branca larga e difusa; sem os dois pontos brancos."
       }
     ],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Grande, castanha. Banda pós-discal branca larga na face inferior da asa posterior, com 'nariz' proeminente."
   },
   "Hipparchia semele": {
     "sizeCategory": "medium",
@@ -1428,7 +1503,8 @@
         "distinction": "Sem os dois pontos brancos distintos entre os ocelos da asa anterior."
       }
     ],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Castanha com áreas ocre-alaranjadas. Face inferior críptica, variada."
   },
   "Hipparchia statilinus": {
     "sizeCategory": "medium",
@@ -1452,7 +1528,8 @@
         "distinction": "Dois pontos brancos entre os ocelos da asa anterior."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Castanha muito escura. Face inferior críptica e uniforme. Voa no final do verão."
   },
   "Hyponephele lupinus": {
     "sizeCategory": "medium",
@@ -1488,7 +1565,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "very-common"
+    "rarity": "very-common",
+    "identificationTips": "Laranja com padrão reticulado castanho. Grande ocelo no ápice da asa anterior e série de ocelos na posterior."
   },
   "Maniola jurtina": {
     "sizeCategory": "medium",
@@ -1507,7 +1585,8 @@
         "distinction": "M. jurtina é maior; fêmea com mancha laranja menos definida e sem 'cerca' escura."
       }
     ],
-    "rarity": "very-common"
+    "rarity": "very-common",
+    "identificationTips": "Castanha. Fêmeas com mancha laranja na asa anterior. Ocelo apical pequeno. Face inferior mais clara."
   },
   "Melanargia ines": {
     "sizeCategory": "medium",
@@ -1530,7 +1609,8 @@
         "distinction": "Barra negra na célula da asa anterior não atinge a veia."
       }
     ],
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "identificationTips": "Branca com padrão reticulado preto. Ocelos na face inferior com pupila azulada."
   },
   "Melanargia lachesis": {
     "sizeCategory": "medium",
@@ -1554,7 +1634,8 @@
         "distinction": "Célula da asa anterior branca, sem barra negra."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Branca com padrão preto. Distingue-se pela grande mancha branca na base da asa (sem barra preta transversal)."
   },
   "Melanargia occitanica": {
     "sizeCategory": "medium",
@@ -1576,7 +1657,8 @@
         "distinction": "Possui barra negra na célula da asa anterior."
       }
     ],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Branca com padrão negro. Veias da face inferior das asas avermelhadas (cor de ferrugem)."
   },
   "Melanargia russiae": {
     "sizeCategory": "medium",
@@ -1598,7 +1680,8 @@
       "Setembro"
     ],
     "similarSpecies": [],
-    "rarity": "very-common"
+    "rarity": "very-common",
+    "identificationTips": "Castanha com manchas laranja (subespécie aegeria). Ocelo no ápice da asa anterior e três na posterior."
   },
   "Pyronia bathseba": {
     "sizeCategory": "medium",
@@ -1609,7 +1692,8 @@
       "Junho"
     ],
     "similarSpecies": [],
-    "rarity": "very-common"
+    "rarity": "very-common",
+    "identificationTips": "Castanha com mancha laranja na asa anterior contendo um ocelo duplo. Faixa branca distinta na face inferior da asa posterior."
   },
   "Pyronia cecilia": {
     "sizeCategory": "medium",
@@ -1627,7 +1711,8 @@
         "distinction": "Menor que M. jurtina; mancha laranja bem delimitada por borda escura ('cercada')."
       }
     ],
-    "rarity": "very-common"
+    "rarity": "very-common",
+    "identificationTips": "Laranja com largas bordas castanhas. Machos sem ocelos na asa posterior. Marca androconial dividida por veias laranjas."
   },
   "Pyronia tithonus": {
     "sizeCategory": "medium",
@@ -1638,7 +1723,8 @@
       "Agosto"
     ],
     "similarSpecies": [],
-    "rarity": "common"
+    "rarity": "common",
+    "identificationTips": "Laranja com bordas castanhas. Ocelo duplo no ápice da asa anterior. Pequenos pontos brancos na face inferior."
   },
   "Satyrus actaea": {
     "sizeCategory": "medium",
