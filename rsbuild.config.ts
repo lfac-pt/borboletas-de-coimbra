@@ -26,6 +26,6 @@ export default defineConfig({
     },
   },
   output: {
-    assetPrefix: isProd ? '/borboletas-de-coimbra/' : '/',
+    assetPrefix: '/',
   },
 });

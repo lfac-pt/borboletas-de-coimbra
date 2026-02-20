@@ -11,11 +11,11 @@ interface SEOProps {
 const SEO = ({
     title = 'Borboletas de Coimbra',
     description = 'Um guia digital dedicado à identificação e preservação da biodiversidade de borboletas na região de Coimbra.',
-    image = '/borboletas-de-coimbra/logo.webp', // Default absolute path for production
+    image = '/logo.webp', // Default absolute path for production
     url,
     type = 'website'
 }: SEOProps) => {
-    const siteUrl = 'https://lfac-pt.github.io/borboletas-de-coimbra';
+    const siteUrl = 'https://borboletasdecoimbra.pt';
     const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
     const fullImage = image.startsWith('http') ? image : `${siteUrl}${image.startsWith('/') ? '' : '/'}${image}`;
 
