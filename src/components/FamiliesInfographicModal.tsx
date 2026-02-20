@@ -125,7 +125,7 @@ const FamiliesInfographicModal = ({ onClose }: FamiliesInfographicModalProps) =>
                                 As 5 Famílias
                             </h2>
                             <p className="text-sm md:text-base text-gray-500 font-light max-w-2xl mt-2 leading-relaxed">
-                                Descubra como distinguir os 5 maiores grupos de borboletas diurnas que podemos encontrar na região. Cada família tem características morfológicas e de comportamentos únicos.
+                                Descubra como distinguir as 5 famílias de borboletas diurnas que podemos encontrar na região. Cada uma com características morfológicas e comportamentos únicos.
                             </p>
                         </div>
                         <button

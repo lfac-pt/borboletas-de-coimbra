@@ -280,10 +280,14 @@ const App = () => {
     };
   }, [speciesList]);
 
+  const validSpecies = useMemo(() => {
+    return speciesList.filter(s => (s.details?.months.length ?? 0) > 0);
+  }, [speciesList]);
+
   // Derived stats
   const familiesCount = useMemo(() => {
-    return new Set(filteredSpecies.map(s => s.family)).size;
-  }, [filteredSpecies]);
+    return new Set(validSpecies.map(s => s.family)).size;
+  }, [validSpecies]);
 
   const monthCounts = useMemo(() => {
     const counts: Record<string, number> = {};
@@ -338,7 +342,7 @@ const App = () => {
 
           <div className="flex justify-center items-end gap-12 text-white">
             <div className="text-center">
-              <span className="block text-4xl font-bold">{filteredSpecies.length}</span>
+              <span className="block text-4xl font-bold">{validSpecies.length}</span>
               <span className="text-xs uppercase tracking-widest text-white/50 font-semibold">Espécies</span>
             </div>
             <button
@@ -347,9 +351,9 @@ const App = () => {
               aria-label="Ver Infografia das Famílias"
             >
               <span className="block text-4xl font-bold group-hover:text-[#f4d47c] transition-colors">{familiesCount}</span>
-              <span className="text-xs uppercase tracking-widest text-white/50 font-semibold group-hover:text-[#f4d47c] transition-colors flex items-center justify-center gap-1">
+              <span className="relative inline-block text-xs uppercase tracking-widest text-white/50 font-semibold group-hover:text-[#f4d47c] transition-colors">
                 Famílias
-                <svg className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-3.5 h-3.5 absolute -right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </span>
@@ -379,7 +383,7 @@ const App = () => {
           onSortChange={setSortBy}
           onOrderChange={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}
           monthCounts={monthCounts}
-          totalCount={speciesList.filter(s => (s.details?.months.length ?? 0) > 0).length}
+          totalCount={validSpecies.length}
           // Advanced filter props
           selectedSize={selectedSize}
           setSelectedSize={setSelectedSize}
