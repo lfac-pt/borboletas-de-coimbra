@@ -1,1201 +1,743 @@
 {
   "Aglais io": {
     "habitatType": "Generalist",
-    "hostPlantFamilies": [
-      "Urticaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Nymphalis_io_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Urtica dioica"
-    ]
+    "hostPlantFamilies": ["Urticaceae"],
+    "sources": ["https://www.pyrgus.de/Nymphalis_io_en.html"],
+    "hostPlantSpecies": {
+      "Urticaceae": ["Urtica dioica"]
+    }
   },
   "Aglais urticae ": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Urticaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Nymphalis_urticae_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Urticaceae"],
+    "sources": ["https://www.pyrgus.de/Nymphalis_urticae_en.html"],
+    "hostPlantSpecies": {}
   },
   "Anthocharis cardamines": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Brassicaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Anthocharis_cardamines_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Cardamine pratensis",
-      "Alliaria petiolata"
-    ]
+    "hostPlantFamilies": ["Brassicaceae"],
+    "sources": ["https://www.pyrgus.de/Anthocharis_cardamines_en.html"],
+    "hostPlantSpecies": {
+      "Brassicaceae": ["Cardamine pratensis", "Alliaria petiolata"]
+    }
   },
   "Anthocharis euphenoides": {
     "habitatType": "Scrubland",
-    "hostPlantFamilies": [
-      "Brassicaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Anthocharis_euphenoides_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Brassicaceae"],
+    "sources": ["https://www.pyrgus.de/Anthocharis_euphenoides_en.html"],
+    "hostPlantSpecies": {}
   },
   "Apatura ilia": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Salicaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Apatura_ilia_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Salix atrocinerea",
-      "Populus tremula"
-    ]
+    "hostPlantFamilies": ["Salicaceae"],
+    "sources": ["https://www.pyrgus.de/Apatura_ilia_en.html"],
+    "hostPlantSpecies": {
+      "Salicaceae": ["Salix atrocinerea", "Populus tremula"]
+    }
   },
   "Aporia crataegi": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Rosaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Aporia_crataegi_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Crataegus monogyna",
-      "Prunus spinosa"
-    ]
+    "hostPlantFamilies": ["Rosaceae"],
+    "sources": ["https://www.pyrgus.de/Aporia_crataegi_en.html"],
+    "hostPlantSpecies": {
+      "Rosaceae": ["Crataegus monogyna", "Prunus spinosa"]
+    }
   },
   "Arethusana arethusa": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Arethusana_arethusa_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Arethusana_arethusa_en.html"],
+    "hostPlantSpecies": {}
   },
   "Argynnis pandora": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Violaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Argynnis_pandora_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Viola spp."
-    ]
+    "hostPlantFamilies": ["Violaceae"],
+    "sources": ["https://www.pyrgus.de/Argynnis_pandora_en.html"],
+    "hostPlantSpecies": {
+      "Violaceae": ["Viola spp."]
+    }
   },
   "Argynnis paphia": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Violaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Argynnis_paphia_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Viola spp."
-    ]
+    "hostPlantFamilies": ["Violaceae"],
+    "sources": ["https://www.pyrgus.de/Argynnis_paphia_en.html"],
+    "hostPlantSpecies": {
+      "Violaceae": ["Viola spp."]
+    }
   },
   "Aricia cramera": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Cistaceae",
-      "Geraniaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Polyommatus_cramera_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Erodium spp.",
-      "Geranium spp.",
-      "Helianthemum spp."
-    ]
+    "hostPlantFamilies": ["Cistaceae", "Geraniaceae"],
+    "sources": ["https://www.pyrgus.de/Polyommatus_cramera_en.html"],
+    "hostPlantSpecies": {
+      "Geraniaceae": ["Erodium spp.", "Geranium spp."],
+      "Cistaceae": ["Helianthemum spp."]
+    }
   },
   "Aricia montensis": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Cistaceae",
-      "Geraniaceae"
-    ],
+    "hostPlantFamilies": ["Cistaceae", "Geraniaceae"],
     "sources": [
       "https://www.asturnatura.com/especie/aricia-montensis",
       "https://lepidoptera.eu/species/8213"
     ],
-    "hostPlantSpecies": []
+    "hostPlantSpecies": {}
   },
   "Boloria dia": {
     "habitatType": "Wetland",
-    "hostPlantFamilies": [
-      "Violaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Boloria_dia_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Violaceae"],
+    "sources": ["https://www.pyrgus.de/Boloria_dia_en.html"],
+    "hostPlantSpecies": {}
   },
   "Boloria euphrosyne": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Violaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Boloria_euphrosyne_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Violaceae"],
+    "sources": ["https://www.pyrgus.de/Boloria_euphrosyne_en.html"],
+    "hostPlantSpecies": {}
   },
   "Boloria selene": {
     "habitatType": "Wetland",
-    "hostPlantFamilies": [
-      "Violaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Boloria_selene_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Violaceae"],
+    "sources": ["https://www.pyrgus.de/Boloria_selene_en.html"],
+    "hostPlantSpecies": {}
   },
   "Brenthis daphne": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Rosaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Brenthis_daphne_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Rosaceae"],
+    "sources": ["https://www.pyrgus.de/Brenthis_daphne_en.html"],
+    "hostPlantSpecies": {}
   },
   "Brenthis hecate": {
     "habitatType": "Wetland",
-    "hostPlantFamilies": [
-      "Rosaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Brenthis_hecate_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Rosaceae"],
+    "sources": ["https://www.pyrgus.de/Brenthis_hecate_en.html"],
+    "hostPlantSpecies": {}
   },
   "Brenthis ino": {
     "habitatType": "Wetland",
-    "hostPlantFamilies": [
-      "Rosaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Brenthis_ino_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Rosaceae"],
+    "sources": ["https://www.pyrgus.de/Brenthis_ino_en.html"],
+    "hostPlantSpecies": {}
   },
   "Brintesia circe": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Aulocera_circe_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Brachypodium spp.",
-      "Festuca spp."
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Aulocera_circe_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Brachypodium spp.", "Festuca spp."]
+    }
   },
   "Cacyreus marshalli": {
     "habitatType": "Urban/Agricultural",
-    "hostPlantFamilies": [
-      "Geraniaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Cacyreus_marshalli_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Pelargonium spp."
-    ]
+    "hostPlantFamilies": ["Geraniaceae"],
+    "sources": ["https://www.pyrgus.de/Cacyreus_marshalli_en.html"],
+    "hostPlantSpecies": {
+      "Geraniaceae": ["Pelargonium spp."]
+    }
   },
   "Callophrys avis": {
     "habitatType": "Scrubland",
-    "hostPlantFamilies": [
-      "Ericaceae",
-      "Coriariaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Callophrys_avis_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Arbutus unedo"
-    ]
+    "hostPlantFamilies": ["Ericaceae", "Coriariaceae"],
+    "sources": ["https://www.pyrgus.de/Callophrys_avis_en.html"],
+    "hostPlantSpecies": {
+      "Ericaceae": ["Arbutus unedo"]
+    }
   },
   "Callophrys rubi": {
     "habitatType": "Scrubland",
-    "hostPlantFamilies": [
-      "Fabaceae",
-      "Cistaceae",
-      "Ericaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Callophrys_rubi_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Ulex spp.",
-      "Cytisus spp."
-    ]
+    "hostPlantFamilies": ["Fabaceae", "Cistaceae", "Ericaceae"],
+    "sources": ["https://www.pyrgus.de/Callophrys_rubi_en.html"],
+    "hostPlantSpecies": {
+      "Fabaceae": ["Ulex spp.", "Cytisus spp."]
+    }
   },
   "Carcharodus alceae": {
     "habitatType": "Generalist",
-    "hostPlantFamilies": [
-      "Malvaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Carcharodus_alceae_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Malva sylvestris"
-    ]
+    "hostPlantFamilies": ["Malvaceae"],
+    "sources": ["https://www.pyrgus.de/Carcharodus_alceae_en.html"],
+    "hostPlantSpecies": {
+      "Malvaceae": ["Malva sylvestris"]
+    }
   },
   "Carcharodus baeticus": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Lamiaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Muschampia_baeticus_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Lamiaceae"],
+    "sources": ["https://www.pyrgus.de/Muschampia_baeticus_en.html"],
+    "hostPlantSpecies": {}
   },
   "Carcharodus tripolinus": {
     "habitatType": "Coastal",
-    "hostPlantFamilies": [
-      "Malvaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Carcharodus_tripolinus_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Malvaceae"],
+    "sources": ["https://www.pyrgus.de/Carcharodus_tripolinus_en.html"],
+    "hostPlantSpecies": {}
   },
   "Celastrina argiolus": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Fabaceae",
-      "Rhamnaceae",
-      "Ericaceae",
-      "Lythraceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Celastrina_argiolus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Hedera helix",
-      "Rubus ulmifolius",
-      "Ilex aquifolium"
-    ]
+    "hostPlantFamilies": ["Fabaceae", "Rhamnaceae", "Ericaceae", "Lythraceae"],
+    "sources": ["https://www.pyrgus.de/Celastrina_argiolus_en.html"],
+    "hostPlantSpecies": {
+      "Ericaceae": ["Hedera helix"],
+      "Lythraceae": ["Rubus ulmifolius"],
+      "Rhamnaceae": ["Ilex aquifolium"]
+    }
   },
   "Charaxes jasius": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Ericaceae",
-      "Santalaceae",
-      "Solanaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Charaxes_jasius_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Arbutus unedo"
-    ]
+    "hostPlantFamilies": ["Ericaceae", "Santalaceae", "Solanaceae"],
+    "sources": ["https://www.pyrgus.de/Charaxes_jasius_en.html"],
+    "hostPlantSpecies": {
+      "Ericaceae": ["Arbutus unedo"]
+    }
   },
   "Coenonympha arcania": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Coenonympha_arcania_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Melica ciliata"
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Coenonympha_arcania_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Melica ciliata"]
+    }
   },
   "Coenonympha dorus": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Coenonympha_dorus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Agrostis spp.",
-      "Festuca spp."
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Coenonympha_dorus_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Agrostis spp.", "Festuca spp."]
+    }
   },
   "Coenonympha glycerion iphioides": {
     "habitatType": "Wetland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Coenonympha_glycerion_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Coenonympha_glycerion_en.html"],
+    "hostPlantSpecies": {}
   },
   "Coenonympha pamphilus": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Coenonympha_pamphilus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Poa annua",
-      "Festuca spp."
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Coenonympha_pamphilus_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Poa annua", "Festuca spp."]
+    }
   },
   "Colias crocea": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Fabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Colias_crocea_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Medicago sativa",
-      "Trifolium spp."
-    ]
+    "hostPlantFamilies": ["Fabaceae"],
+    "sources": ["https://www.pyrgus.de/Colias_crocea_en.html"],
+    "hostPlantSpecies": {
+      "Fabaceae": ["Medicago sativa", "Trifolium spp."]
+    }
   },
   "Cupido lorquinii": {
     "habitatType": "Scrubland",
-    "hostPlantFamilies": [
-      "Fabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Cupido_lorquinii_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Ulex spp."
-    ]
+    "hostPlantFamilies": ["Fabaceae"],
+    "sources": ["https://www.pyrgus.de/Cupido_lorquinii_en.html"],
+    "hostPlantSpecies": {
+      "Fabaceae": ["Ulex spp."]
+    }
   },
   "Cupido minimus": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Fabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Cupido_minimus_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Fabaceae"],
+    "sources": ["https://www.pyrgus.de/Cupido_minimus_en.html"],
+    "hostPlantSpecies": {}
   },
   "Cyaniris semiargus": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Plumbaginaceae",
-      "Fabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Polyommatus_semiargus_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Plumbaginaceae", "Fabaceae"],
+    "sources": ["https://www.pyrgus.de/Polyommatus_semiargus_en.html"],
+    "hostPlantSpecies": {}
   },
   "Danaus chrysippus": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Asclepiadaceae",
-      "Apocynaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Danaus_chrysippus_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Asclepiadaceae", "Apocynaceae"],
+    "sources": ["https://www.pyrgus.de/Danaus_chrysippus_en.html"],
+    "hostPlantSpecies": {}
   },
   "Danaus plexippus": {
     "habitatType": "Coastal",
-    "hostPlantFamilies": [
-      "Asclepiadaceae",
-      "Apocynaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Danaus_plexippus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Gomphocarpus fruticosus"
-    ]
+    "hostPlantFamilies": ["Asclepiadaceae", "Apocynaceae"],
+    "sources": ["https://www.pyrgus.de/Danaus_plexippus_en.html"],
+    "hostPlantSpecies": {
+      "Asclepiadaceae": ["Gomphocarpus fruticosus"]
+    }
   },
   "Erebia triarius": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Poaceae",
-      "Cyperaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Erebia_triarius_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Poaceae", "Cyperaceae"],
+    "sources": ["https://www.pyrgus.de/Erebia_triarius_en.html"],
+    "hostPlantSpecies": {}
   },
   "Erynnis tages": {
     "habitatType": "Urban/Agricultural",
-    "hostPlantFamilies": [
-      "Fabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Erynnis_tages_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Fabaceae"],
+    "sources": ["https://www.pyrgus.de/Erynnis_tages_en.html"],
+    "hostPlantSpecies": {}
   },
   "Euchloe belemia": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Brassicaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Euchloe_belemia_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Sisymbrium spp.",
-      "Biscutella spp."
-    ]
+    "hostPlantFamilies": ["Brassicaceae"],
+    "sources": ["https://www.pyrgus.de/Euchloe_belemia_en.html"],
+    "hostPlantSpecies": {
+      "Brassicaceae": ["Sisymbrium spp.", "Biscutella spp."]
+    }
   },
   "Euchloe crameri": {
     "habitatType": "Scrubland",
-    "hostPlantFamilies": [
-      "Brassicaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Euchloe_crameri_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Sinapis alba",
-      "Biscutella spp."
-    ]
+    "hostPlantFamilies": ["Brassicaceae"],
+    "sources": ["https://www.pyrgus.de/Euchloe_crameri_en.html"],
+    "hostPlantSpecies": {
+      "Brassicaceae": ["Sinapis alba", "Biscutella spp."]
+    }
   },
   "Euchloe tagis": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Brassicaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Euchloe_tagis_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Brassicaceae"],
+    "sources": ["https://www.pyrgus.de/Euchloe_tagis_en.html"],
+    "hostPlantSpecies": {}
   },
   "Eumedonia eumedon": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Geraniaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Polyommatus_eumedon_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Geraniaceae"],
+    "sources": ["https://www.pyrgus.de/Polyommatus_eumedon_en.html"],
+    "hostPlantSpecies": {}
   },
   "Euphydryas aurinia": {
     "habitatType": "Wetland",
-    "hostPlantFamilies": [
-      "Caprifoliaceae",
-      "Dipsacaceae",
-      "Gentianaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Euphydryas_aurinia_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Lonicera periclymenum",
-      "Scabiosa spp."
-    ]
+    "hostPlantFamilies": ["Caprifoliaceae", "Dipsacaceae", "Gentianaceae"],
+    "sources": ["https://www.pyrgus.de/Euphydryas_aurinia_en.html"],
+    "hostPlantSpecies": {
+      "Caprifoliaceae": ["Lonicera periclymenum"],
+      "Dipsacaceae": ["Scabiosa spp."]
+    }
   },
   "Euphydryas desfontainii": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Dipsacaceae",
-      "Caprifoliaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Euphydryas_desfontainii_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Dipsacaceae", "Caprifoliaceae"],
+    "sources": ["https://www.pyrgus.de/Euphydryas_desfontainii_en.html"],
+    "hostPlantSpecies": {}
   },
   "Fabriciana adippe": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Violaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Argynnis_adippe_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Viola spp."
-    ]
+    "hostPlantFamilies": ["Violaceae"],
+    "sources": ["https://www.pyrgus.de/Argynnis_adippe_en.html"],
+    "hostPlantSpecies": {
+      "Violaceae": ["Viola spp."]
+    }
   },
   "Fabriciana niobe": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Violaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Argynnis_niobe_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Violaceae"],
+    "sources": ["https://www.pyrgus.de/Argynnis_niobe_en.html"],
+    "hostPlantSpecies": {}
   },
   "Favonius quercus": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Fagaceae",
-      "Rosaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Favonius_quercus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Quercus suber",
-      "Quercus robur"
-    ]
+    "hostPlantFamilies": ["Fagaceae", "Rosaceae"],
+    "sources": ["https://www.pyrgus.de/Favonius_quercus_en.html"],
+    "hostPlantSpecies": {
+      "Fagaceae": ["Quercus suber", "Quercus robur"]
+    }
   },
   "Gegenes nostrodamus": {
     "habitatType": "Coastal",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Gegenes_nostrodamus_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Gegenes_nostrodamus_en.html"],
+    "hostPlantSpecies": {}
   },
   "Glaucopsyche alexis": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Fabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Glaucopsyche_alexis_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Fabaceae"],
+    "sources": ["https://www.pyrgus.de/Glaucopsyche_alexis_en.html"],
+    "hostPlantSpecies": {}
   },
   "Glaucopsyche melanops": {
     "habitatType": "Scrubland",
-    "hostPlantFamilies": [
-      "Fabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Glaucopsyche_melanops_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Cytisus multiflorus",
-      "Ulex spp."
-    ]
+    "hostPlantFamilies": ["Fabaceae"],
+    "sources": ["https://www.pyrgus.de/Glaucopsyche_melanops_en.html"],
+    "hostPlantSpecies": {
+      "Fabaceae": ["Cytisus multiflorus", "Ulex spp."]
+    }
   },
   "Gonepteryx cleopatra": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Rhamnaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Gonepteryx_cleopatra_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Rhamnus alaternus"
-    ]
+    "hostPlantFamilies": ["Rhamnaceae"],
+    "sources": ["https://www.pyrgus.de/Gonepteryx_cleopatra_en.html"],
+    "hostPlantSpecies": {
+      "Rhamnaceae": ["Rhamnus alaternus"]
+    }
   },
   "Gonepteryx rhamni ": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Rhamnaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Gonepteryx_rhamni_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Rhamnus alaternus",
-      "Frangula alnus"
-    ]
+    "hostPlantFamilies": ["Rhamnaceae"],
+    "sources": ["https://www.pyrgus.de/Gonepteryx_rhamni_en.html"],
+    "hostPlantSpecies": {
+      "Rhamnaceae": ["Rhamnus alaternus", "Frangula alnus"]
+    }
   },
   "Hamearis lucina": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Primulaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Hamearis_lucina_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Primulaceae"],
+    "sources": ["https://www.pyrgus.de/Hamearis_lucina_en.html"],
+    "hostPlantSpecies": {}
   },
   "Hesperia comma": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Hesperia_comma_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Festuca ovina"
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Hesperia_comma_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Festuca ovina"]
+    }
   },
   "Hipparchia fidia": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Hipparchia_fidia_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Brachypodium spp.",
-      "Festuca spp."
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Hipparchia_fidia_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Brachypodium spp.", "Festuca spp."]
+    }
   },
   "Hipparchia hermione": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Hipparchia_hermione_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Holcus lanatus"
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Hipparchia_hermione_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Holcus lanatus"]
+    }
   },
   "Hipparchia semele": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Hipparchia_semele_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Festuca spp."
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Hipparchia_semele_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Festuca spp."]
+    }
   },
   "Hipparchia statilinus": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Fagaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Hipparchia_statilinus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Festuca spp.",
-      "Bromus spp."
-    ]
+    "hostPlantFamilies": ["Fagaceae"],
+    "sources": ["https://www.pyrgus.de/Hipparchia_statilinus_en.html"],
+    "hostPlantSpecies": {
+      "Fagaceae": ["Festuca spp.", "Bromus spp."]
+    }
   },
   "Hyponephele lupinus": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Hyponephele_lupinus_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Hyponephele_lupinus_en.html"],
+    "hostPlantSpecies": {}
   },
   "Hyponephele lycaon": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Hyponephele_lycaon_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Hyponephele_lycaon_en.html"],
+    "hostPlantSpecies": {}
   },
   "Iphiclides feisthamelii": {
     "habitatType": "Urban/Agricultural",
-    "hostPlantFamilies": [
-      "Rosaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Iphiclides_feisthamelii_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Prunus dulcis",
-      "Prunus spinosa",
-      "Pyrus communis"
-    ]
+    "hostPlantFamilies": ["Rosaceae"],
+    "sources": ["https://www.pyrgus.de/Iphiclides_feisthamelii_en.html"],
+    "hostPlantSpecies": {
+      "Rosaceae": ["Prunus dulcis", "Prunus spinosa", "Pyrus communis"]
+    }
   },
   "Issoria lathonia": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Violaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Issoria_lathonia_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Viola spp."
-    ]
+    "hostPlantFamilies": ["Violaceae"],
+    "sources": ["https://www.pyrgus.de/Issoria_lathonia_en.html"],
+    "hostPlantSpecies": {
+      "Violaceae": ["Viola spp."]
+    }
   },
   "Laeosopis roboris": {
     "habitatType": "Wetland",
-    "hostPlantFamilies": [
-      "Oleaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Laeosopis_roboris_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Fraxinus angustifolia"
-    ]
+    "hostPlantFamilies": ["Oleaceae"],
+    "sources": ["https://www.pyrgus.de/Laeosopis_roboris_en.html"],
+    "hostPlantSpecies": {
+      "Oleaceae": ["Fraxinus angustifolia"]
+    }
   },
   "Lampides boeticus": {
     "habitatType": "Urban/Agricultural",
-    "hostPlantFamilies": [
-      "Fabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Lampides_boeticus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Spartium junceum",
-      "Colutea arborescens"
-    ]
+    "hostPlantFamilies": ["Fabaceae"],
+    "sources": ["https://www.pyrgus.de/Lampides_boeticus_en.html"],
+    "hostPlantSpecies": {
+      "Fabaceae": ["Spartium junceum", "Colutea arborescens"]
+    }
   },
   "Lasiommata maera": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Lasiommata_maera_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Lasiommata_maera_en.html"],
+    "hostPlantSpecies": {}
   },
   "Lasiommata megera": {
     "habitatType": "Generalist",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Lasiommata_megera_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Dactylis glomerata",
-      "Poa spp."
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Lasiommata_megera_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Dactylis glomerata", "Poa spp."]
+    }
   },
   "Leptidea sinapis": {
     "habitatType": "Wetland",
-    "hostPlantFamilies": [
-      "Fabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Leptidea_sinapis_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Lathyrus spp.",
-      "Vicia spp."
-    ]
+    "hostPlantFamilies": ["Fabaceae"],
+    "sources": ["https://www.pyrgus.de/Leptidea_sinapis_en.html"],
+    "hostPlantSpecies": {
+      "Fabaceae": ["Lathyrus spp.", "Vicia spp."]
+    }
   },
   "Leptotes pirithous": {
     "habitatType": "Urban/Agricultural",
-    "hostPlantFamilies": [
-      "Fabaceae",
-      "Lythraceae",
-      "Ericaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Leptodes_pirithous_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Plumbago capensis",
-      "Medicago spp."
-    ]
+    "hostPlantFamilies": ["Fabaceae", "Lythraceae", "Ericaceae"],
+    "sources": ["https://www.pyrgus.de/Leptodes_pirithous_en.html"],
+    "hostPlantSpecies": {
+      "Plumbaginaceae": ["Plumbago capensis"],
+      "Fabaceae": ["Medicago spp."]
+    }
   },
   "Libythea celtis": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Cannabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Libythea_celtis_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Celtis australis"
-    ]
+    "hostPlantFamilies": ["Cannabaceae"],
+    "sources": ["https://www.pyrgus.de/Libythea_celtis_en.html"],
+    "hostPlantSpecies": {
+      "Cannabaceae": ["Celtis australis"]
+    }
   },
   "Limenitis camilla": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Caprifoliaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Limenitis_camilla_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Caprifoliaceae"],
+    "sources": ["https://www.pyrgus.de/Limenitis_camilla_en.html"],
+    "hostPlantSpecies": {}
   },
   "Limenitis reducta": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Caprifoliaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Limenitis_reducta_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Lonicera periclymenum"
-    ]
+    "hostPlantFamilies": ["Caprifoliaceae"],
+    "sources": ["https://www.pyrgus.de/Limenitis_reducta_en.html"],
+    "hostPlantSpecies": {
+      "Caprifoliaceae": ["Lonicera periclymenum"]
+    }
   },
   "Lycaena alciphron": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Polygonaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Lycaena_alciphron_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Rumex spp."
-    ]
+    "hostPlantFamilies": ["Polygonaceae"],
+    "sources": ["https://www.pyrgus.de/Lycaena_alciphron_en.html"],
+    "hostPlantSpecies": {
+      "Polygonaceae": ["Rumex spp."]
+    }
   },
   "Lycaena bleusei": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Polygonaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Lycaena_bleusei_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Rumex spp."
-    ]
+    "hostPlantFamilies": ["Polygonaceae"],
+    "sources": ["https://www.pyrgus.de/Lycaena_bleusei_en.html"],
+    "hostPlantSpecies": {
+      "Polygonaceae": ["Rumex spp."]
+    }
   },
   "Lycaena phlaeas": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Polygonaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Lycaena_phlaeas_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Rumex acetosa",
-      "Rumex crispus"
-    ]
+    "hostPlantFamilies": ["Polygonaceae"],
+    "sources": ["https://www.pyrgus.de/Lycaena_phlaeas_en.html"],
+    "hostPlantSpecies": {
+      "Polygonaceae": ["Rumex acetosa", "Rumex crispus"]
+    }
   },
   "Lycaena tityrus": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Polygonaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Lycaena_tityrus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Rumex acetosa"
-    ]
+    "hostPlantFamilies": ["Polygonaceae"],
+    "sources": ["https://www.pyrgus.de/Lycaena_tityrus_en.html"],
+    "hostPlantSpecies": {
+      "Polygonaceae": ["Rumex acetosa"]
+    }
   },
   "Lycaena virgaureae": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Polygonaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Lycaena_virgaureae_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Polygonaceae"],
+    "sources": ["https://www.pyrgus.de/Lycaena_virgaureae_en.html"],
+    "hostPlantSpecies": {}
   },
   "Lysandra bellargus": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Fabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Polyommatus_bellargus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Hippocrepis comosa"
-    ]
+    "hostPlantFamilies": ["Fabaceae"],
+    "sources": ["https://www.pyrgus.de/Polyommatus_bellargus_en.html"],
+    "hostPlantSpecies": {
+      "Fabaceae": ["Hippocrepis comosa"]
+    }
   },
   "Maniola jurtina": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Maniola_jurtina_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Poa pratensis",
-      "Dactylis glomerata"
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Maniola_jurtina_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Poa pratensis", "Dactylis glomerata"]
+    }
   },
   "Melanargia ines": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Melanargia_ines_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Brachypodium spp."
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Melanargia_ines_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Brachypodium spp."]
+    }
   },
   "Melanargia lachesis": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Melanargia_lachesis_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Dactylis glomerata",
-      "Brachypodium spp."
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Melanargia_lachesis_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Dactylis glomerata", "Brachypodium spp."]
+    }
   },
   "Melanargia occitanica": {
     "habitatType": "Scrubland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Melanargia_occitanica_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Brachypodium retusum"
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Melanargia_occitanica_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Brachypodium retusum"]
+    }
   },
   "Melanargia russiae": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Melanargia_russiae_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Melanargia_russiae_en.html"],
+    "hostPlantSpecies": {}
   },
   "Melitaea aetherie": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Asteraceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Melitaea_aetherie_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Asteraceae"],
+    "sources": ["https://www.pyrgus.de/Melitaea_aetherie_en.html"],
+    "hostPlantSpecies": {}
   },
   "Melitaea celadussa": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Asteraceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Melitaea_celadussa_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Plantago lanceolata"
-    ]
+    "hostPlantFamilies": ["Asteraceae"],
+    "sources": ["https://www.pyrgus.de/Melitaea_celadussa_en.html"],
+    "hostPlantSpecies": {
+      "Asteraceae": ["Plantago lanceolata"]
+    }
   },
   "Melitaea cinxia": {
     "habitatType": "Wetland",
-    "hostPlantFamilies": [
-      "Plantaginaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Melitaea_cinxia_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Plantago lanceolata"
-    ]
+    "hostPlantFamilies": ["Plantaginaceae"],
+    "sources": ["https://www.pyrgus.de/Melitaea_cinxia_en.html"],
+    "hostPlantSpecies": {
+      "Plantaginaceae": ["Plantago lanceolata"]
+    }
   },
   "Melitaea deione": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Plantaginaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Melitaea_deione_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Linaria spp.",
-      "Antirrhinum spp."
-    ]
+    "hostPlantFamilies": ["Plantaginaceae"],
+    "sources": ["https://www.pyrgus.de/Melitaea_deione_en.html"],
+    "hostPlantSpecies": {
+      "Plantaginaceae": ["Linaria spp.", "Antirrhinum spp."]
+    }
   },
   "Melitaea didyma": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Scrophulariaceae",
-      "Asteraceae",
-      "Plantaginaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Melitaea_didyma_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Linaria spp.",
-      "Plantago spp."
-    ]
+    "hostPlantFamilies": ["Scrophulariaceae", "Asteraceae", "Plantaginaceae"],
+    "sources": ["https://www.pyrgus.de/Melitaea_didyma_en.html"],
+    "hostPlantSpecies": {
+      "Plantaginaceae": ["Linaria spp.", "Plantago spp."]
+    }
   },
   "Melitaea parthenoides": {
     "habitatType": "Wetland",
-    "hostPlantFamilies": [
-      "Scrophulariaceae",
-      "Plantaginaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Melitaea_parthenoides_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Scrophulariaceae", "Plantaginaceae"],
+    "sources": ["https://www.pyrgus.de/Melitaea_parthenoides_en.html"],
+    "hostPlantSpecies": {}
   },
   "Melitaea phoebe": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Asteraceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Melitaea_phoebe_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Centaurea spp."
-    ]
+    "hostPlantFamilies": ["Asteraceae"],
+    "sources": ["https://www.pyrgus.de/Melitaea_phoebe_en.html"],
+    "hostPlantSpecies": {
+      "Asteraceae": ["Centaurea spp."]
+    }
   },
   "Melitaea trivia": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Scrophulariaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Melitaea_trivia_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Verbascum spp."
-    ]
+    "hostPlantFamilies": ["Scrophulariaceae"],
+    "sources": ["https://www.pyrgus.de/Melitaea_trivia_en.html"],
+    "hostPlantSpecies": {
+      "Scrophulariaceae": ["Verbascum spp."]
+    }
   },
   "Muschampia proto": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Lamiaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Muschampia_proto_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Lamiaceae"],
+    "sources": ["https://www.pyrgus.de/Muschampia_proto_en.html"],
+    "hostPlantSpecies": {}
   },
   "Nymphalis antiopa": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Salicaceae",
-      "Betulaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Nymphalis_antiopa_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Salix spp."
-    ]
+    "hostPlantFamilies": ["Salicaceae", "Betulaceae"],
+    "sources": ["https://www.pyrgus.de/Nymphalis_antiopa_en.html"],
+    "hostPlantSpecies": {
+      "Salicaceae": ["Salix spp."]
+    }
   },
   "Nymphalis polychloros": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Salicaceae",
-      "Ulmaceae",
-      "Rosaceae",
-      "Cannabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Nymphalis_polychloros_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Ulmus spp.",
-      "Salix spp."
-    ]
+    "hostPlantFamilies": ["Salicaceae", "Ulmaceae", "Rosaceae", "Cannabaceae"],
+    "sources": ["https://www.pyrgus.de/Nymphalis_polychloros_en.html"],
+    "hostPlantSpecies": {
+      "Ulmaceae": ["Ulmus spp."],
+      "Salicaceae": ["Salix spp."]
+    }
   },
   "Ochlodes sylvanus": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Ochlodes_sylvanus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Dactylis glomerata"
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Ochlodes_sylvanus_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Dactylis glomerata"]
+    }
   },
   "Papilio machaon": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Apiaceae",
-      "Rutaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Papilio_machaon_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Foeniculum vulgare",
-      "Daucus carota",
-      "Ruta graveolens"
-    ]
+    "hostPlantFamilies": ["Apiaceae", "Rutaceae"],
+    "sources": ["https://www.pyrgus.de/Papilio_machaon_en.html"],
+    "hostPlantSpecies": {
+      "Apiaceae": ["Foeniculum vulgare", "Daucus carota"],
+      "Rutaceae": ["Ruta graveolens"]
+    }
   },
   "Pararge aegeria": {
     "habitatType": "Generalist",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Pararge_aegeria_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Brachypodium sylvaticum",
-      "Dactylis glomerata"
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Pararge_aegeria_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Brachypodium sylvaticum", "Dactylis glomerata"]
+    }
   },
   "Phengaris alcon": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Gentianaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Maculinea_alcon_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Gentianaceae"],
+    "sources": ["https://www.pyrgus.de/Maculinea_alcon_en.html"],
+    "hostPlantSpecies": {}
   },
   "Pieris brassicae ": {
     "habitatType": "Urban/Agricultural",
-    "hostPlantFamilies": [
-      "Brassicaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Pieris_brassicae_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Brassica oleracea",
-      "Tropaeolum majus"
-    ]
+    "hostPlantFamilies": ["Brassicaceae"],
+    "sources": ["https://www.pyrgus.de/Pieris_brassicae_en.html"],
+    "hostPlantSpecies": {
+      "Brassicaceae": ["Brassica oleracea", "Tropaeolum majus"]
+    }
   },
   "Pieris napi": {
     "habitatType": "Generalist",
-    "hostPlantFamilies": [
-      "Brassicaceae",
-      "Resedaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Pieris_napi_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Nasturtium officinale",
-      "Cardamine spp."
-    ]
+    "hostPlantFamilies": ["Brassicaceae", "Resedaceae"],
+    "sources": ["https://www.pyrgus.de/Pieris_napi_en.html"],
+    "hostPlantSpecies": {
+      "Brassicaceae": ["Nasturtium officinale", "Cardamine spp."]
+    }
   },
   "Pieris rapae": {
     "habitatType": "Urban/Agricultural",
-    "hostPlantFamilies": [
-      "Brassicaceae",
-      "Resedaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Pieris_rapae_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Brassica spp."
-    ]
+    "hostPlantFamilies": ["Brassicaceae", "Resedaceae"],
+    "sources": ["https://www.pyrgus.de/Pieris_rapae_en.html"],
+    "hostPlantSpecies": {
+      "Brassicaceae": ["Brassica spp."]
+    }
   },
   "Plebejus argus": {
     "habitatType": "Grassland",
@@ -1205,335 +747,208 @@
       "Cistaceae",
       "Plumbaginaceae"
     ],
-    "sources": [
-      "https://www.pyrgus.de/Polyommatus_argus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Ulex spp.",
-      "Erica spp."
-    ]
+    "sources": ["https://www.pyrgus.de/Polyommatus_argus_en.html"],
+    "hostPlantSpecies": {
+      "Fabaceae": ["Ulex spp."],
+      "Ericaceae": ["Erica spp."]
+    }
   },
   "Polygonia c-album": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Urticaceae",
-      "Ulmaceae",
-      "Salicaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Nymphalis_c-album_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Urtica dioica",
-      "Ulmus spp.",
-      "Humulus lupulus"
-    ]
+    "hostPlantFamilies": ["Urticaceae", "Ulmaceae", "Salicaceae"],
+    "sources": ["https://www.pyrgus.de/Nymphalis_c-album_en.html"],
+    "hostPlantSpecies": {
+      "Urticaceae": ["Urtica dioica"],
+      "Ulmaceae": ["Ulmus spp."],
+      "Cannabaceae": ["Humulus lupulus"]
+    }
   },
   "Polyommatus icarus/celina": {
     "habitatType": "Urban/Agricultural",
-    "hostPlantFamilies": [
-      "Fabaceae",
-      "Cistaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Polyommatus_icarus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Lotus corniculatus",
-      "Trifolium spp."
-    ]
+    "hostPlantFamilies": ["Fabaceae", "Cistaceae"],
+    "sources": ["https://www.pyrgus.de/Polyommatus_icarus_en.html"],
+    "hostPlantSpecies": {
+      "Fabaceae": ["Lotus corniculatus", "Trifolium spp."]
+    }
   },
   "Polyommatus thersites": {
     "habitatType": "Urban/Agricultural",
-    "hostPlantFamilies": [
-      "Fabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Polyommatus_thersites_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Fabaceae"],
+    "sources": ["https://www.pyrgus.de/Polyommatus_thersites_en.html"],
+    "hostPlantSpecies": {}
   },
   "Pontia daplidice": {
     "habitatType": "Generalist",
-    "hostPlantFamilies": [
-      "Brassicaceae",
-      "Resedaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Pontia_daplidice_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Reseda luteola",
-      "Sisymbrium spp."
-    ]
+    "hostPlantFamilies": ["Brassicaceae", "Resedaceae"],
+    "sources": ["https://www.pyrgus.de/Pontia_daplidice_en.html"],
+    "hostPlantSpecies": {
+      "Resedaceae": ["Reseda luteola"],
+      "Brassicaceae": ["Sisymbrium spp."]
+    }
   },
   "Pseudophilotes abencerragus": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Lamiaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Pseudophilotes_abencerragus_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Lamiaceae"],
+    "sources": ["https://www.pyrgus.de/Pseudophilotes_abencerragus_en.html"],
+    "hostPlantSpecies": {}
   },
   "Pseudophilotes baton": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Lamiaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Scolitantides_baton_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Lamiaceae"],
+    "sources": ["https://www.pyrgus.de/Scolitantides_baton_en.html"],
+    "hostPlantSpecies": {}
   },
   "Pseudophilotes panoptes": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Lamiaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Pseudophilotes_panoptes_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Thymus mastichina",
-      "Thymus vulgaris"
-    ]
+    "hostPlantFamilies": ["Lamiaceae"],
+    "sources": ["https://www.pyrgus.de/Pseudophilotes_panoptes_en.html"],
+    "hostPlantSpecies": {
+      "Lamiaceae": ["Thymus mastichina", "Thymus vulgaris"]
+    }
   },
   "Pyrgus alveus": {
     "habitatType": "Urban/Agricultural",
-    "hostPlantFamilies": [
-      "Cistaceae",
-      "Rosaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Pyrgus_alveus_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Cistaceae", "Rosaceae"],
+    "sources": ["https://www.pyrgus.de/Pyrgus_alveus_en.html"],
+    "hostPlantSpecies": {}
   },
   "Pyrgus armoricanus": {
     "habitatType": "Wetland",
-    "hostPlantFamilies": [
-      "Rosaceae",
-      "Cistaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Pyrgus_armoricanus_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Rosaceae", "Cistaceae"],
+    "sources": ["https://www.pyrgus.de/Pyrgus_armoricanus_en.html"],
+    "hostPlantSpecies": {}
   },
   "Pyrgus malvoides": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Rosaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Pyrgus_malvoides_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Potentilla spp.",
-      "Fragaria vesca"
-    ]
+    "hostPlantFamilies": ["Rosaceae"],
+    "sources": ["https://www.pyrgus.de/Pyrgus_malvoides_en.html"],
+    "hostPlantSpecies": {
+      "Rosaceae": ["Potentilla spp.", "Fragaria vesca"]
+    }
   },
   "Pyrgus onopordi": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Malvaceae",
-      "Rosaceae",
-      "Cistaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Pyrgus_onopordi_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Malvaceae", "Rosaceae", "Cistaceae"],
+    "sources": ["https://www.pyrgus.de/Pyrgus_onopordi_en.html"],
+    "hostPlantSpecies": {}
   },
   "Pyrgus serratulae": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Rosaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Pyrgus_serratulae_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Rosaceae"],
+    "sources": ["https://www.pyrgus.de/Pyrgus_serratulae_en.html"],
+    "hostPlantSpecies": {}
   },
   "Pyronia bathseba": {
     "habitatType": "Scrubland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Maniola_bathseba_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Brachypodium spp."
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Maniola_bathseba_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Brachypodium spp."]
+    }
   },
   "Pyronia cecilia": {
     "habitatType": "Scrubland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Maniola_cecilia_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Deschampsia spp.",
-      "Festuca spp."
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Maniola_cecilia_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Deschampsia spp.", "Festuca spp."]
+    }
   },
   "Pyronia tithonus": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Maniola_tithonus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Poa spp.",
-      "Dactylis glomerata"
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Maniola_tithonus_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Poa spp.", "Dactylis glomerata"]
+    }
   },
   "Satyrium esculi": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Fagaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Satyrium_esculi_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Quercus ilex",
-      "Quercus coccifera"
-    ]
+    "hostPlantFamilies": ["Fagaceae"],
+    "sources": ["https://www.pyrgus.de/Satyrium_esculi_en.html"],
+    "hostPlantSpecies": {
+      "Fagaceae": ["Quercus ilex", "Quercus coccifera"]
+    }
   },
   "Satyrium ilicis": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Fagaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Satyrium_ilicis_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Fagaceae"],
+    "sources": ["https://www.pyrgus.de/Satyrium_ilicis_en.html"],
+    "hostPlantSpecies": {}
   },
   "Satyrium spini": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Rhamnaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Satyrium_spini_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Rhamnus alaternus"
-    ]
+    "hostPlantFamilies": ["Rhamnaceae"],
+    "sources": ["https://www.pyrgus.de/Satyrium_spini_en.html"],
+    "hostPlantSpecies": {
+      "Rhamnaceae": ["Rhamnus alaternus"]
+    }
   },
   "Satyrus actaea": {
     "habitatType": "Rocky/Mountain",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Satyrus_actaea_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Satyrus_actaea_en.html"],
+    "hostPlantSpecies": {}
   },
   "Speyeria aglaja": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Violaceae",
-      "Polygonaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Argynnis_aglaja_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Violaceae", "Polygonaceae"],
+    "sources": ["https://www.pyrgus.de/Argynnis_aglaja_en.html"],
+    "hostPlantSpecies": {}
   },
   "Spialia sertorius": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Rosaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Spialia_sertorius_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Sanguisorba minor"
-    ]
+    "hostPlantFamilies": ["Rosaceae"],
+    "sources": ["https://www.pyrgus.de/Spialia_sertorius_en.html"],
+    "hostPlantSpecies": {
+      "Rosaceae": ["Sanguisorba minor"]
+    }
   },
   "Thecla betulae": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Rosaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Thecla_betulae_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Prunus spinosa"
-    ]
+    "hostPlantFamilies": ["Rosaceae"],
+    "sources": ["https://www.pyrgus.de/Thecla_betulae_en.html"],
+    "hostPlantSpecies": {
+      "Rosaceae": ["Prunus spinosa"]
+    }
   },
   "Thymelicus acteon": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Thymelicus_acteon_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Brachypodium sylvaticum"
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Thymelicus_acteon_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Brachypodium sylvaticum"]
+    }
   },
   "Thymelicus lineola": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Thymelicus_lineola_en.html"
-    ],
-    "hostPlantSpecies": []
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Thymelicus_lineola_en.html"],
+    "hostPlantSpecies": {}
   },
   "Thymelicus sylvestris": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Poaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Thymelicus_sylvestris_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Holcus lanatus"
-    ]
+    "hostPlantFamilies": ["Poaceae"],
+    "sources": ["https://www.pyrgus.de/Thymelicus_sylvestris_en.html"],
+    "hostPlantSpecies": {
+      "Poaceae": ["Holcus lanatus"]
+    }
   },
   "Tomares ballus": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Fabaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Tomares_ballus_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Erodium botrys",
-      "Medicago polymorpha"
-    ]
+    "hostPlantFamilies": ["Fabaceae"],
+    "sources": ["https://www.pyrgus.de/Tomares_ballus_en.html"],
+    "hostPlantSpecies": {
+      "Fabaceae": ["Erodium botrys", "Medicago polymorpha"]
+    }
   },
   "Vanessa atalanta": {
     "habitatType": "Woodland",
-    "hostPlantFamilies": [
-      "Urticaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Vanessa_atalanta_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Urtica dioica",
-      "Parietaria judaica"
-    ]
+    "hostPlantFamilies": ["Urticaceae"],
+    "sources": ["https://www.pyrgus.de/Vanessa_atalanta_en.html"],
+    "hostPlantSpecies": {
+      "Urticaceae": ["Urtica dioica", "Parietaria judaica"]
+    }
   },
   "Vanessa cardui": {
     "habitatType": "Generalist",
@@ -1545,38 +960,27 @@
       "Malvaceae",
       "Plantaginaceae"
     ],
-    "sources": [
-      "https://www.pyrgus.de/Vanessa_cardui_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Carduus spp.",
-      "Cirsium spp.",
-      "Malva spp."
-    ]
+    "sources": ["https://www.pyrgus.de/Vanessa_cardui_en.html"],
+    "hostPlantSpecies": {
+      "Asteraceae": ["Carduus spp.", "Cirsium spp."],
+      "Malvaceae": ["Malva spp."]
+    }
   },
   "Vanessa virginiensis": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Asteraceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Vanessa_virginiensis_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Gnaphalium spp."
-    ]
+    "hostPlantFamilies": ["Asteraceae"],
+    "sources": ["https://www.pyrgus.de/Vanessa_virginiensis_en.html"],
+    "hostPlantSpecies": {
+      "Asteraceae": ["Gnaphalium spp."]
+    }
   },
   "Zerynthia rumina": {
     "habitatType": "Grassland",
-    "hostPlantFamilies": [
-      "Aristolochiaceae"
-    ],
-    "sources": [
-      "https://www.pyrgus.de/Zerynthia_rumina_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Aristolochia paucinervis"
-    ]
+    "hostPlantFamilies": ["Aristolochiaceae"],
+    "sources": ["https://www.pyrgus.de/Zerynthia_rumina_en.html"],
+    "hostPlantSpecies": {
+      "Aristolochiaceae": ["Aristolochia paucinervis"]
+    }
   },
   "Zizeeria knysna": {
     "habitatType": "Urban/Agricultural",
@@ -1586,13 +990,10 @@
       "Chenopodiaceae",
       "Malvaceae"
     ],
-    "sources": [
-      "https://www.pyrgus.de/Zizeeria_knysna_en.html"
-    ],
-    "hostPlantSpecies": [
-      "Medicago spp.",
-      "Trifolium spp.",
-      "Amaranthus spp."
-    ]
+    "sources": ["https://www.pyrgus.de/Zizeeria_knysna_en.html"],
+    "hostPlantSpecies": {
+      "Fabaceae": ["Medicago spp.", "Trifolium spp."],
+      "Amaranthaceae": ["Amaranthus spp."]
+    }
   }
 }

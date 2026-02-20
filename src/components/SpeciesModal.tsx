@@ -405,18 +405,21 @@ const SpeciesModal = ({
                       const plantCommonName = getPlantFamilyCommonName(family);
 
                       let titleText = `Plantas: ${plantCommonName || family || "N/A"}`;
+                      let floraOnLink = family;
+
                       if (
-                        families.length === 1 &&
                         species.ecology?.hostPlantSpecies &&
-                        species.ecology.hostPlantSpecies.length > 0
+                        species.ecology.hostPlantSpecies[family] &&
+                        species.ecology.hostPlantSpecies[family].length > 0
                       ) {
-                        titleText += ` (${species.ecology.hostPlantSpecies.join(", ")})`;
+                        titleText += ` (${species.ecology.hostPlantSpecies[family].join(", ")})`;
+                        floraOnLink = species.ecology.hostPlantSpecies[family][0].replace(" spp.", "");
                       }
                       titleText += " (Ver no Flora-On)";
 
                       return (
                         <a
-                          href={`https://flora-on.pt/#/1${family}`}
+                          href={`https://flora-on.pt/#/1${floraOnLink}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           key={idx}
@@ -479,8 +482,8 @@ const SpeciesModal = ({
                     <div className="flex space-x-2 border-b border-gray-200 mb-4">
                       <button
                         className={`pb-2 px-1 text-sm font-semibold border-b-2 transition-colors flex items-center gap-2 ${activeTab === "tips"
-                          ? "border-forest-green text-forest-green"
-                          : "border-transparent text-gray-400 hover:text-gray-600 hover:border-gray-300"
+                            ? "border-forest-green text-forest-green"
+                            : "border-transparent text-gray-400 hover:text-gray-600 hover:border-gray-300"
                           }`}
                         onClick={() => setActiveTab("tips")}
                       >
@@ -501,8 +504,8 @@ const SpeciesModal = ({
                       </button>
                       <button
                         className={`pb-2 px-1 text-sm font-semibold border-b-2 transition-colors flex items-center gap-2 ml-4 ${activeTab === "similar"
-                          ? "border-forest-green text-forest-green"
-                          : "border-transparent text-gray-400 hover:text-gray-600 hover:border-gray-300"
+                            ? "border-forest-green text-forest-green"
+                            : "border-transparent text-gray-400 hover:text-gray-600 hover:border-gray-300"
                           }`}
                         onClick={() => setActiveTab("similar")}
                       >
@@ -636,8 +639,8 @@ const SpeciesModal = ({
                       <span
                         key={month}
                         className={`px-2 py-1 text-[10px] uppercase font-bold rounded ${isFlying
-                          ? "bg-forest-green/10 text-forest-green border border-forest-green/20"
-                          : "bg-gray-50 text-gray-300 border border-transparent"
+                            ? "bg-forest-green/10 text-forest-green border border-forest-green/20"
+                            : "bg-gray-50 text-gray-300 border border-transparent"
                           }`}
                       >
                         {month.substring(0, 3)}
@@ -701,7 +704,7 @@ const SpeciesModal = ({
           )}
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 

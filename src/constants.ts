@@ -363,7 +363,7 @@ export interface SpeciesEcology {
   habitats: string[];
   habitatType: string;
   hostPlantFamilies: string[];
-  hostPlantSpecies: string[];
+  hostPlantSpecies: Record<string, string[]>;
   sources: string[];
 }
 

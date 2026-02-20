@@ -353,8 +353,8 @@ const App = () => {
 
   const selectedSpeciesIndex = selectedSpecies
     ? filteredSpecies.findIndex(
-      (s) => s.latinName === selectedSpecies.latinName,
-    )
+        (s) => s.latinName === selectedSpecies.latinName,
+      )
     : -1;
 
   const filterOptions = useMemo(() => {
