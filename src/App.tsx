@@ -140,12 +140,13 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const t = Date.now();
         const [commonNamesRes, ecologyRes, detailsRes, attributionsRes] =
           await Promise.all([
-            fetch("data/common-names.json"),
-            fetch("data/species-ecology.json"),
-            fetch("data/species-details.json"),
-            fetch("data/attributions.json"),
+            fetch(`data/common-names.json?v=${t}`),
+            fetch(`data/species-ecology.json?v=${t}`),
+            fetch(`data/species-details.json?v=${t}`),
+            fetch(`data/attributions.json?v=${t}`),
           ]);
 
         const commonNames: Record<string, string> = await commonNamesRes.json();
@@ -352,8 +353,8 @@ const App = () => {
 
   const selectedSpeciesIndex = selectedSpecies
     ? filteredSpecies.findIndex(
-        (s) => s.latinName === selectedSpecies.latinName,
-      )
+      (s) => s.latinName === selectedSpecies.latinName,
+    )
     : -1;
 
   const filterOptions = useMemo(() => {
