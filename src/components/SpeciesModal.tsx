@@ -374,7 +374,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                                                     onClick={() => onSelectSpecies(sim)}
                                                     title={sim.commonName}
                                                 >
-                                                    <div className="aspect-square w-full bg-gray-100 relative overflow-hidden border-b border-gray-100">
+                                                    <div className="aspect-[5/4] w-full bg-gray-100 relative overflow-hidden border-b border-gray-100">
                                                         <img
                                                             src={getImagePath(sim.latinName, sim.family)}
                                                             alt={sim.latinName}
