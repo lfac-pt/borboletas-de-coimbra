@@ -1,81 +1,131 @@
-import { useState, useEffect, useMemo, Suspense, lazy } from 'react';
-import './App.css';
-import { SPECIES_FAMILIES, endangered_eu, endangered_pt, HABITAT_TRANSLATIONS } from './constants';
-import { HABITAT_TYPE_SPRITES } from './utils/habitatTypeIcons';
-import type { Species, SpeciesEcology, SpeciesDetails } from './constants';
-import SpeciesCard from './components/SpeciesCard';
-import Filters from './components/Filters';
-import { isNewSpeciesInMonth } from './utils/filterUtils';
-import SEO from './components/SEO';
+import { useState, useEffect, useMemo, Suspense, lazy } from "react";
+import "./App.css";
+import {
+  SPECIES_FAMILIES,
+  endangered_eu,
+  endangered_pt,
+  HABITAT_TRANSLATIONS,
+} from "./constants";
+import { HABITAT_TYPE_SPRITES } from "./utils/habitatTypeIcons";
+import type { Species, SpeciesEcology, SpeciesDetails } from "./constants";
+import SpeciesCard from "./components/SpeciesCard";
+import Filters from "./components/Filters";
+import { isNewSpeciesInMonth } from "./utils/filterUtils";
+import SEO from "./components/SEO";
 
-const SpeciesModal = lazy(() => import('./components/SpeciesModal'));
-const FamiliesInfographicModal = lazy(() => import('./components/FamiliesInfographicModal'));
+const SpeciesModal = lazy(() => import("./components/SpeciesModal"));
+const FamiliesInfographicModal = lazy(
+  () => import("./components/FamiliesInfographicModal"),
+);
 
 const App = () => {
   // State initialization from URL
-  const getUrlParam = (key: string) => new URLSearchParams(window.location.search).get(key);
+  const getUrlParam = (key: string) =>
+    new URLSearchParams(window.location.search).get(key);
   const getArrayFromUrl = (key: string): string[] => {
     const param = getUrlParam(key);
-    return param ? param.split(',') : [];
+    return param ? param.split(",") : [];
   };
 
   const [speciesList, setSpeciesList] = useState<Species[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedMonth, setSelectedMonth] = useState<string | null>(getUrlParam('month'));
-
-  const initialSort = getUrlParam('sort');
-  const [sortBy, setSortBy] = useState<'taxonomy' | 'size' | 'rarity'>(
-    (initialSort === 'taxonomy' || initialSort === 'size' || initialSort === 'rarity') ? initialSort : 'taxonomy'
+  const [selectedMonth, setSelectedMonth] = useState<string | null>(
+    getUrlParam("month"),
   );
 
-  const initialOrder = getUrlParam('order');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>(
-    (initialOrder === 'asc' || initialOrder === 'desc') ? initialOrder : 'asc'
+  const initialSort = getUrlParam("sort");
+  const [sortBy, setSortBy] = useState<"taxonomy" | "size" | "rarity">(
+    initialSort === "taxonomy" ||
+      initialSort === "size" ||
+      initialSort === "rarity"
+      ? initialSort
+      : "taxonomy",
+  );
+
+  const initialOrder = getUrlParam("order");
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">(
+    initialOrder === "asc" || initialOrder === "desc" ? initialOrder : "asc",
   );
 
   const [selectedSpecies, setSelectedSpecies] = useState<Species | null>(null);
   const [isFamiliesModalOpen, setIsFamiliesModalOpen] = useState(false);
 
   // Advanced filters (Multi-select)
-  const [selectedSize, setSelectedSize] = useState<string | null>(getUrlParam('size'));
-  const [selectedColors, setSelectedColors] = useState<string[]>(getArrayFromUrl('color'));
-  const [selectedHabitats, setSelectedHabitats] = useState<string[]>(getArrayFromUrl('habitat'));
-  const [selectedHostFamilies, setSelectedHostFamilies] = useState<string[]>(getArrayFromUrl('plant'));
-  const [onlyEndangered, setOnlyEndangered] = useState(getUrlParam('endangered') === 'true');
-  const [onlyNewSpecies, setOnlyNewSpecies] = useState(getUrlParam('new') === 'true');
-  const [selectedRarities, setSelectedRarities] = useState<string[]>(getArrayFromUrl('rarity'));
+  const [selectedSize, setSelectedSize] = useState<string | null>(
+    getUrlParam("size"),
+  );
+  const [selectedColors, setSelectedColors] = useState<string[]>(
+    getArrayFromUrl("color"),
+  );
+  const [selectedHabitats, setSelectedHabitats] = useState<string[]>(
+    getArrayFromUrl("habitat"),
+  );
+  const [selectedHostFamilies, setSelectedHostFamilies] = useState<string[]>(
+    getArrayFromUrl("plant"),
+  );
+  const [onlyEndangered, setOnlyEndangered] = useState(
+    getUrlParam("endangered") === "true",
+  );
+  const [onlyNewSpecies, setOnlyNewSpecies] = useState(
+    getUrlParam("new") === "true",
+  );
+  const [selectedRarities, setSelectedRarities] = useState<string[]>(
+    getArrayFromUrl("rarity"),
+  );
 
   // Sync state to URL
   useEffect(() => {
     if (loading) return; // DON'T sync URL while loading, or it might wipe out deep links
 
     const params = new URLSearchParams();
-    if (selectedMonth) params.set('month', selectedMonth);
-    if (sortBy !== 'taxonomy') params.set('sort', sortBy);
-    if (sortOrder !== 'asc') params.set('order', sortOrder);
-    if (selectedSize) params.set('size', selectedSize);
-    if (selectedColors.length > 0) params.set('color', selectedColors.join(','));
-    if (selectedHabitats.length > 0) params.set('habitat', selectedHabitats.join(','));
-    if (selectedHostFamilies.length > 0) params.set('plant', selectedHostFamilies.join(','));
-    if (onlyEndangered) params.set('endangered', 'true');
-    if (onlyNewSpecies && selectedMonth) params.set('new', 'true');
-    if (selectedRarities.length > 0) params.set('rarity', selectedRarities.join(','));
-    if (selectedSpecies) params.set('species', selectedSpecies.latinName);
+    if (selectedMonth) params.set("month", selectedMonth);
+    if (sortBy !== "taxonomy") params.set("sort", sortBy);
+    if (sortOrder !== "asc") params.set("order", sortOrder);
+    if (selectedSize) params.set("size", selectedSize);
+    if (selectedColors.length > 0)
+      params.set("color", selectedColors.join(","));
+    if (selectedHabitats.length > 0)
+      params.set("habitat", selectedHabitats.join(","));
+    if (selectedHostFamilies.length > 0)
+      params.set("plant", selectedHostFamilies.join(","));
+    if (onlyEndangered) params.set("endangered", "true");
+    if (onlyNewSpecies && selectedMonth) params.set("new", "true");
+    if (selectedRarities.length > 0)
+      params.set("rarity", selectedRarities.join(","));
+    if (selectedSpecies) params.set("species", selectedSpecies.latinName);
 
-    const newRelativePathQuery = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
-    window.history.replaceState(null, '', newRelativePathQuery);
-  }, [selectedMonth, sortBy, sortOrder, selectedSize, selectedColors, selectedHabitats, selectedHostFamilies, onlyEndangered, onlyNewSpecies, selectedRarities, selectedSpecies, loading]);
+    const newRelativePathQuery =
+      window.location.pathname +
+      (params.toString() ? "?" + params.toString() : "");
+    window.history.replaceState(null, "", newRelativePathQuery);
+  }, [
+    selectedMonth,
+    sortBy,
+    sortOrder,
+    selectedSize,
+    selectedColors,
+    selectedHabitats,
+    selectedHostFamilies,
+    onlyEndangered,
+    onlyNewSpecies,
+    selectedRarities,
+    selectedSpecies,
+    loading,
+  ]);
 
   // Handle Initial Species Popstate
   useEffect(() => {
     const handlePopState = () => {
       const params = new URLSearchParams(window.location.search);
-      const speciesParam = params.get('species');
+      const speciesParam = params.get("species");
       if (speciesParam) {
-        const decodedParam = decodeURIComponent(speciesParam.replace(/\+/g, ' '));
-        const found = speciesList.find(s =>
-          s.latinName.toLowerCase() === speciesParam.toLowerCase() ||
-          s.latinName.toLowerCase() === decodedParam.toLowerCase()
+        const decodedParam = decodeURIComponent(
+          speciesParam.replace(/\+/g, " "),
+        );
+        const found = speciesList.find(
+          (s) =>
+            s.latinName.toLowerCase() === speciesParam.toLowerCase() ||
+            s.latinName.toLowerCase() === decodedParam.toLowerCase(),
         );
         if (found) setSelectedSpecies(found);
       } else {
@@ -83,29 +133,31 @@ const App = () => {
       }
     };
 
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
   }, [speciesList]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [commonNamesRes, ecologyRes, detailsRes, attributionsRes] = await Promise.all([
-          fetch('data/common-names.json'),
-          fetch('data/species-ecology.json'),
-          fetch('data/species-details.json'),
-          fetch('data/attributions.json')
-        ]);
+        const [commonNamesRes, ecologyRes, detailsRes, attributionsRes] =
+          await Promise.all([
+            fetch("data/common-names.json"),
+            fetch("data/species-ecology.json"),
+            fetch("data/species-details.json"),
+            fetch("data/attributions.json"),
+          ]);
 
         const commonNames: Record<string, string> = await commonNamesRes.json();
         const ecology: Record<string, SpeciesEcology> = await ecologyRes.json();
         const details: Record<string, SpeciesDetails> = await detailsRes.json();
-        const attributions: Record<string, string> = await attributionsRes.json();
+        const attributions: Record<string, string> =
+          await attributionsRes.json();
 
-        const combined: Species[] = Object.keys(commonNames).map(key => {
+        const combined: Species[] = Object.keys(commonNames).map((key) => {
           const latinName = key.trim();
-          const family = SPECIES_FAMILIES[latinName] || 'Desconhecida';
-          const formattedName = latinName.replace(/\//g, '_');
+          const family = SPECIES_FAMILIES[latinName] || "Desconhecida";
+          const formattedName = latinName.replace(/\//g, "_");
           const imageKey = `${family}/${formattedName}.webp`;
 
           return {
@@ -114,25 +166,29 @@ const App = () => {
             family,
             ecology: ecology[latinName] || ecology[key],
             details: details[latinName] || details[key],
-            attribution: attributions[imageKey]
+            attribution: attributions[imageKey],
           };
         });
 
         setSpeciesList(combined);
 
         // Check for deep link on initial load
-        const initialSpeciesParam = new URLSearchParams(window.location.search).get('species');
+        const initialSpeciesParam = new URLSearchParams(
+          window.location.search,
+        ).get("species");
         if (initialSpeciesParam) {
-          const decodedParam = decodeURIComponent(initialSpeciesParam.replace(/\+/g, ' '));
-          const found = combined.find(s =>
-            s.latinName.toLowerCase() === initialSpeciesParam.toLowerCase() ||
-            s.latinName.toLowerCase() === decodedParam.toLowerCase()
+          const decodedParam = decodeURIComponent(
+            initialSpeciesParam.replace(/\+/g, " "),
+          );
+          const found = combined.find(
+            (s) =>
+              s.latinName.toLowerCase() === initialSpeciesParam.toLowerCase() ||
+              s.latinName.toLowerCase() === decodedParam.toLowerCase(),
           );
           if (found) setSelectedSpecies(found);
         }
-
       } catch (error) {
-        console.error('Erro ao carregar dados:', error);
+        console.error("Erro ao carregar dados:", error);
       } finally {
         setLoading(false);
       }
@@ -142,85 +198,119 @@ const App = () => {
   }, []);
 
   const filteredSpecies = useMemo(() => {
-    let list = speciesList.filter(s => (s.details?.months.length ?? 0) > 0);
+    let list = speciesList.filter((s) => (s.details?.months.length ?? 0) > 0);
 
     if (selectedMonth) {
-      list = list.filter(s => s.details?.months.includes(selectedMonth));
+      list = list.filter((s) => s.details?.months.includes(selectedMonth));
     }
 
     if (selectedSize) {
-      list = list.filter(s => s.details?.sizeCategory === selectedSize);
+      list = list.filter((s) => s.details?.sizeCategory === selectedSize);
     }
 
     if (selectedColors.length > 0) {
-      list = list.filter(s => {
+      list = list.filter((s) => {
         if (!s.details?.predominantColor) return false;
         const speciesColors = Array.isArray(s.details.predominantColor)
           ? s.details.predominantColor
           : [s.details.predominantColor];
         // Check if ANY of the selected colors match any of the species colors
-        return selectedColors.some(selectedColor => speciesColors.includes(selectedColor));
+        return selectedColors.some((selectedColor) =>
+          speciesColors.includes(selectedColor),
+        );
       });
     }
 
     if (selectedHabitats.length > 0) {
-      list = list.filter(s => {
-        const habitatTypeTrans = s.ecology?.habitatType ? (HABITAT_TRANSLATIONS[s.ecology.habitatType] || s.ecology.habitatType) : (HABITAT_TRANSLATIONS['Generalist'] || 'Generalista');
+      list = list.filter((s) => {
+        const habitatTypeTrans = s.ecology?.habitatType
+          ? HABITAT_TRANSLATIONS[s.ecology.habitatType] || s.ecology.habitatType
+          : HABITAT_TRANSLATIONS["Generalist"] || "Generalista";
         return selectedHabitats.includes(habitatTypeTrans);
       });
     }
 
     if (selectedHostFamilies.length > 0) {
-      list = list.filter(s => {
+      list = list.filter((s) => {
         if (!s.ecology?.hostPlantFamilies) return false;
-        return selectedHostFamilies.some(family => s.ecology!.hostPlantFamilies.includes(family));
+        return selectedHostFamilies.some((family) =>
+          s.ecology!.hostPlantFamilies.includes(family),
+        );
       });
     }
 
     if (onlyEndangered) {
-      list = list.filter(s => endangered_pt[s.latinName] || endangered_eu[s.latinName]);
+      list = list.filter(
+        (s) => endangered_pt[s.latinName] || endangered_eu[s.latinName],
+      );
     }
 
     if (selectedRarities.length > 0) {
-      list = list.filter(s => s.details?.rarity && selectedRarities.includes(s.details.rarity));
+      list = list.filter(
+        (s) => s.details?.rarity && selectedRarities.includes(s.details.rarity),
+      );
     }
 
     if (onlyNewSpecies && selectedMonth) {
-      list = list.filter(s => isNewSpeciesInMonth(s.details?.months, selectedMonth));
+      list = list.filter((s) =>
+        isNewSpeciesInMonth(s.details?.months, selectedMonth),
+      );
     }
 
     list.sort((a, b) => {
       let result = 0;
-      if (sortBy === 'taxonomy') {
+      if (sortBy === "taxonomy") {
         const familyOrder: Record<string, number> = {
-          'Hesperiidae': 1,
-          'Papilionidae': 2,
-          'Pieridae': 3,
-          'Nymphalidae': 4,
-          'Lycaenidae': 5
+          Hesperiidae: 1,
+          Papilionidae: 2,
+          Pieridae: 3,
+          Nymphalidae: 4,
+          Lycaenidae: 5,
         };
         const orderA = familyOrder[a.family] || 99;
         const orderB = familyOrder[b.family] || 99;
-        result = (orderA - orderB) || a.latinName.localeCompare(b.latinName);
-      } else if (sortBy === 'size') {
-        const sizes: Record<string, number> = { 'small': 1, 'medium': 2, 'large': 3, '': 0 };
-        const sizeA = sizes[a.details?.sizeCategory || ''] || 0;
-        const sizeB = sizes[b.details?.sizeCategory || ''] || 0;
-        // Size is naturally descending (large to small) in the original code, 
+        result = orderA - orderB || a.latinName.localeCompare(b.latinName);
+      } else if (sortBy === "size") {
+        const sizes: Record<string, number> = {
+          small: 1,
+          medium: 2,
+          large: 3,
+          "": 0,
+        };
+        const sizeA = sizes[a.details?.sizeCategory || ""] || 0;
+        const sizeB = sizes[b.details?.sizeCategory || ""] || 0;
+        // Size is naturally descending (large to small) in the original code,
         // but we'll normalize it to respect sortOrder
         result = sizeA - sizeB || a.latinName.localeCompare(b.latinName);
-      } else if (sortBy === 'rarity') {
-        const rarities: Record<string, number> = { 'very-common': 1, 'common': 2, 'uncommon': 3, 'rare': 4 };
-        const rarityA = rarities[a.details?.rarity || ''] || 0;
-        const rarityB = rarities[b.details?.rarity || ''] || 0;
+      } else if (sortBy === "rarity") {
+        const rarities: Record<string, number> = {
+          "very-common": 1,
+          common: 2,
+          uncommon: 3,
+          rare: 4,
+        };
+        const rarityA = rarities[a.details?.rarity || ""] || 0;
+        const rarityB = rarities[b.details?.rarity || ""] || 0;
         result = rarityA - rarityB || a.latinName.localeCompare(b.latinName);
       }
 
-      return sortOrder === 'asc' ? result : -result;
+      return sortOrder === "asc" ? result : -result;
     });
 
     return list;
-  }, [speciesList, selectedMonth, sortBy, sortOrder, selectedSize, selectedColors, selectedHabitats, selectedHostFamilies, onlyEndangered, selectedRarities, onlyNewSpecies]);
+  }, [
+    speciesList,
+    selectedMonth,
+    sortBy,
+    sortOrder,
+    selectedSize,
+    selectedColors,
+    selectedHabitats,
+    selectedHostFamilies,
+    onlyEndangered,
+    selectedRarities,
+    onlyNewSpecies,
+  ]);
 
   // Use this function to change species so we push to history
   const handleSetSelectedSpecies = (species: Species | null) => {
@@ -230,17 +320,21 @@ const App = () => {
     // The useEffect above will also run, but 'replaceState' on the same URL is harmless.
     const params = new URLSearchParams(window.location.search);
     if (species) {
-      params.set('species', species.latinName);
+      params.set("species", species.latinName);
     } else {
-      params.delete('species');
+      params.delete("species");
     }
-    const newRelativePathQuery = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
-    window.history.pushState(null, '', newRelativePathQuery);
+    const newRelativePathQuery =
+      window.location.pathname +
+      (params.toString() ? "?" + params.toString() : "");
+    window.history.pushState(null, "", newRelativePathQuery);
   };
 
   const handleNextSpecies = () => {
     if (!selectedSpecies) return;
-    const currentIndex = filteredSpecies.findIndex(s => s.latinName === selectedSpecies.latinName);
+    const currentIndex = filteredSpecies.findIndex(
+      (s) => s.latinName === selectedSpecies.latinName,
+    );
     if (currentIndex !== -1 && currentIndex < filteredSpecies.length - 1) {
       handleSetSelectedSpecies(filteredSpecies[currentIndex + 1]);
     }
@@ -248,61 +342,77 @@ const App = () => {
 
   const handlePrevSpecies = () => {
     if (!selectedSpecies) return;
-    const currentIndex = filteredSpecies.findIndex(s => s.latinName === selectedSpecies.latinName);
+    const currentIndex = filteredSpecies.findIndex(
+      (s) => s.latinName === selectedSpecies.latinName,
+    );
     if (currentIndex > 0) {
       handleSetSelectedSpecies(filteredSpecies[currentIndex - 1]);
     }
   };
 
-  const selectedSpeciesIndex = selectedSpecies ? filteredSpecies.findIndex(s => s.latinName === selectedSpecies.latinName) : -1;
+  const selectedSpeciesIndex = selectedSpecies
+    ? filteredSpecies.findIndex(
+        (s) => s.latinName === selectedSpecies.latinName,
+      )
+    : -1;
 
   const filterOptions = useMemo(() => {
     const colors = new Set<string>();
     const hostFamilies = new Set<string>();
 
-    speciesList.forEach(s => {
+    speciesList.forEach((s) => {
       if (s.details?.predominantColor) {
         if (Array.isArray(s.details.predominantColor)) {
-          s.details.predominantColor.forEach(c => c && colors.add(c));
+          s.details.predominantColor.forEach((c) => c && colors.add(c));
         } else {
           colors.add(s.details.predominantColor);
         }
       }
-      s.ecology?.hostPlantFamilies.forEach(f => hostFamilies.add(f));
+      s.ecology?.hostPlantFamilies.forEach((f) => hostFamilies.add(f));
     });
 
-    const mainHabitats = Object.keys(HABITAT_TYPE_SPRITES).map(h => HABITAT_TRANSLATIONS[h] || h);
+    const mainHabitats = Object.keys(HABITAT_TYPE_SPRITES).map(
+      (h) => HABITAT_TRANSLATIONS[h] || h,
+    );
 
     return {
       colors: Array.from(colors).filter(Boolean).sort() as string[],
       habitats: Array.from(new Set(mainHabitats)).sort() as string[],
-      hostFamilies: Array.from(hostFamilies).filter(Boolean).sort() as string[]
+      hostFamilies: Array.from(hostFamilies).filter(Boolean).sort() as string[],
     };
   }, [speciesList]);
 
   const validSpecies = useMemo(() => {
-    return speciesList.filter(s => (s.details?.months.length ?? 0) > 0);
+    return speciesList.filter((s) => (s.details?.months.length ?? 0) > 0);
   }, [speciesList]);
 
   // Derived stats
   const familiesCount = useMemo(() => {
-    return new Set(validSpecies.map(s => s.family)).size;
+    return new Set(validSpecies.map((s) => s.family)).size;
   }, [validSpecies]);
 
   const monthCounts = useMemo(() => {
     const counts: Record<string, number> = {};
-    const allMonths = ['Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro'];
-    allMonths.forEach(m => counts[m] = 0);
+    const allMonths = [
+      "Março",
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho",
+      "Agosto",
+      "Setembro",
+    ];
+    allMonths.forEach((m) => (counts[m] = 0));
 
-    speciesList.forEach(s => {
+    speciesList.forEach((s) => {
       if (onlyNewSpecies) {
-        allMonths.forEach(m => {
+        allMonths.forEach((m) => {
           if (isNewSpeciesInMonth(s.details?.months, m)) {
             counts[m]++;
           }
         });
       } else {
-        s.details?.months.forEach(m => {
+        s.details?.months.forEach((m) => {
           if (counts[m] !== undefined) {
             counts[m]++;
           }
@@ -330,10 +440,17 @@ const App = () => {
         <div className="absolute bottom-20 right-10 w-64 h-64 rounded-full border border-white/10 opacity-10"></div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10 text-white">
-          <img src="logo.webp" alt="Logo" className="w-32 h-32 object-contain mx-auto" />
+          <img
+            src="logo.webp"
+            alt="Logo"
+            className="w-32 h-32 object-contain mx-auto"
+          />
 
           <h1 className="serif-title text-5xl md:text-7xl mb-4 font-bold leading-tight uppercase tracking-tight">
-            Borboletas Diurnas <br /> <span className="text-white/80 font-normal normal-case">de Coimbra</span>
+            Borboletas Diurnas <br />{" "}
+            <span className="text-white/80 font-normal normal-case">
+              de Coimbra
+            </span>
           </h1>
 
           <p className="text-white/70 max-w-2xl mx-auto text-lg md:text-xl font-light mb-12">
@@ -342,33 +459,59 @@ const App = () => {
 
           <div className="flex justify-center items-end gap-12 text-white">
             <div className="text-center">
-              <span className="block text-4xl font-bold">{validSpecies.length}</span>
-              <span className="text-xs uppercase tracking-widest text-white/50 font-semibold">Espécies</span>
+              <span className="block text-4xl font-bold">
+                {validSpecies.length}
+              </span>
+              <span className="text-xs uppercase tracking-widest text-white/50 font-semibold">
+                Espécies
+              </span>
             </div>
             <button
               onClick={() => setIsFamiliesModalOpen(true)}
               className="text-center group cursor-pointer transition-all hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white/50 rounded-lg p-2 -m-2"
               aria-label="Ver Infografia das Famílias"
             >
-              <span className="block text-4xl font-bold group-hover:text-[#f4d47c] transition-colors">{familiesCount}</span>
+              <span className="block text-4xl font-bold group-hover:text-[#f4d47c] transition-colors">
+                {familiesCount}
+              </span>
               <span className="relative inline-block text-xs uppercase tracking-widest text-white/50 font-semibold group-hover:text-[#f4d47c] transition-colors">
                 Famílias
-                <svg className="w-3.5 h-3.5 absolute -right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg
+                  className="w-3.5 h-3.5 absolute -right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
               </span>
             </button>
             <div className="text-center">
               <span className="block text-4xl serif-title italic">Mar–Set</span>
-              <span className="text-xs uppercase tracking-widest text-white/50 font-semibold">Época de Voo</span>
+              <span className="text-xs uppercase tracking-widest text-white/50 font-semibold">
+                Época de Voo
+              </span>
             </div>
           </div>
         </div>
 
         {/* Wavy Divider */}
         <div className="wavy-divider">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              className="shape-fill"
+            ></path>
           </svg>
         </div>
       </header>
@@ -381,7 +524,9 @@ const App = () => {
           sortOrder={sortOrder}
           onMonthChange={setSelectedMonth}
           onSortChange={setSortBy}
-          onOrderChange={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}
+          onOrderChange={() =>
+            setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"))
+          }
           monthCounts={monthCounts}
           totalCount={validSpecies.length}
           // Advanced filter props
@@ -410,8 +555,18 @@ const App = () => {
             </div>
           ) : filteredSpecies.length === 0 ? (
             <div className="col-span-full h-64 flex flex-col items-center justify-center text-gray-400 gap-4 bg-gray-50 rounded-2xl border border-gray-100 border-dashed">
-              <svg className="w-12 h-12 opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <svg
+                className="w-12 h-12 opacity-20"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
               </svg>
               <p>Nenhuma espécie encontrada com os filtros selecionados.</p>
               <button
@@ -431,7 +586,7 @@ const App = () => {
               </button>
             </div>
           ) : (
-            filteredSpecies.map(species => (
+            filteredSpecies.map((species) => (
               <SpeciesCard
                 key={species.latinName}
                 species={species}
@@ -446,9 +601,12 @@ const App = () => {
       <footer className="bg-[#1b2621] text-white py-12 md:py-20 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <div className="space-y-2">
-            <h2 className="serif-title text-2xl md:text-3xl italic">Borboletas de Coimbra</h2>
+            <h2 className="serif-title text-2xl md:text-3xl italic">
+              Borboletas de Coimbra
+            </h2>
             <p className="text-gray-400 text-sm max-w-xl mx-auto">
-              Um guia digital dedicado à identificação e preservação da biodiversidade de lepidópteros na região de Coimbra.
+              Um guia digital dedicado à identificação e preservação da
+              biodiversidade de lepidópteros na região de Coimbra.
             </p>
           </div>
 
@@ -456,15 +614,54 @@ const App = () => {
             <div className="flex flex-col gap-1 items-center">
               <span className="text-gray-600 text-[9px]">Fontes de Dados:</span>
               <div className="flex gap-4">
-                <a href="https://www.biodiversity4all.org/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Biodiversity4All</a>
-                <a href="http://www.naturdata.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Naturdata</a>
-                <a href="https://www.pyrgus.de/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Pyrgus.de</a>
-                <a href="https://www.eurobutterflies.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">EuroButterflies</a>
+                <a
+                  href="https://www.biodiversity4all.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  Biodiversity4All
+                </a>
+                <a
+                  href="http://www.naturdata.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  Naturdata
+                </a>
+                <a
+                  href="https://www.pyrgus.de/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  Pyrgus.de
+                </a>
+                <a
+                  href="https://www.eurobutterflies.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  EuroButterflies
+                </a>
               </div>
             </div>
           </div>
           <div className="pt-8 border-t border-white/10 text-xs text-gray-500">
-            <p>&copy; {new Date().getFullYear()} <a href="https://www.instagram.com/lfac_pt/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Luís Cardoso</a>. Todos os direitos reservados.</p>
+            <p>
+              &copy; {new Date().getFullYear()}{" "}
+              <a
+                href="https://www.instagram.com/lfac_pt/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Luís Cardoso
+              </a>
+              . Todos os direitos reservados.
+            </p>
           </div>
         </div>
       </footer>
@@ -475,7 +672,10 @@ const App = () => {
           <SpeciesModal
             species={selectedSpecies}
             onClose={() => handleSetSelectedSpecies(null)}
-            hasNext={selectedSpeciesIndex !== -1 && selectedSpeciesIndex < filteredSpecies.length - 1}
+            hasNext={
+              selectedSpeciesIndex !== -1 &&
+              selectedSpeciesIndex < filteredSpecies.length - 1
+            }
             hasPrev={selectedSpeciesIndex > 0}
             onNext={handleNextSpecies}
             onPrev={handlePrevSpecies}
@@ -484,7 +684,9 @@ const App = () => {
           />
         )}
         {isFamiliesModalOpen && (
-          <FamiliesInfographicModal onClose={() => setIsFamiliesModalOpen(false)} />
+          <FamiliesInfographicModal
+            onClose={() => setIsFamiliesModalOpen(false)}
+          />
         )}
       </Suspense>
     </div>

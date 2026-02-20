@@ -2,13 +2,7 @@
   "Carcharodus alceae": {
     "sizeCategory": "small",
     "predominantColor": "Castanho",
-    "months": [
-      "Abril",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "months": ["Abril", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [],
     "rarity": "common",
     "identificationTips": "Pequeno hesperídeo de coloração castanha e cinzenta com padrão marmoreado. Face inferior das asas posteriores com tons esverdeados ou castanhos."
@@ -44,10 +38,7 @@
   "Hesperia comma": {
     "sizeCategory": "small",
     "predominantColor": "Castanho",
-    "months": [
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Fundo alaranjado com bordas escuras. Apresenta manchas branco-prateadas bem definidas ('vírgulas') na face inferior das asas posteriores."
@@ -62,13 +53,7 @@
   "Ochlodes sylvanus": {
     "sizeCategory": "small",
     "predominantColor": "Laranja",
-    "months": [
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "months": ["Maio", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [
       {
         "name": "Thymelicus acteon",
@@ -99,12 +84,7 @@
   "Pyrgus malvoides": {
     "sizeCategory": "small",
     "predominantColor": "Castanho",
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho",
-      "Agosto"
-    ],
+    "months": ["Abril", "Maio", "Junho", "Agosto"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Padrão axadrezado preto e branco típico do género Pyrgus. Distinção segura de espécies semelhantes muitas vezes requer exame da genitália."
@@ -126,12 +106,7 @@
   "Spialia sertorius": {
     "sizeCategory": "small",
     "predominantColor": "Castanho",
-    "months": [
-      "Abril",
-      "Maio",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Abril", "Maio", "Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Castanha escura com pequenas manchas brancas. Característica face inferior das asas posteriores avermelhada com manchas brancas."
@@ -139,12 +114,7 @@
   "Thymelicus acteon": {
     "sizeCategory": "small",
     "predominantColor": "Laranja",
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho"
-    ],
+    "months": ["Abril", "Maio", "Junho", "Julho"],
     "similarSpecies": [
       {
         "name": "Ochlodes sylvanus",
@@ -168,11 +138,7 @@
   "Thymelicus sylvestris": {
     "sizeCategory": "small",
     "predominantColor": "Laranja",
-    "months": [
-      "Maio",
-      "Junho",
-      "Julho"
-    ],
+    "months": ["Maio", "Junho", "Julho"],
     "similarSpecies": [
       {
         "name": "Thymelicus acteon",
@@ -188,10 +154,7 @@
   },
   "Aricia cramera": {
     "sizeCategory": "small",
-    "predominantColor": [
-      "Castanho",
-      "Azul"
-    ],
+    "predominantColor": ["Castanho", "Azul"],
     "months": [
       "Março",
       "Abril",
@@ -236,10 +199,7 @@
   "Callophrys avis": {
     "sizeCategory": "small",
     "predominantColor": "Verde",
-    "months": [
-      "Abril",
-      "Maio"
-    ],
+    "months": ["Abril", "Maio"],
     "similarSpecies": [
       {
         "name": "Callophrys rubi",
@@ -252,11 +212,7 @@
   "Callophrys rubi": {
     "sizeCategory": "small",
     "predominantColor": "Verde",
-    "months": [
-      "Março",
-      "Abril",
-      "Maio"
-    ],
+    "months": ["Março", "Abril", "Maio"],
     "similarSpecies": [
       {
         "name": "Callophrys avis",
@@ -285,10 +241,7 @@
   "Cupido lorquinii": {
     "sizeCategory": "small",
     "predominantColor": "Azul",
-    "months": [
-      "Abril",
-      "Maio"
-    ],
+    "months": ["Abril", "Maio"],
     "similarSpecies": [],
     "rarity": "common",
     "identificationTips": "Muito pequena. Machos azul-escuro, fêmeas castanhas. Face inferior cinzenta pálida com pequenos pontos pretos."
@@ -310,10 +263,7 @@
   "Favonius quercus": {
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
-    "months": [
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Asas de cor escura, com reflexo azul-púrpura nos machos e manchas púrpuras nas fêmeas. Face inferior cinzenta com linha branca."
@@ -328,11 +278,7 @@
   "Glaucopsyche melanops": {
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
-    "months": [
-      "Março",
-      "Abril",
-      "Maio"
-    ],
+    "months": ["Março", "Abril", "Maio"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Azul violeta. Face inferior caraterística com grandes pontos pretos rodeados de branco na asa anterior ('Melanops' = olhos negros)."
@@ -347,13 +293,7 @@
   "Laeosopis roboris": {
     "sizeCategory": "small",
     "predominantColor": "Castanho",
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Abril", "Maio", "Junho", "Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Asas castanho-escuras com reflexo violeta. Margens com manchas laranjas. Face inferior com linha submarginal laranja."
@@ -382,14 +322,7 @@
   "Leptotes pirithous": {
     "sizeCategory": "small",
     "predominantColor": "Castanho",
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "months": ["Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [
       {
         "name": "Lampides boeticus",
@@ -402,12 +335,7 @@
   "Lycaena alciphron": {
     "sizeCategory": "small",
     "predominantColor": "Laranja",
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho"
-    ],
+    "months": ["Abril", "Maio", "Junho", "Julho"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Machos laranja-acobreado com forte reflexo violeta e manchas pretas. Fêmeas castanhas com manchas laranja e pretas."
@@ -415,10 +343,7 @@
   "Lycaena bleusei": {
     "sizeCategory": "small",
     "predominantColor": "Castanho",
-    "months": [
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Endemismo ibérico semelhante a L. alciphron, mas com coloração e distribuição distintas."
@@ -442,9 +367,7 @@
   "Lycaena tityrus": {
     "sizeCategory": "small",
     "predominantColor": "Laranja",
-    "months": [
-      "Maio"
-    ],
+    "months": ["Maio"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Machos castanhos com pontos pretos e ligeiro reflexo esverdeado. Fêmeas laranja com manchas pretas. Face inferior amarelada/cinzenta."
@@ -458,17 +381,8 @@
   },
   "Lysandra bellargus": {
     "sizeCategory": "small",
-    "predominantColor": [
-      "Castanho",
-      "Azul"
-    ],
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "predominantColor": ["Castanho", "Azul"],
+    "months": ["Abril", "Maio", "Junho", "Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Machos de azul celeste brilhante inconfundível. Fêmeas castanhas. Margens das asas (fímbrias) axadrezadas de branco e preto."
@@ -482,36 +396,16 @@
   },
   "Plebejus argus": {
     "sizeCategory": "small",
-    "predominantColor": [
-      "Castanho",
-      "Azul"
-    ],
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "predominantColor": ["Castanho", "Azul"],
+    "months": ["Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [],
     "rarity": "common",
     "identificationTips": "Machos azul-escuro com margem negra larga. Fêmeas castanhas. Espinha na tíbia das patas anteriores (difícil observação)."
   },
   "Polyommatus icarus/celina": {
     "sizeCategory": "small",
-    "predominantColor": [
-      "Castanho",
-      "Azul"
-    ],
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "predominantColor": ["Castanho", "Azul"],
+    "months": ["Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [
       {
         "name": "Aricia cramera",
@@ -551,13 +445,8 @@
   },
   "Pseudophilotes panoptes": {
     "sizeCategory": "small",
-    "predominantColor": [
-      "Castanho",
-      "Azul"
-    ],
-    "months": [
-      "Abril"
-    ],
+    "predominantColor": ["Castanho", "Azul"],
+    "months": ["Abril"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Muito pequena. Azul-acinzentado com fímbrias axadrezadas. Face inferior cinzenta com grandes pontos pretos."
@@ -565,11 +454,7 @@
   "Satyrium esculi": {
     "sizeCategory": "small",
     "predominantColor": "Castanho",
-    "months": [
-      "Maio",
-      "Junho",
-      "Julho"
-    ],
+    "months": ["Maio", "Junho", "Julho"],
     "similarSpecies": [],
     "rarity": "common",
     "identificationTips": "Castanha uniforme. Face inferior castanha clara com fina linha branca descontínua. Sem cauda evidente."
@@ -584,10 +469,7 @@
   "Satyrium spini": {
     "sizeCategory": "small",
     "predominantColor": "Castanho",
-    "months": [
-      "Junho",
-      "Julho"
-    ],
+    "months": ["Junho", "Julho"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Castanha. Face inferior com mancha azul no canto anal e linha branca em forma de 'W' bem marcada. Pequena cauda."
@@ -595,11 +477,7 @@
   "Thecla betulae": {
     "sizeCategory": "small",
     "predominantColor": "Laranja",
-    "months": [
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Junho", "Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Asas castanhas. Fêmeas com grande mancha laranja na asa anterior. Face inferior laranja vivo com linhas brancas transversais."
@@ -607,9 +485,7 @@
   "Tomares ballus": {
     "sizeCategory": "small",
     "predominantColor": "Verde",
-    "months": [
-      "Abril"
-    ],
+    "months": ["Abril"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Face inferior inconfundível: asa posterior verde marginada de castanho. Face superior laranja (fêmeas) ou escura (machos)."
@@ -617,11 +493,7 @@
   "Zizeeria knysna": {
     "sizeCategory": "small",
     "predominantColor": "Cinzento",
-    "months": [
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "months": ["Julho", "Agosto", "Setembro"],
     "similarSpecies": [],
     "rarity": "common",
     "identificationTips": "Pequena, azul-violáceo com largas margens escuras. Face inferior cinzenta monótona com pequenos pontos. Voa baixo junto à relva."
@@ -629,9 +501,7 @@
   "Aglais io": {
     "sizeCategory": "medium",
     "predominantColor": "Vermelho",
-    "months": [
-      "Junho"
-    ],
+    "months": ["Junho"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Inconfundível pelos grandes ocelos coloridos em cada asa sobre um fundo vermelho-tijolo ('Peacock')."
@@ -645,17 +515,8 @@
   },
   "Apatura ilia": {
     "sizeCategory": "medium",
-    "predominantColor": [
-      "Castanho",
-      "Azul"
-    ],
-    "months": [
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "predominantColor": ["Castanho", "Azul"],
+    "months": ["Maio", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Grande. Asas castanhas com reflexo azul metalizado (machos). Ocelo laranja característico na asa anterior."
@@ -663,13 +524,7 @@
   "Argynnis pandora": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "months": ["Maio", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [],
     "rarity": "common",
     "identificationTips": "Grande. Face superior laranja com manchas pretas e esverdeada. Face inferior da asa anterior vermelho-rosado e posterior verde com finas linhas prateadas."
@@ -677,11 +532,7 @@
   "Argynnis paphia": {
     "sizeCategory": "large",
     "predominantColor": "Laranja",
-    "months": [
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Junho", "Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Grande. Laranja com padrão de manchas pretas. Face inferior da asa posterior esverdeada com faixas prateadas."
@@ -731,13 +582,7 @@
   "Charaxes jasius": {
     "sizeCategory": "large",
     "predominantColor": "Castanho",
-    "months": [
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "months": ["Maio", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [],
     "rarity": "common",
     "identificationTips": "A única borboleta europeia com duas caudas em cada asa posterior. Asas castanhas com margens laranja e azul."
@@ -752,9 +597,7 @@
   "Danaus plexippus": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Junho"
-    ],
+    "months": ["Junho"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Grande, inconfundível. Laranja com veias pretas marcadas e margem preta com pontos brancos (Monarca)."
@@ -762,12 +605,7 @@
   "Euphydryas aurinia": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Março",
-      "Abril",
-      "Maio",
-      "Junho"
-    ],
+    "months": ["Março", "Abril", "Maio", "Junho"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Padrão em mosaico de manchas laranjas, amarelas e pretas ('damier'). Sem manchas prateadas na face inferior."
@@ -782,11 +620,7 @@
   "Fabriciana adippe": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Junho", "Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Laranja com manchas pretas. Face inferior com manchas nacaradas (prateadas) e uma série de ocelos pós-discais com centro metalizado."
@@ -801,13 +635,7 @@
   "Issoria lathonia": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Abril", "Maio", "Junho", "Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "common",
     "identificationTips": "Asas angulosas, laranja com manchas pretas. Face inferior com grandes manchas prateadas (espelhos) muito visíveis."
@@ -815,9 +643,7 @@
   "Libythea celtis": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Maio"
-    ],
+    "months": ["Maio"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Asas com contorno irregular e 'recortado'. Palpos muito longos projetados para a frente ('snout butterfly')."
@@ -832,10 +658,7 @@
   "Limenitis reducta": {
     "sizeCategory": "medium",
     "predominantColor": "Vermelho",
-    "months": [
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Preta com uma faixa branca transversal e reflexo azulado. Face inferior castanha-avermelhada com faixa branca."
@@ -850,9 +673,7 @@
   "Melitaea cinxia": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Maio"
-    ],
+    "months": ["Maio"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Laranja com padrão reticulado preto típico. Banda marginal da face inferior das asas posteriores com pontos pretos nítidos."
@@ -860,14 +681,7 @@
   "Melitaea deione": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Março",
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Março", "Abril", "Maio", "Junho", "Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "common",
     "identificationTips": "Semelhante a outras Melitaea. Face inferior com nervuras menos marcadas a negro que M. cinxia."
@@ -875,11 +689,7 @@
   "Melitaea didyma": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Junho", "Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Machos de cor laranja-avermelhado intenso, fêmeas mais variáveis. Manchas pretas redondas e dispersas."
@@ -887,11 +697,7 @@
   "Melitaea celadussa": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Maio",
-      "Junho",
-      "Julho"
-    ],
+    "months": ["Maio", "Junho", "Julho"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Laranja escura com padrão negro reticulado denso. Distinção por genitália da M. athalia."
@@ -906,12 +712,7 @@
   "Melitaea phoebe": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho",
-      "Agosto"
-    ],
+    "months": ["Abril", "Maio", "Junho", "Agosto"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Maior que outras Melitaea. Mancha marginal em forma de crescente na asa anterior distintamente maior que as restantes."
@@ -919,10 +720,7 @@
   "Melitaea trivia": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Junho",
-      "Julho"
-    ],
+    "months": ["Junho", "Julho"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Banda marginal da asa posterior contendo uma série de pontos triangulares característicos."
@@ -930,14 +728,7 @@
   "Nymphalis antiopa": {
     "sizeCategory": "large",
     "predominantColor": "Preto",
-    "months": [
-      "Março",
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Março", "Abril", "Maio", "Junho", "Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Inconfundível. Asas castanho-púrpura escuro com larga margem amarelo-creme e uma fila de pontos azuis submarginais."
@@ -945,14 +736,7 @@
   "Nymphalis polychloros": {
     "sizeCategory": "large",
     "predominantColor": "Laranja",
-    "months": [
-      "Março",
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Setembro"
-    ],
+    "months": ["Março", "Abril", "Maio", "Junho", "Julho", "Setembro"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Laranja com manchas pretas e bordas escuras. Sem mancha branca no ápice da asa anterior (diferença para Aglais urticae)."
@@ -999,14 +783,7 @@
   "Vanessa cardui ": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Março",
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Março", "Abril", "Maio", "Junho", "Julho", "Agosto"],
     "similarSpecies": [
       {
         "name": "Vanessa virginiensis",
@@ -1019,14 +796,7 @@
   "Vanessa virginiensis": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "months": ["Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [
       {
         "name": "Vanessa cardui",
@@ -1038,10 +808,7 @@
   },
   "Iphiclides feisthamelii": {
     "sizeCategory": "large",
-    "predominantColor": [
-      "Preto",
-      "Branco"
-    ],
+    "predominantColor": ["Preto", "Branco"],
     "months": [
       "Março",
       "Abril",
@@ -1057,10 +824,7 @@
   },
   "Papilio machaon": {
     "sizeCategory": "large",
-    "predominantColor": [
-      "Preto",
-      "Amarelo"
-    ],
+    "predominantColor": ["Preto", "Amarelo"],
     "months": [
       "Março",
       "Abril",
@@ -1076,16 +840,8 @@
   },
   "Zerynthia rumina": {
     "sizeCategory": "medium",
-    "predominantColor": [
-      "Preto",
-      "Amarelo"
-    ],
-    "months": [
-      "Março",
-      "Abril",
-      "Maio",
-      "Junho"
-    ],
+    "predominantColor": ["Preto", "Amarelo"],
+    "months": ["Março", "Abril", "Maio", "Junho"],
     "similarSpecies": [],
     "rarity": "common",
     "identificationTips": "Padrão complexo de manchas amarelas, pretas e vermelhas ('Arlequim'). Sem caudas."
@@ -1093,11 +849,7 @@
   "Anthocharis cardamines": {
     "sizeCategory": "medium",
     "predominantColor": "Branco",
-    "months": [
-      "Março",
-      "Abril",
-      "Maio"
-    ],
+    "months": ["Março", "Abril", "Maio"],
     "similarSpecies": [],
     "rarity": "common",
     "identificationTips": "Asas brancas. Machos com a metade distal da asa anterior laranja vivo. Face inferior marmoreada de verde."
@@ -1111,16 +863,8 @@
   },
   "Aporia crataegi": {
     "sizeCategory": "medium",
-    "predominantColor": [
-      "Preto",
-      "Branco"
-    ],
-    "months": [
-      "Março",
-      "Abril",
-      "Maio",
-      "Julho"
-    ],
+    "predominantColor": ["Preto", "Branco"],
+    "months": ["Março", "Abril", "Maio", "Julho"],
     "similarSpecies": [],
     "rarity": "rare",
     "identificationTips": "Grande e branca com veias pretas muito marcadas. Sem manchas pretas adicionais."
@@ -1143,28 +887,16 @@
   },
   "Euchloe belemia": {
     "sizeCategory": "medium",
-    "predominantColor": [
-      "Branco",
-      "Verde"
-    ],
-    "months": [
-      "Março",
-      "Maio"
-    ],
+    "predominantColor": ["Branco", "Verde"],
+    "months": ["Março", "Maio"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Branca com ápice preto manchado. Face inferior das asas posteriores com faixas verdes longitudinais ('zebra')."
   },
   "Euchloe crameri": {
     "sizeCategory": "medium",
-    "predominantColor": [
-      "Branco",
-      "Verde"
-    ],
-    "months": [
-      "Abril",
-      "Maio"
-    ],
+    "predominantColor": ["Branco", "Verde"],
+    "months": ["Abril", "Maio"],
     "similarSpecies": [
       {
         "name": "Pontia daplidice",
@@ -1226,13 +958,7 @@
   "Leptidea sinapis": {
     "sizeCategory": "medium",
     "predominantColor": "Branco",
-    "months": [
-      "Março",
-      "Abril",
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Março", "Abril", "Junho", "Julho", "Agosto"],
     "similarSpecies": [
       {
         "name": "Pieris brassicae",
@@ -1248,10 +974,7 @@
   },
   "Pieris brassicae ": {
     "sizeCategory": "medium",
-    "predominantColor": [
-      "Preto",
-      "Branco"
-    ],
+    "predominantColor": ["Preto", "Branco"],
     "months": [
       "Março",
       "Abril",
@@ -1276,28 +999,15 @@
   },
   "Pieris napi": {
     "sizeCategory": "medium",
-    "predominantColor": [
-      "Preto",
-      "Branco"
-    ],
-    "months": [
-      "Março",
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "predominantColor": ["Preto", "Branco"],
+    "months": ["Março", "Abril", "Maio", "Junho", "Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "common",
     "identificationTips": "Branca. Veias da face inferior das asas marcadas a verde-acinzentado."
   },
   "Pieris rapae": {
     "sizeCategory": "medium",
-    "predominantColor": [
-      "Preto",
-      "Branco"
-    ],
+    "predominantColor": ["Preto", "Branco"],
     "months": [
       "Março",
       "Abril",
@@ -1322,18 +1032,8 @@
   },
   "Pontia daplidice": {
     "sizeCategory": "medium",
-    "predominantColor": [
-      "Preto",
-      "Branco"
-    ],
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "predominantColor": ["Preto", "Branco"],
+    "months": ["Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [
       {
         "name": "Euchloe crameri",
@@ -1352,17 +1052,8 @@
   },
   "Brintesia circe": {
     "sizeCategory": "large",
-    "predominantColor": [
-      "Preto",
-      "Branco"
-    ],
-    "months": [
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "predominantColor": ["Preto", "Branco"],
+    "months": ["Maio", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Grande e preta com uma larga banda branca transversal em todas as asas. Face inferior críptica com banda branca visível."
@@ -1370,11 +1061,7 @@
   "Coenonympha arcania": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Maio",
-      "Junho",
-      "Julho"
-    ],
+    "months": ["Maio", "Junho", "Julho"],
     "similarSpecies": [
       {
         "name": "Coenonympha dorus",
@@ -1387,12 +1074,7 @@
   "Coenonympha dorus": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "months": ["Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [
       {
         "name": "Coenonympha arcania",
@@ -1412,12 +1094,7 @@
   "Coenonympha pamphilus": {
     "sizeCategory": "medium",
     "predominantColor": "Laranja",
-    "months": [
-      "Abril",
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Abril", "Junho", "Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "uncommon",
     "identificationTips": "Pequena, laranja pálido. Pequeno ocelo no ápice da asa anterior, por vezes pouco visível."
@@ -1432,11 +1109,7 @@
   "Hipparchia fidia": {
     "sizeCategory": "medium",
     "predominantColor": "Castanho",
-    "months": [
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "months": ["Julho", "Agosto", "Setembro"],
     "similarSpecies": [
       {
         "name": "Hipparchia hermione",
@@ -1457,11 +1130,7 @@
   "Hipparchia hermione": {
     "sizeCategory": "medium",
     "predominantColor": "Castanho",
-    "months": [
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Junho", "Julho", "Agosto"],
     "similarSpecies": [
       {
         "name": "Hipparchia fidia",
@@ -1482,13 +1151,7 @@
   "Hipparchia semele": {
     "sizeCategory": "medium",
     "predominantColor": "Castanho",
-    "months": [
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "months": ["Maio", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [
       {
         "name": "Hipparchia fidia",
@@ -1509,11 +1172,7 @@
   "Hipparchia statilinus": {
     "sizeCategory": "medium",
     "predominantColor": "Castanho",
-    "months": [
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "months": ["Julho", "Agosto", "Setembro"],
     "similarSpecies": [
       {
         "name": "Hipparchia fidia",
@@ -1571,14 +1230,7 @@
   "Maniola jurtina": {
     "sizeCategory": "medium",
     "predominantColor": "Castanho",
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "months": ["Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [
       {
         "name": "Pyronia cecilia",
@@ -1590,15 +1242,8 @@
   },
   "Melanargia ines": {
     "sizeCategory": "medium",
-    "predominantColor": [
-      "Preto",
-      "Branco"
-    ],
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho"
-    ],
+    "predominantColor": ["Preto", "Branco"],
+    "months": ["Abril", "Maio", "Junho"],
     "similarSpecies": [
       {
         "name": "Melanargia lachesis",
@@ -1614,16 +1259,8 @@
   },
   "Melanargia lachesis": {
     "sizeCategory": "medium",
-    "predominantColor": [
-      "Preto",
-      "Branco"
-    ],
-    "months": [
-      "Maio",
-      "Junho",
-      "Julho",
-      "Setembro"
-    ],
+    "predominantColor": ["Preto", "Branco"],
+    "months": ["Maio", "Junho", "Julho", "Setembro"],
     "similarSpecies": [
       {
         "name": "Melanargia ines",
@@ -1639,14 +1276,8 @@
   },
   "Melanargia occitanica": {
     "sizeCategory": "medium",
-    "predominantColor": [
-      "Preto",
-      "Branco"
-    ],
-    "months": [
-      "Abril",
-      "Maio"
-    ],
+    "predominantColor": ["Preto", "Branco"],
+    "months": ["Abril", "Maio"],
     "similarSpecies": [
       {
         "name": "Melanargia ines",
@@ -1686,11 +1317,7 @@
   "Pyronia bathseba": {
     "sizeCategory": "medium",
     "predominantColor": "Castanho",
-    "months": [
-      "Abril",
-      "Maio",
-      "Junho"
-    ],
+    "months": ["Abril", "Maio", "Junho"],
     "similarSpecies": [],
     "rarity": "very-common",
     "identificationTips": "Castanha com mancha laranja na asa anterior contendo um ocelo duplo. Faixa branca distinta na face inferior da asa posterior."
@@ -1698,13 +1325,7 @@
   "Pyronia cecilia": {
     "sizeCategory": "medium",
     "predominantColor": "Castanho",
-    "months": [
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro"
-    ],
+    "months": ["Maio", "Junho", "Julho", "Agosto", "Setembro"],
     "similarSpecies": [
       {
         "name": "Maniola jurtina",
@@ -1717,11 +1338,7 @@
   "Pyronia tithonus": {
     "sizeCategory": "medium",
     "predominantColor": "Castanho",
-    "months": [
-      "Junho",
-      "Julho",
-      "Agosto"
-    ],
+    "months": ["Junho", "Julho", "Agosto"],
     "similarSpecies": [],
     "rarity": "common",
     "identificationTips": "Laranja com bordas castanhas. Ocelo duplo no ápice da asa anterior. Pequenos pontos brancos na face inferior."

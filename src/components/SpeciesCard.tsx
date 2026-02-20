@@ -1,235 +1,337 @@
-import { useState } from 'react';
-import { getPlantFamilySpritePosition, getPlantFamilyCommonName } from '../utils/plantFamilyIcons';
-import { getHabitatSpritePosition } from '../utils/habitatTypeIcons';
-import { getSizeSpritePosition } from '../utils/sizeTypeIcons';
-import { endangered_pt, endangered_eu } from '../constants';
-import type { Species } from '../constants';
+import { useState } from "react";
+import {
+  getPlantFamilySpritePosition,
+  getPlantFamilyCommonName,
+} from "../utils/plantFamilyIcons";
+import { getHabitatSpritePosition } from "../utils/habitatTypeIcons";
+import { getSizeSpritePosition } from "../utils/sizeTypeIcons";
+import { endangered_pt, endangered_eu } from "../constants";
+import type { Species } from "../constants";
 
 interface SpeciesCardProps {
-    species: Species;
-    onExpand: () => void;
+  species: Species;
+  onExpand: () => void;
 }
 
 const SpeciesCard = ({ species, onExpand }: SpeciesCardProps) => {
-    const [imgError, setImgError] = useState(false);
+  const [imgError, setImgError] = useState(false);
 
-    const getImagePath = (latinName: string, family: string) => {
-        const formattedName = latinName.replace(/\//g, '_');
-        return `imgs/sp/${family}/${formattedName}.webp`;
-    };
-    const statusPT = endangered_pt[species.latinName as keyof typeof endangered_pt];
-    const statusEU = endangered_eu[species.latinName as keyof typeof endangered_eu];
+  const getImagePath = (latinName: string, family: string) => {
+    const formattedName = latinName.replace(/\//g, "_");
+    return `imgs/sp/${family}/${formattedName}.webp`;
+  };
+  const statusPT =
+    endangered_pt[species.latinName as keyof typeof endangered_pt];
+  const statusEU =
+    endangered_eu[species.latinName as keyof typeof endangered_eu];
 
-    const getStatusColor = (status: string) => {
-        switch (status) {
-            case 'CR': return 'bg-red-100 text-red-700 border-red-200';
-            case 'EN': return 'bg-orange-100 text-orange-700 border-orange-200';
-            case 'VU': return 'bg-yellow-100 text-yellow-700 border-yellow-200';
-            case 'NT': return 'bg-blue-100 text-blue-700 border-blue-200';
-            default: return 'bg-gray-100 text-gray-700 border-gray-200';
-        }
-    };
-    const habitatPos = species.ecology?.habitatType ? getHabitatSpritePosition(species.ecology.habitatType) : getHabitatSpritePosition('Generalist');
-    const plantFamilyCount = species.ecology?.hostPlantFamilies?.length || 0;
-    const plantFamily = species.ecology?.hostPlantFamilies[0];
-    const plantPos = plantFamily ? getPlantFamilySpritePosition(plantFamily) : null;
-    const plantCommonName = plantFamily ? getPlantFamilyCommonName(plantFamily) : null;
-    const sizePos = species.details?.sizeCategory ? getSizeSpritePosition(species.details.sizeCategory) : null;
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case "CR":
+        return "bg-red-100 text-red-700 border-red-200";
+      case "EN":
+        return "bg-orange-100 text-orange-700 border-orange-200";
+      case "VU":
+        return "bg-yellow-100 text-yellow-700 border-yellow-200";
+      case "NT":
+        return "bg-blue-100 text-blue-700 border-blue-200";
+      default:
+        return "bg-gray-100 text-gray-700 border-gray-200";
+    }
+  };
+  const habitatPos = species.ecology?.habitatType
+    ? getHabitatSpritePosition(species.ecology.habitatType)
+    : getHabitatSpritePosition("Generalist");
+  const plantFamilyCount = species.ecology?.hostPlantFamilies?.length || 0;
+  const plantFamily = species.ecology?.hostPlantFamilies[0];
+  const plantPos = plantFamily
+    ? getPlantFamilySpritePosition(plantFamily)
+    : null;
+  const plantCommonName = plantFamily
+    ? getPlantFamilyCommonName(plantFamily)
+    : null;
+  const sizePos = species.details?.sizeCategory
+    ? getSizeSpritePosition(species.details.sizeCategory)
+    : null;
 
-    const getColorClass = (color: string) => {
-        switch (color) {
-            case 'Branco': return 'bg-white border-gray-200';
-            case 'Preto': return 'bg-gray-900';
-            case 'Castanho': return 'bg-[#8B4513]';
-            case 'Laranja': return 'bg-orange-500';
-            case 'Amarelo': return 'bg-yellow-400';
-            case 'Azul': return 'bg-blue-500';
-            case 'Verde': return 'bg-green-600';
-            case 'Vermelho': return 'bg-red-600';
-            case 'Cinzento': return 'bg-gray-400';
-            default: return 'bg-gray-200';
-        }
-    };
+  const getColorClass = (color: string) => {
+    switch (color) {
+      case "Branco":
+        return "bg-white border-gray-200";
+      case "Preto":
+        return "bg-gray-900";
+      case "Castanho":
+        return "bg-[#8B4513]";
+      case "Laranja":
+        return "bg-orange-500";
+      case "Amarelo":
+        return "bg-yellow-400";
+      case "Azul":
+        return "bg-blue-500";
+      case "Verde":
+        return "bg-green-600";
+      case "Vermelho":
+        return "bg-red-600";
+      case "Cinzento":
+        return "bg-gray-400";
+      default:
+        return "bg-gray-200";
+    }
+  };
 
-    const getRarityConfig = (rarity: string) => {
-        switch (rarity) {
-            case 'very-common': return { label: 'Muito Comum', className: 'bg-emerald-100 text-emerald-800 border-emerald-200' };
-            case 'common': return { label: 'Comum', className: 'bg-green-100 text-green-800 border-green-200' };
-            case 'uncommon': return { label: 'Pouco Comum', className: 'bg-amber-100 text-amber-800 border-amber-200' };
-            case 'rare': return { label: 'Rara', className: 'bg-rose-100 text-rose-800 border-rose-200' };
-            default: return { label: 'Desconhecido', className: 'bg-gray-100 text-gray-800 border-gray-200' };
-        }
-    };
+  const getRarityConfig = (rarity: string) => {
+    switch (rarity) {
+      case "very-common":
+        return {
+          label: "Muito Comum",
+          className: "bg-emerald-100 text-emerald-800 border-emerald-200",
+        };
+      case "common":
+        return {
+          label: "Comum",
+          className: "bg-green-100 text-green-800 border-green-200",
+        };
+      case "uncommon":
+        return {
+          label: "Pouco Comum",
+          className: "bg-amber-100 text-amber-800 border-amber-200",
+        };
+      case "rare":
+        return {
+          label: "Rara",
+          className: "bg-rose-100 text-rose-800 border-rose-200",
+        };
+      default:
+        return {
+          label: "Desconhecido",
+          className: "bg-gray-100 text-gray-800 border-gray-200",
+        };
+    }
+  };
 
-    return (
-        <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col md:flex-row group transition-all hover:shadow-md h-full">
-            {/* Left Photo */}
-            <div className="w-full md:w-1/3 aspect-[4/3] md:aspect-square overflow-hidden shrink-0 bg-green-50 flex items-center justify-center relative border-r border-gray-100">
-                {!imgError ? (
-                    <img
-                        src={getImagePath(species.latinName, species.family)}
-                        alt={species.latinName}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        loading="lazy"
-                        onError={() => setImgError(true)}
-                    />
-                ) : (
-                    <div className="flex flex-col items-center gap-3 text-green-200 p-8">
-                        <svg className="w-16 h-16 md:w-20 md:h-20 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M12 20s-2-2-2-5 2-4 2-4 2 1 2 4-2 5-2 5ZM10 13c-3 0-5 1-5 4s2 4 5-1ZM14 13c3 0 5 1 5 4s-2 4-5-1ZM10 13c-3 0-5-2-5-5s2-5 5 1ZM14 13c3 0 5-2 5-5s-2-5-5 1ZM12 7l1-2m-2 2l-1-2" />
-                        </svg>
-                        <span className="text-[10px] uppercase tracking-widest font-bold opacity-40 text-center">Imagem em breve</span>
-                    </div>
-                )}
+  return (
+    <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col md:flex-row group transition-all hover:shadow-md h-full">
+      {/* Left Photo */}
+      <div className="w-full md:w-1/3 aspect-[4/3] md:aspect-square overflow-hidden shrink-0 bg-green-50 flex items-center justify-center relative border-r border-gray-100">
+        {!imgError ? (
+          <img
+            src={getImagePath(species.latinName, species.family)}
+            alt={species.latinName}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            loading="lazy"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <div className="flex flex-col items-center gap-3 text-green-200 p-8">
+            <svg
+              className="w-16 h-16 md:w-20 md:h-20 opacity-50"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1"
+                d="M12 20s-2-2-2-5 2-4 2-4 2 1 2 4-2 5-2 5ZM10 13c-3 0-5 1-5 4s2 4 5-1ZM14 13c3 0 5 1 5 4s-2 4-5-1ZM10 13c-3 0-5-2-5-5s2-5 5 1ZM14 13c3 0 5-2 5-5s-2-5-5 1ZM12 7l1-2m-2 2l-1-2"
+              />
+            </svg>
+            <span className="text-[10px] uppercase tracking-widest font-bold opacity-40 text-center">
+              Imagem em breve
+            </span>
+          </div>
+        )}
 
-                {species.attribution && !imgError && (
-                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-2 py-1 bg-black/40 backdrop-blur-sm rounded text-[10px] text-white/90 font-medium tracking-wide z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        © {species.attribution}
-                    </div>
-                )}
+        {species.attribution && !imgError && (
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-2 py-1 bg-black/40 backdrop-blur-sm rounded text-[10px] text-white/90 font-medium tracking-wide z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            © {species.attribution}
+          </div>
+        )}
 
-                {/* Expand Button Overlay */}
-                <button
-                    onClick={onExpand}
-                    className="absolute bottom-3 right-3 w-8 h-8 bg-white/90 hover:bg-white text-gray-700 rounded-full shadow-sm flex items-center justify-center backdrop-blur-sm transition-all hover:scale-110 opacity-0 group-hover:opacity-100 focus:opacity-100"
-                    title="Expandir detalhes"
-                >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                    </svg>
-                </button>
-            </div>
+        {/* Expand Button Overlay */}
+        <button
+          onClick={onExpand}
+          className="absolute bottom-3 right-3 w-8 h-8 bg-white/90 hover:bg-white text-gray-700 rounded-full shadow-sm flex items-center justify-center backdrop-blur-sm transition-all hover:scale-110 opacity-0 group-hover:opacity-100 focus:opacity-100"
+          title="Expandir detalhes"
+        >
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+            />
+          </svg>
+        </button>
+      </div>
 
-            {/* Right Content */}
-            <div className="p-6 md:p-8 flex-1 flex flex-col min-w-0">
-                <div className="mb-4">
-                    <h3 className="serif-title text-2xl md:text-3xl text-gray-800 italic mb-1 truncate">
-                        {species.latinName}
-                    </h3>
-                    <p className="text-lg text-gray-500 font-medium">
-                        {species.commonName}
-                    </p>
-                </div>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold border border-blue-100">
-                        {species.family}
-                    </span>
-                    {species.details?.rarity && (() => {
-                        const config = getRarityConfig(species.details.rarity);
-                        return (
-                            <span
-                                className={`px-3 py-1 rounded-full text-xs font-bold border ${config.className}`}
-                                title="Dados baseados em biodiversity4all.org e na experiência de campo do autor"
-                            >
-                                {config.label}
-                            </span>
-                        );
-                    })()}
-                    {statusPT && (
-                        <span className={`px-3 py-1 rounded-full text-xs font-bold border ${getStatusColor(statusPT)}`}>
-                            PT: {statusPT}
-                        </span>
-                    )}
-                    {statusEU && (
-                        <span className={`px-3 py-1 rounded-full text-xs font-bold border ${getStatusColor(statusEU)}`}>
-                            EU: {statusEU}
-                        </span>
-                    )}
-                </div>
-
-                {/* Stats Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 mt-auto items-center">
-                    {/* Habitat Icon */}
-                    <div className="flex items-center justify-center sm:justify-start">
-                        <div
-                            className="w-[88px] h-[88px] shrink-0 grayscale hover:grayscale-0 transition-all duration-300 rounded-lg"
-                            style={{
-                                backgroundImage: 'url("imgs/habitats.webp")',
-                                backgroundPosition: `${habitatPos.x}px ${habitatPos.y}px`,
-                                backgroundSize: '352px 192px',
-                            }}
-                            title={`Habitat: ${species.ecology?.habitatType || 'Inconhecido'}`}
-                        />
-                    </div>
-
-                    {/* Size Icon */}
-                    <div className="flex items-center justify-center sm:justify-start">
-                        {sizePos ? (
-                            <div
-                                className="w-[88px] h-[88px] shrink-0 grayscale hover:grayscale-0 transition-all duration-300 rounded-lg"
-                                style={{
-                                    backgroundImage: 'url("imgs/sizes.webp")',
-                                    backgroundPosition: `${sizePos.x}px ${sizePos.y}px`,
-                                    backgroundSize: '352px 192px',
-                                }}
-                                title={`Porte: ${species.details?.sizeCategory || 'N/A'}`}
-                            />
-                        ) : (
-                            <div className="w-[88px] h-[88px] rounded-lg bg-green-50 flex items-center justify-center text-green-700 shrink-0" title={`Porte: ${species.details?.sizeCategory || 'N/A'}`}>
-                                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                                </svg>
-                            </div>
-                        )}
-                    </div>
-
-                    {/* Plant Icon */}
-                    <div className="flex items-center justify-center sm:justify-start">
-                        {plantPos ? (
-                            <a
-                                href={`https://flora-on.pt/#/1${plantFamily}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-[88px] h-[88px] shrink-0 grayscale hover:grayscale-0 transition-all duration-300 rounded-lg block relative"
-                                style={{
-                                    backgroundImage: 'url("imgs/plant_family_sprite.webp")',
-                                    backgroundPosition: `${plantPos.x}px ${plantPos.y}px`,
-                                    backgroundSize: '352px 1250px',
-                                }}
-                                title={`Plantas: ${plantCommonName || plantFamily || 'N/A'} (Ver no Flora-On)`}
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                {plantFamilyCount > 1 && (
-                                    <div className="absolute -top-2 -right-2 bg-white text-forest-green text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm border border-green-200 z-10">
-                                        +{plantFamilyCount - 1}
-                                    </div>
-                                )}
-                            </a>
-                        ) : (
-                            <div className="w-[88px] h-[88px] rounded-lg bg-green-50 flex items-center justify-center text-green-700 shrink-0" title="Plantas: N/A">
-                                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-                {/* Footer info: Color */}
-                <div className="pt-4 border-t border-gray-100 flex items-center gap-2">
-                    <div className="flex -space-x-1">
-                        {(Array.isArray(species.details?.predominantColor)
-                            ? species.details.predominantColor
-                            : [species.details?.predominantColor || '']
-                        ).map((color, idx) => (
-                            <div
-                                key={idx}
-                                className={`w-3 h-3 rounded-full shadow-sm border ${getColorClass(color)}`}
-                            />
-                        ))}
-                    </div>
-                    <p className="text-sm text-gray-500">
-                        Cor predominante: <span className="font-semibold text-gray-700">
-                            {Array.isArray(species.details?.predominantColor)
-                                ? species.details.predominantColor.join(' / ')
-                                : species.details?.predominantColor || 'Inconhecida'}
-                        </span>
-                    </p>
-                </div>
-            </div>
+      {/* Right Content */}
+      <div className="p-6 md:p-8 flex-1 flex flex-col min-w-0">
+        <div className="mb-4">
+          <h3 className="serif-title text-2xl md:text-3xl text-gray-800 italic mb-1 truncate">
+            {species.latinName}
+          </h3>
+          <p className="text-lg text-gray-500 font-medium">
+            {species.commonName}
+          </p>
         </div>
-    );
+
+        <div className="flex flex-wrap gap-2 mb-6">
+          <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold border border-blue-100">
+            {species.family}
+          </span>
+          {species.details?.rarity &&
+            (() => {
+              const config = getRarityConfig(species.details.rarity);
+              return (
+                <span
+                  className={`px-3 py-1 rounded-full text-xs font-bold border ${config.className}`}
+                  title="Dados baseados em biodiversity4all.org e na experiência de campo do autor"
+                >
+                  {config.label}
+                </span>
+              );
+            })()}
+          {statusPT && (
+            <span
+              className={`px-3 py-1 rounded-full text-xs font-bold border ${getStatusColor(statusPT)}`}
+            >
+              PT: {statusPT}
+            </span>
+          )}
+          {statusEU && (
+            <span
+              className={`px-3 py-1 rounded-full text-xs font-bold border ${getStatusColor(statusEU)}`}
+            >
+              EU: {statusEU}
+            </span>
+          )}
+        </div>
+
+        {/* Stats Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 mt-auto items-center">
+          {/* Habitat Icon */}
+          <div className="flex items-center justify-center sm:justify-start">
+            <div
+              className="w-[88px] h-[88px] shrink-0 grayscale hover:grayscale-0 transition-all duration-300 rounded-lg"
+              style={{
+                backgroundImage: 'url("imgs/habitats.webp")',
+                backgroundPosition: `${habitatPos.x}px ${habitatPos.y}px`,
+                backgroundSize: "352px 192px",
+              }}
+              title={`Habitat: ${species.ecology?.habitatType || "Inconhecido"}`}
+            />
+          </div>
+
+          {/* Size Icon */}
+          <div className="flex items-center justify-center sm:justify-start">
+            {sizePos ? (
+              <div
+                className="w-[88px] h-[88px] shrink-0 grayscale hover:grayscale-0 transition-all duration-300 rounded-lg"
+                style={{
+                  backgroundImage: 'url("imgs/sizes.webp")',
+                  backgroundPosition: `${sizePos.x}px ${sizePos.y}px`,
+                  backgroundSize: "352px 192px",
+                }}
+                title={`Porte: ${species.details?.sizeCategory || "N/A"}`}
+              />
+            ) : (
+              <div
+                className="w-[88px] h-[88px] rounded-lg bg-green-50 flex items-center justify-center text-green-700 shrink-0"
+                title={`Porte: ${species.details?.sizeCategory || "N/A"}`}
+              >
+                <svg
+                  className="w-10 h-10"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  />
+                </svg>
+              </div>
+            )}
+          </div>
+
+          {/* Plant Icon */}
+          <div className="flex items-center justify-center sm:justify-start">
+            {plantPos ? (
+              <a
+                href={`https://flora-on.pt/#/1${plantFamily}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[88px] h-[88px] shrink-0 grayscale hover:grayscale-0 transition-all duration-300 rounded-lg block relative"
+                style={{
+                  backgroundImage: 'url("imgs/plant_family_sprite.webp")',
+                  backgroundPosition: `${plantPos.x}px ${plantPos.y}px`,
+                  backgroundSize: "352px 1250px",
+                }}
+                title={`Plantas: ${plantCommonName || plantFamily || "N/A"} (Ver no Flora-On)`}
+                onClick={(e) => e.stopPropagation()}
+              >
+                {plantFamilyCount > 1 && (
+                  <div className="absolute -top-2 -right-2 bg-white text-forest-green text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm border border-green-200 z-10">
+                    +{plantFamilyCount - 1}
+                  </div>
+                )}
+              </a>
+            ) : (
+              <div
+                className="w-[88px] h-[88px] rounded-lg bg-green-50 flex items-center justify-center text-green-700 shrink-0"
+                title="Plantas: N/A"
+              >
+                <svg
+                  className="w-10 h-10"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
+                </svg>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Footer info: Color */}
+        <div className="pt-4 border-t border-gray-100 flex items-center gap-2">
+          <div className="flex -space-x-1">
+            {(Array.isArray(species.details?.predominantColor)
+              ? species.details.predominantColor
+              : [species.details?.predominantColor || ""]
+            ).map((color, idx) => (
+              <div
+                key={idx}
+                className={`w-3 h-3 rounded-full shadow-sm border ${getColorClass(color)}`}
+              />
+            ))}
+          </div>
+          <p className="text-sm text-gray-500">
+            Cor predominante:{" "}
+            <span className="font-semibold text-gray-700">
+              {Array.isArray(species.details?.predominantColor)
+                ? species.details.predominantColor.join(" / ")
+                : species.details?.predominantColor || "Inconhecida"}
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default SpeciesCard;
