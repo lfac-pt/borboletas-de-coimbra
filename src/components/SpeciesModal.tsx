@@ -319,7 +319,7 @@ const SpeciesModal = ({ species, onClose, hasNext, hasPrev, onNext, onPrev, allS
                                     <div className="flex space-x-2 border-b border-gray-200 mb-4">
                                         <button
                                             className={`pb-2 px-1 text-sm font-semibold border-b-2 transition-colors flex items-center gap-2 ${activeTab === 'tips'
-                                                ? 'border-amber-500 text-amber-700'
+                                                ? 'border-forest-green text-forest-green'
                                                 : 'border-transparent text-gray-400 hover:text-gray-600 hover:border-gray-300'
                                                 }`}
                                             onClick={() => setActiveTab('tips')}
