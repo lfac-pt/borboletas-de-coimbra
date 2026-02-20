@@ -9,6 +9,7 @@ import { isNewSpeciesInMonth } from './utils/filterUtils';
 import SEO from './components/SEO';
 
 const SpeciesModal = lazy(() => import('./components/SpeciesModal'));
+const FamiliesInfographicModal = lazy(() => import('./components/FamiliesInfographicModal'));
 
 const App = () => {
   // State initialization from URL
@@ -33,6 +34,7 @@ const App = () => {
   );
 
   const [selectedSpecies, setSelectedSpecies] = useState<Species | null>(null);
+  const [isFamiliesModalOpen, setIsFamiliesModalOpen] = useState(false);
 
   // Advanced filters (Multi-select)
   const [selectedSize, setSelectedSize] = useState<string | null>(getUrlParam('size'));
@@ -339,10 +341,19 @@ const App = () => {
               <span className="block text-4xl font-bold">{filteredSpecies.length}</span>
               <span className="text-xs uppercase tracking-widest text-white/50 font-semibold">Espécies</span>
             </div>
-            <div className="text-center">
-              <span className="block text-4xl font-bold">{familiesCount}</span>
-              <span className="text-xs uppercase tracking-widest text-white/50 font-semibold">Famílias</span>
-            </div>
+            <button
+              onClick={() => setIsFamiliesModalOpen(true)}
+              className="text-center group cursor-pointer transition-all hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white/50 rounded-lg p-2 -m-2"
+              aria-label="Ver Infografia das Famílias"
+            >
+              <span className="block text-4xl font-bold group-hover:text-[#f4d47c] transition-colors">{familiesCount}</span>
+              <span className="text-xs uppercase tracking-widest text-white/50 font-semibold group-hover:text-[#f4d47c] transition-colors flex items-center justify-center gap-1">
+                Famílias
+                <svg className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+            </button>
             <div className="text-center">
               <span className="block text-4xl serif-title italic">Mar–Set</span>
               <span className="text-xs uppercase tracking-widest text-white/50 font-semibold">Época de Voo</span>
@@ -467,6 +478,9 @@ const App = () => {
             allSpecies={speciesList}
             onSelectSpecies={handleSetSelectedSpecies}
           />
+        )}
+        {isFamiliesModalOpen && (
+          <FamiliesInfographicModal onClose={() => setIsFamiliesModalOpen(false)} />
         )}
       </Suspense>
     </div>
