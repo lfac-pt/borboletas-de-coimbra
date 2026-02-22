@@ -74,6 +74,24 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
       ]
     },
     {
+      title: "Área de Contagem",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+        </svg>
+      ),
+      color: "bg-emerald-500",
+      textColor: "text-emerald-600",
+      lightBg: "bg-emerald-500/10",
+      border: "border-emerald-500/20",
+      items: [
+        "Caminhar a um passo constante e lento ao longo da rota predefinida.",
+        "Caixa imaginária: Registar apenas as borboletas num cubo de 5x5x5 metros (2.5m para a esquerda, 2.5m para a direita, 5m em frente e 5m de altura).",
+        "Não volte para trás para contar indivíduos que tenham passado depois de si.",
+        "Percorrer o transecto deve demorar entre 30 a 60 minutos (dependendo da quantidade de borboletas).",
+      ]
+    },
+    {
       title: "Identificação taxonómica",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -93,24 +111,6 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
       ]
     },
     {
-      title: "Área de Contagem",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-        </svg>
-      ),
-      color: "bg-emerald-500",
-      textColor: "text-emerald-600",
-      lightBg: "bg-emerald-500/10",
-      border: "border-emerald-500/20",
-      items: [
-        "Caminhar a um passo constante e lento ao longo da rota predefinida.",
-        "Caixa imaginária: Registar apenas as borboletas num cubo de 5x5x5 metros (2.5m para a esquerda, 2.5m para a direita, 5m em frente e 5m de altura).",
-        "Não volte para trás para contar indivíduos que tenham passado depois de si.",
-        "Percorrer o transecto deve demorar entre 30 a 60 minutos (dependendo da quantidade de borboletas).",
-      ]
-    },
-    {
       title: "Registo de Dados",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,24 +125,9 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
         "Utilize um bloco de notas ou o seu telemóvel para registar as espécies.",
         "Antes de começar, tome nota da hora, da temperatura, da % de cobertura de nuvens, bem como da direção e velocidade do vento (veja na app da metrologia no telemóvel).",
         "Conte o número de indivíduos de cada espécie sempre por secção (2 Pieris Rapae na secção 1, 3 Pieris Rapae na secção 2, etc).",
-        "No final não se esqueça de registar a hora de fim."
-      ]
-    },
-    {
-      title: "Segurança",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-        </svg>
-      ),
-      color: "bg-red-500",
-      textColor: "text-red-600",
-      lightBg: "bg-red-500/10",
-      border: "border-red-500/20",
-      items: [
-        "Atenção às condições meteorológicas: roupa adequada e proteja sempre a pele e a cabeça com um chapéu.",
-        "Tenha consigo o seu telemóvel.",
-        "Tendo em conta a área, tenha atenção às carraças e outros animais que possam transmitir doenças."
+        "Registe alterações significativas ao habitat (ex: corte de um prado).",
+        "No final não se esqueça de registar a hora de término.",
+        <span key="platform">Registe os dados na plataforma <a href="https://butterfly-monitoring.net/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline underline-offset-2 hover:decoration-2 transition-all">https://butterfly-monitoring.net/</a>.</span>,
       ]
     }
   ];
@@ -203,14 +188,14 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
               {guidelines.map((guide, index) => (
                 <div
                   key={guide.title}
-                  className={`group relative flex flex-col rounded-[1.5rem] bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${guide.title === "Área de Contagem" || guide.title === "Identificação taxonómica" ? "md:col-span-2 lg:col-span-3" : ""
+                  className={`group relative flex flex-col rounded-[1.5rem] bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${guide.title === "Área de Contagem" || guide.title === "Identificação taxonómica" || guide.title === "Registo de Dados" ? "md:col-span-2 lg:col-span-3" : ""
                     }`}
                   style={{
                     transitionDelay: `${index * 100}ms`,
                   }}
                 >
                   {/* Content Container */}
-                  <div className={`relative flex flex-1 p-6 sm:p-8 ${guide.title === "Área de Contagem" || guide.title === "Identificação taxonómica" ? "flex-col lg:flex-row gap-8 lg:items-center" : "flex-col"
+                  <div className={`relative flex flex-1 p-6 sm:p-8 ${guide.title === "Área de Contagem" || guide.title === "Identificação taxonómica" || guide.title === "Registo de Dados" ? "flex-col lg:flex-row gap-8 lg:items-center" : "flex-col"
                     }`}>
                     {/* Decorative background element */}
                     <div
@@ -261,6 +246,11 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
                         <TaxonomyTreeDiagram />
                       </div>
                     )}
+                    {guide.title === "Registo de Dados" && (
+                      <div className="w-full lg:w-1/2 shrink-0">
+                        <RecordReportDiagram />
+                      </div>
+                    )}
                     {guide.title === "Área de Contagem" && (
                       <div className="w-full lg:w-1/2 shrink-0">
                         <TransectBoxDiagram />
@@ -271,8 +261,8 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
               ))}
             </div>
 
-            <div className="mt-12 text-center max-w-2xl mx-auto">
-              <div className="inline-flex items-center gap-3 px-6 py-4 bg-forest-green/5 text-forest-green rounded-2xl text-sm font-medium border border-forest-green/10">
+            <div className="mt-12 flex flex-col items-center gap-4 max-w-2xl mx-auto w-full">
+              <div className="w-full flex items-center gap-3 px-6 py-4 bg-forest-green/5 text-forest-green rounded-2xl text-sm font-medium border border-forest-green/10">
                 <svg
                   className="w-8 h-8 flex-shrink-0 opacity-80"
                   fill="none"
@@ -289,6 +279,25 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
                 <div className="text-left">
                   <p className="font-bold text-gray-900 mb-0.5 uppercase tracking-wide text-xs">Atenção ao detalhe</p>
                   <p className="text-gray-700">Se um indivíduo voar de trás para a sua frente atravessando a caixa, ou for detetado a repousar dentro da mesma, deve ser contado.</p>
+                </div>
+              </div>
+
+              <div className="w-full flex items-center gap-3 px-6 py-4 bg-red-500/5 text-red-600 rounded-2xl text-sm font-medium border border-red-500/10">
+                <svg
+                  className="w-8 h-8 flex-shrink-0 opacity-80"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <div className="text-left w-full">
+                  <p className="font-bold text-gray-900 mb-1.5 uppercase tracking-wide text-xs">Segurança</p>
+                  <ul className="text-gray-700 list-disc list-inside space-y-1">
+                    <li>Atenção às condições meteorológicas: roupa adequada e proteja sempre a pele e a cabeça com um chapéu.</li>
+                    <li>Tenha consigo o seu telemóvel.</li>
+                    <li>Tendo em conta a área, tenha atenção às carraças e outros animais que possam transmitir doenças.</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -464,6 +473,62 @@ const TaxonomyTreeDiagram = () => (
       </g>
 
     </svg>
+  </div>
+);
+
+const RecordReportDiagram = () => (
+  <div className="w-full flex justify-center mt-4 lg:mt-0 xl:scale-100 font-sans">
+    <div className="relative w-full max-w-[280px] bg-[#fdfbf7] rounded-sm shadow-md border border-gray-200/60 p-5 rotate-1">
+      {/* Decorative tape */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-3 w-16 h-6 bg-yellow-400/30 rounded-sm transform rotate-[-2deg] opacity-70"></div>
+
+      {/* Header Info */}
+      <div className="text-[13px] text-gray-600 font-medium mb-4 grid grid-cols-2 gap-y-1 gap-x-2 border-b border-gray-200/60 pb-3">
+        <span>Nuvens: <span className="text-gray-900 font-semibold">5</span></span>
+        <span>Temp: <span className="text-gray-900 font-semibold">14°C</span></span>
+        <span>Vento vel.: <span className="text-gray-900 font-semibold">Lig.</span></span>
+        <span>Vento dir.: <span className="text-gray-900 font-semibold">N</span></span>
+        <span className="col-span-2 mt-1">Hora: <span className="text-gray-900 font-semibold text-blue-600">12:56</span> - <span className="text-gray-900 font-semibold text-blue-600">13:28</span></span>
+      </div>
+
+      {/* Sections */}
+      <div className="space-y-3 font-mono text-sm leading-snug">
+        <div>
+          <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 font-sans">Secção 1</h4>
+          <div className="text-gray-800 flex justify-between items-center gap-2">
+            <span>Andorinha</span>
+            <span className="font-bold text-gray-900">2</span>
+          </div>
+          <div className="text-gray-800 flex justify-between items-center gap-2">
+            <span>Pieris sp.</span>
+            <span className="font-bold text-gray-900">3</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 font-sans">Secção 2</h4>
+          <div className="text-gray-400 italic flex items-center gap-2">
+            0
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 font-sans">Secção 3</h4>
+          <div className="text-gray-800 flex justify-between items-center gap-2">
+            <span>Cleopatra</span>
+            <span className="font-bold text-gray-900">3</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 font-sans">Secção 4</h4>
+          <div className="text-gray-800 flex justify-between items-center gap-2">
+            <span>Familia L.</span>
+            <span className="font-bold text-gray-900">2</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 );
 
