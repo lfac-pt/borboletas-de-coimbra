@@ -109,6 +109,23 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
         "Caixa imaginária: Registar apenas as borboletas num cubo de 5x5x5 metros (2.5m para a esquerda, 2.5m para a direita, 5m em frente e 5m de altura).",
         "Não volte para trás para contar indivíduos que tenham passado depois de si.",
       ]
+    },
+    {
+      title: "Segurança",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+      ),
+      color: "bg-red-500",
+      textColor: "text-red-600",
+      lightBg: "bg-red-500/10",
+      border: "border-red-500/20",
+      items: [
+        "Atenção às condições meteorológicas: roupa adequada e proteja sempre a pele e a cabeça com um chapéu.",
+        "Tenha consigo o seu telemóvel.",
+        "Tendo em conta a área, tenha atenção às carraças e outros animais que possam transmitir doenças."
+      ]
     }
   ];
 
