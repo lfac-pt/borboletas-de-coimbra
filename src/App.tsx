@@ -17,6 +17,7 @@ const SpeciesModal = lazy(() => import("./components/SpeciesModal"));
 const FamiliesInfographicModal = lazy(
   () => import("./components/FamiliesInfographicModal"),
 );
+const HowToCountModal = lazy(() => import("./components/HowToCountModal"));
 
 const App = () => {
   // State initialization from URL
@@ -49,6 +50,7 @@ const App = () => {
 
   const [selectedSpecies, setSelectedSpecies] = useState<Species | null>(null);
   const [isFamiliesModalOpen, setIsFamiliesModalOpen] = useState(false);
+  const [isHowToCountModalOpen, setIsHowToCountModalOpen] = useState(false);
 
   // Advanced filters (Multi-select)
   const [selectedSize, setSelectedSize] = useState<string | null>(
@@ -353,8 +355,8 @@ const App = () => {
 
   const selectedSpeciesIndex = selectedSpecies
     ? filteredSpecies.findIndex(
-        (s) => s.latinName === selectedSpecies.latinName,
-      )
+      (s) => s.latinName === selectedSpecies.latinName,
+    )
     : -1;
 
   const filterOptions = useMemo(() => {
@@ -458,7 +460,7 @@ const App = () => {
             Guia para contadores de borboletas diurnas no distrito de Coimbra.
           </p>
 
-          <div className="flex justify-center items-end gap-12 text-white">
+          <div className="flex flex-wrap justify-center items-end gap-6 md:gap-12 text-white">
             <div className="text-center">
               <span className="block text-4xl font-bold">
                 {validSpecies.length}
@@ -498,6 +500,28 @@ const App = () => {
                 Época de Voo
               </span>
             </div>
+            <button
+              onClick={() => setIsHowToCountModalOpen(true)}
+              className="text-center group cursor-pointer transition-all hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white/50 rounded-lg p-2 -m-2"
+              aria-label="Ver Guia de Contagem"
+            >
+              <span className="flex justify-center items-center h-[40px] mb-1 text-white group-hover:text-[#f4d47c] transition-colors">
+                <svg className="w-9 h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                </svg>
+              </span>
+              <span className="relative inline-block text-xs uppercase tracking-widest text-white/50 font-semibold group-hover:text-[#f4d47c] transition-colors">
+                Como Contar
+                <svg
+                  className="w-3.5 h-3.5 absolute -right-5 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+            </button>
           </div>
         </div>
 
@@ -688,6 +712,9 @@ const App = () => {
           <FamiliesInfographicModal
             onClose={() => setIsFamiliesModalOpen(false)}
           />
+        )}
+        {isHowToCountModalOpen && (
+          <HowToCountModal onClose={() => setIsHowToCountModalOpen(false)} />
         )}
       </Suspense>
     </div>
