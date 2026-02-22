@@ -74,7 +74,7 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
       ]
     },
     {
-      title: "Registo e Identificação",
+      title: "Identificação taxonómica",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -104,10 +104,28 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
       lightBg: "bg-emerald-500/10",
       border: "border-emerald-500/20",
       items: [
-        "Contar o número de indivíduos de cada espécie sempre por secção (2 Pieris Rapae na secção 1, 3 Pieris Rapae na secção 2, etc).",
         "Caminhar a um passo constante e lento ao longo da rota predefinida.",
         "Caixa imaginária: Registar apenas as borboletas num cubo de 5x5x5 metros (2.5m para a esquerda, 2.5m para a direita, 5m em frente e 5m de altura).",
         "Não volte para trás para contar indivíduos que tenham passado depois de si.",
+        "Percorrer o transecto deve demorar entre 30 a 60 minutos (dependendo da quantidade de borboletas).",
+      ]
+    },
+    {
+      title: "Registo de Dados",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        </svg>
+      ),
+      color: "bg-blue-500",
+      textColor: "text-blue-600",
+      lightBg: "bg-blue-500/10",
+      border: "border-blue-500/20",
+      items: [
+        "Utilize um bloco de notas ou o seu telemóvel para registar as espécies.",
+        "Antes de começar, tome nota da hora, da temperatura, da % de cobertura de nuvens, bem como da direção e velocidade do vento (veja na app da metrologia no telemóvel).",
+        "Conte o número de indivíduos de cada espécie sempre por secção (2 Pieris Rapae na secção 1, 3 Pieris Rapae na secção 2, etc).",
+        "No final não se esqueça de registar a hora de fim."
       ]
     },
     {
@@ -185,14 +203,14 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
               {guidelines.map((guide, index) => (
                 <div
                   key={guide.title}
-                  className={`group relative flex flex-col rounded-[1.5rem] bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${guide.title === "Área de Contagem" || guide.title === "Registo e Identificação" ? "md:col-span-2 lg:col-span-3" : ""
+                  className={`group relative flex flex-col rounded-[1.5rem] bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${guide.title === "Área de Contagem" || guide.title === "Identificação taxonómica" ? "md:col-span-2 lg:col-span-3" : ""
                     }`}
                   style={{
                     transitionDelay: `${index * 100}ms`,
                   }}
                 >
                   {/* Content Container */}
-                  <div className={`relative flex flex-1 p-6 sm:p-8 ${guide.title === "Área de Contagem" || guide.title === "Registo e Identificação" ? "flex-col lg:flex-row gap-8 lg:items-center" : "flex-col"
+                  <div className={`relative flex flex-1 p-6 sm:p-8 ${guide.title === "Área de Contagem" || guide.title === "Identificação taxonómica" ? "flex-col lg:flex-row gap-8 lg:items-center" : "flex-col"
                     }`}>
                     {/* Decorative background element */}
                     <div
@@ -238,7 +256,7 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
                       </ul>
                     </div>
 
-                    {guide.title === "Registo e Identificação" && (
+                    {guide.title === "Identificação taxonómica" && (
                       <div className="w-full lg:w-1/2 shrink-0">
                         <TaxonomyTreeDiagram />
                       </div>
