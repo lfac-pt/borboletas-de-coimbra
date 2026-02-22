@@ -366,7 +366,7 @@ const TransectBoxDiagram = () => (
 
 const TaxonomyTreeDiagram = () => (
   <div className="w-full flex justify-center mt-4 lg:mt-0 xl:scale-100">
-    <svg viewBox="0 0 430 380" className="w-full h-auto max-h-[340px] sm:max-h-[400px] drop-shadow-sm font-sans">
+    <svg viewBox="0 0 430 300" className="w-full h-auto max-h-[300px] sm:max-h-[340px] drop-shadow-sm font-sans">
       <defs>
         <marker id="arrow-down" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
           <path d="M 0 0 L 10 5 L 0 10 z" fill="#d8b4fe" />
