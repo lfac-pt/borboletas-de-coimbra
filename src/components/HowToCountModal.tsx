@@ -74,6 +74,25 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
       ]
     },
     {
+      title: "Registo e Identificação",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 7v3m0 0v3m0-3h3m-3 0H7" />
+        </svg>
+      ),
+      color: "bg-purple-500",
+      textColor: "text-purple-600",
+      lightBg: "bg-purple-500/10",
+      border: "border-purple-500/20",
+      items: [
+        "Procure registar sempre o nível taxonómico mais detalhado possível (idealmente a Espécie, ex: Pieris rapae).",
+        "Se não tiver a certeza da espécie, registe o Género (ex: Pieris sp.).",
+        "Se mesmo o género for duvidoso, registe a Família (ex: Pieridae).",
+        "Qualquer registo, mesmo a nível de família, tem utilidade para avaliar a abundância."
+      ]
+    },
+    {
       title: "Área de Contagem",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,14 +168,14 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
               {guidelines.map((guide, index) => (
                 <div
                   key={guide.title}
-                  className={`group relative flex flex-col rounded-[1.5rem] bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${guide.title === "O Transecto e a Área" ? "md:col-span-2" : ""
+                  className={`group relative flex flex-col rounded-[1.5rem] bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${guide.title === "Área de Contagem" ? "md:col-span-2" : ""
                     }`}
                   style={{
                     transitionDelay: `${index * 100}ms`,
                   }}
                 >
                   {/* Content Container */}
-                  <div className={`relative flex flex-1 p-6 sm:p-8 ${guide.title === "O Transecto e a Área" ? "flex-col lg:flex-row gap-8 lg:items-center" : "flex-col"
+                  <div className={`relative flex flex-1 p-6 sm:p-8 ${guide.title === "Área de Contagem" ? "flex-col lg:flex-row gap-8 lg:items-center" : "flex-col"
                     }`}>
                     {/* Decorative background element */}
                     <div
@@ -202,7 +221,7 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
                       </ul>
                     </div>
 
-                    {guide.title === "O Transecto e a Área" && (
+                    {guide.title === "Área de Contagem" && (
                       <div className="w-full lg:w-1/2 shrink-0">
                         <TransectBoxDiagram />
                       </div>
