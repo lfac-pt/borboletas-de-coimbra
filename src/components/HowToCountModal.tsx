@@ -124,7 +124,7 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
 
       {/* Modal Container */}
       <div
-        className={`relative flex flex-col w-full max-w-4xl max-h-[90vh] bg-white/95 backdrop-blur-xl rounded-2xl md:rounded-[2rem] shadow-2xl border border-white/20 transition-all duration-500 transform overflow-hidden ${isRendered ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-8"}`}
+        className={`relative flex flex-col w-full max-w-6xl max-h-[90vh] bg-white/95 backdrop-blur-xl rounded-2xl md:rounded-[2rem] shadow-2xl border border-white/20 transition-all duration-500 transform overflow-hidden ${isRendered ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-8"}`}
       >
         {/* Scroll Container bounds scrollbar within rounded corners */}
         <div className="flex-1 w-full overflow-y-auto">
@@ -137,7 +137,7 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
               <h2 className="text-3xl md:text-5xl font-extrabold serif-title uppercase text-gray-900 tracking-tight">
                 Como Contar Borboletas
               </h2>
-              <p className="text-sm md:text-base text-gray-500 font-light max-w-xl mt-2 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-500 font-light max-w-2xl mt-2 leading-relaxed">
                 A metodologia padrão do eBMS (European Butterfly Monitoring Scheme) baseia-se em transectos. Siga estas diretrizes simples para que as suas contagens sejam válidas do ponto de vista científico.
               </p>
             </div>
@@ -164,18 +164,18 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
 
           {/* Content */}
           <div className="p-6 md:p-10 bg-slate-50/50">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {guidelines.map((guide, index) => (
                 <div
                   key={guide.title}
-                  className={`group relative flex flex-col rounded-[1.5rem] bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${guide.title === "Área de Contagem" ? "md:col-span-2" : ""
+                  className={`group relative flex flex-col rounded-[1.5rem] bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${guide.title === "Área de Contagem" || guide.title === "Registo e Identificação" ? "md:col-span-2 lg:col-span-3" : ""
                     }`}
                   style={{
                     transitionDelay: `${index * 100}ms`,
                   }}
                 >
                   {/* Content Container */}
-                  <div className={`relative flex flex-1 p-6 sm:p-8 ${guide.title === "Área de Contagem" ? "flex-col lg:flex-row gap-8 lg:items-center" : "flex-col"
+                  <div className={`relative flex flex-1 p-6 sm:p-8 ${guide.title === "Área de Contagem" || guide.title === "Registo e Identificação" ? "flex-col lg:flex-row gap-8 lg:items-center" : "flex-col"
                     }`}>
                     {/* Decorative background element */}
                     <div
@@ -221,6 +221,11 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
                       </ul>
                     </div>
 
+                    {guide.title === "Registo e Identificação" && (
+                      <div className="w-full lg:w-1/2 shrink-0">
+                        <TaxonomyTreeDiagram />
+                      </div>
+                    )}
                     {guide.title === "Área de Contagem" && (
                       <div className="w-full lg:w-1/2 shrink-0">
                         <TransectBoxDiagram />
@@ -355,6 +360,74 @@ const TransectBoxDiagram = () => (
       <g fill="#10b981" transform="translate(280, 140) scale(0.55) rotate(15)">
         <path d="M0,0 C-10,-10 -20,5 0,10 C20,5 10,-10 0,0" />
       </g>
+    </svg>
+  </div>
+);
+
+const TaxonomyTreeDiagram = () => (
+  <div className="w-full flex justify-center mt-4 lg:mt-0 xl:scale-100">
+    <svg viewBox="0 0 430 380" className="w-full h-auto max-h-[340px] sm:max-h-[400px] drop-shadow-sm font-sans">
+      <defs>
+        <marker id="arrow-down" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#d8b4fe" />
+        </marker>
+        <clipPath id="rounded-photo" clipPathUnits="objectBoundingBox">
+          <rect width="1" height="1" rx="0.111" ry="0.156" />
+        </clipPath>
+      </defs>
+
+      {/* Level Labels on the Left side */}
+      <text x="5" y="25" fill="#a855f7" fontSize="12" fontWeight="bold" >1. Família</text>
+      <text x="5" y="105" fill="#a855f7" fontSize="12" fontWeight="bold">2. Género</text>
+      <text x="5" y="185" fill="#a855f7" fontSize="12" fontWeight="bold">3. Espécie</text>
+
+      <g transform="translate(75, 0)">
+        {/* Background soft paths defining the structure */}
+        <path d="M200,40 L200,80" stroke="#d8b4fe" strokeWidth="2" markerEnd="url(#arrow-down)" />
+
+        {/* Branching from Family to Genus */}
+        <path d="M200,110 L200,130 L110,130 L110,160" stroke="#d8b4fe" strokeWidth="2" fill="none" markerEnd="url(#arrow-down)" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M200,110 L200,130 L290,130 L290,160" stroke="#d8b4fe" strokeWidth="2" fill="none" markerEnd="url(#arrow-down)" strokeLinecap="round" strokeLinejoin="round" />
+
+        {/* Branching from Genus to Species */}
+        <path d="M110,190 L110,210 L50,210 L50,240" stroke="#e9d5ff" strokeWidth="2" fill="none" markerEnd="url(#arrow-down)" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M110,190 L110,210 L170,210 L170,240" stroke="#e9d5ff" strokeWidth="2" fill="none" markerEnd="url(#arrow-down)" strokeLinecap="round" strokeLinejoin="round" />
+
+        {/* Single Branch for the secondary Genus to Species for detail */}
+        <path d="M290,190 L290,210 L290,240" stroke="#e9d5ff" strokeWidth="2" fill="none" markerEnd="url(#arrow-down)" />
+
+        {/* FAMILY Node */}
+        <rect x="140" y="10" width="120" height="30" rx="15" fill="#a855f7" />
+        <text x="200" y="29" fill="white" fontSize="13" fontWeight="bold" textAnchor="middle">Pieridae</text>
+
+        {/* GENUS Nodes */}
+        <rect x="50" y="90" width="120" height="30" rx="15" fill="#c084fc" />
+        <text x="110" y="109" fill="white" fontSize="13" fontWeight="bold" textAnchor="middle" fontStyle="italic">Pieris<tspan fill="#f3e8ff" fontStyle="normal" fontSize="11"> sp.</tspan></text>
+
+        <rect x="230" y="90" width="120" height="30" rx="15" fill="#c084fc" />
+        <text x="290" y="109" fill="white" fontSize="13" fontWeight="bold" textAnchor="middle" fontStyle="italic">Gonepteryx<tspan fill="#f3e8ff" fontStyle="normal" fontSize="11"> sp.</tspan></text>
+
+        {/* SPECIES Nodes */}
+        <rect x="10" y="170" width="80" height="30" rx="15" fill="#d8b4fe" />
+        <text x="50" y="189" fill="#4c1d95" fontSize="12" fontWeight="bold" textAnchor="middle" fontStyle="italic">P. rapae</text>
+
+        <rect x="120" y="170" width="90" height="30" rx="15" fill="#d8b4fe" />
+        <text x="165" y="189" fill="#4c1d95" fontSize="12" fontWeight="bold" textAnchor="middle" fontStyle="italic">P. brassicae</text>
+
+        <rect x="240" y="170" width="100" height="30" rx="15" fill="#d8b4fe" />
+        <text x="290" y="189" fill="#4c1d95" fontSize="12" fontWeight="bold" textAnchor="middle" fontStyle="italic">G. cleopatra</text>
+
+        {/* Photos */}
+        <image x="5" y="230" width="90" height="64" href="imgs/sp/Pieridae/Pieris rapae.webp" preserveAspectRatio="xMidYMid slice" clipPath="url(#rounded-photo)" />
+        <image x="120" y="230" width="90" height="64" href="imgs/sp/Pieridae/Pieris brassicae.webp" preserveAspectRatio="xMidYMid slice" clipPath="url(#rounded-photo)" />
+        <image x="245" y="230" width="90" height="64" href="imgs/sp/Pieridae/Gonepteryx cleopatra.webp" preserveAspectRatio="xMidYMid slice" clipPath="url(#rounded-photo)" />
+
+        {/* Photo Background Borders */}
+        <rect x="5" y="230" width="90" height="64" rx="10" fill="none" stroke="#d8b4fe" strokeWidth="2" />
+        <rect x="120" y="230" width="90" height="64" rx="10" fill="none" stroke="#d8b4fe" strokeWidth="2" />
+        <rect x="245" y="230" width="90" height="64" rx="10" fill="none" stroke="#d8b4fe" strokeWidth="2" />
+      </g>
+
     </svg>
   </div>
 );
