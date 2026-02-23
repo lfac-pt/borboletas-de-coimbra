@@ -300,6 +300,21 @@ const HowToCountModal = ({ onClose }: HowToCountModalProps) => {
                   </ul>
                 </div>
               </div>
+
+              <div className="w-full flex items-center gap-3 px-6 py-4 bg-purple-500/5 text-purple-600 rounded-2xl text-sm font-medium border border-purple-500/10">
+                <svg
+                  className="w-8 h-8 flex-shrink-0 opacity-80"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <div className="text-left w-full">
+                  <p className="font-bold text-gray-900 mb-0.5 uppercase tracking-wide text-xs">Saber mais</p>
+                  <p className="text-gray-700">A informação aqui apresentada teve por base o <a href="https://www.tagis.pt/uploads/4/7/9/5/47950987/manual_censos_de_borboletas_final.pdf" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline underline-offset-2 hover:decoration-2 transition-all font-semibold">Manual de Monitorização de Borboletas</a> coordenado pelo Tagis. Consulte-o para conhecer em detalhe o método de contagem em transectos.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
