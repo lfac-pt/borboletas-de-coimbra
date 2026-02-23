@@ -674,7 +674,10 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className="pt-8 border-t border-white/10 text-xs text-gray-500">
+          <div className="pt-8 border-t border-white/10 text-xs text-gray-500 flex flex-col items-center gap-4">
+            <p className="text-sm text-gray-400 max-w-md mx-auto">
+              Tem alguma dúvida, encontrou um erro ou gostava de sugerir alguma funcionalidade nova? Sinta-se à vontade para me enviar uma mensagem através do <a href="https://www.instagram.com/lfac_pt/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white underline underline-offset-2 transition-colors font-medium">Instagram</a>.
+            </p>
             <p>
               &copy; {new Date().getFullYear()}{" "}
               <a
