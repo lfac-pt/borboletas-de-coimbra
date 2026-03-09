@@ -18,6 +18,7 @@ const FamiliesInfographicModal = lazy(
   () => import("./components/FamiliesInfographicModal"),
 );
 const HowToCountModal = lazy(() => import("./components/HowToCountModal"));
+const OnlineCourseModal = lazy(() => import("./components/OnlineCourseModal"));
 
 const App = () => {
   // State initialization from URL
@@ -51,6 +52,7 @@ const App = () => {
   const [selectedSpecies, setSelectedSpecies] = useState<Species | null>(null);
   const [isFamiliesModalOpen, setIsFamiliesModalOpen] = useState(false);
   const [isHowToCountModalOpen, setIsHowToCountModalOpen] = useState(false);
+  const [isOnlineCourseModalOpen, setIsOnlineCourseModalOpen] = useState(false);
 
   // Advanced filters (Multi-select)
   const [selectedSize, setSelectedSize] = useState<string | null>(
@@ -522,6 +524,21 @@ const App = () => {
                 </svg>
               </span>
             </button>
+            <button
+              onClick={() => setIsOnlineCourseModalOpen(true)}
+              className="text-center group cursor-pointer transition-all hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white/50 rounded-lg p-2 -m-2"
+              aria-label="Ver Curso Online"
+            >
+              <span className="flex justify-center items-center h-[40px] mb-1 text-white group-hover:text-[#f4d47c] transition-colors">
+                <svg className="w-9 h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <span className="text-xs uppercase tracking-widest text-white/50 font-semibold group-hover:text-[#f4d47c] transition-colors">
+                Curso Online
+              </span>
+            </button>
           </div>
         </div>
 
@@ -718,6 +735,9 @@ const App = () => {
         )}
         {isHowToCountModalOpen && (
           <HowToCountModal onClose={() => setIsHowToCountModalOpen(false)} />
+        )}
+        {isOnlineCourseModalOpen && (
+          <OnlineCourseModal onClose={() => setIsOnlineCourseModalOpen(false)} />
         )}
       </Suspense>
     </div>
