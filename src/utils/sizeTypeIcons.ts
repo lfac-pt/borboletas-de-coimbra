@@ -12,6 +12,6 @@ export const SIZE_TYPE_SPRITES: Record<string, SizeTypeSpritePosition> = {
 // Get sprite position for a size category
 export function getSizeSpritePosition(
   sizeCategory: string,
-): SizeTypeSpritePosition {
-  return SIZE_TYPE_SPRITES[sizeCategory];
+): SizeTypeSpritePosition | null {
+  return SIZE_TYPE_SPRITES[sizeCategory] || null;
 }

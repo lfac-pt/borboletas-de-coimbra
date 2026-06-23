@@ -23,5 +23,7 @@ export const HABITAT_TYPE_SPRITES: Record<string, HabitatSpritePosition> = {
 export function getHabitatSpritePosition(
   habitatType: string,
 ): HabitatSpritePosition {
-  return HABITAT_TYPE_SPRITES[habitatType];
+  return (
+    HABITAT_TYPE_SPRITES[habitatType] || HABITAT_TYPE_SPRITES["Generalist"]
+  );
 }

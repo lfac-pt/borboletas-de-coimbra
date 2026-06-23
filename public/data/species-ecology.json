@@ -662,10 +662,12 @@
     }
   },
   "Muschampia proto": {
-    "habitatType": "Rocky/Mountain",
+    "habitatType": "Grassland",
     "hostPlantFamilies": ["Lamiaceae"],
     "sources": ["https://www.pyrgus.de/Muschampia_proto_en.html"],
-    "hostPlantSpecies": {}
+    "hostPlantSpecies": {
+      "Lamiaceae": ["Phlomis lychnitis"]
+    }
   },
   "Nymphalis antiopa": {
     "habitatType": "Rocky/Mountain",

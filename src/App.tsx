@@ -357,8 +357,8 @@ const App = () => {
 
   const selectedSpeciesIndex = selectedSpecies
     ? filteredSpecies.findIndex(
-      (s) => s.latinName === selectedSpecies.latinName,
-    )
+        (s) => s.latinName === selectedSpecies.latinName,
+      )
     : -1;
 
   const filterOptions = useMemo(() => {
@@ -508,8 +508,18 @@ const App = () => {
               aria-label="Ver Guia de Contagem"
             >
               <span className="flex justify-center items-center h-[40px] mb-1 text-white group-hover:text-[#f4d47c] transition-colors">
-                <svg className="w-9 h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                <svg
+                  className="w-9 h-9"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                  />
                 </svg>
               </span>
               <span className="relative inline-block text-xs uppercase tracking-widest text-white/50 font-semibold group-hover:text-[#f4d47c] transition-colors">
@@ -520,7 +530,12 @@ const App = () => {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
               </span>
             </button>
@@ -530,9 +545,24 @@ const App = () => {
               aria-label="Ver Curso Online"
             >
               <span className="flex justify-center items-center h-[40px] mb-1 text-white group-hover:text-[#f4d47c] transition-colors">
-                <svg className="w-9 h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg
+                  className="w-9 h-9"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
               </span>
               <span className="text-xs uppercase tracking-widest text-white/50 font-semibold group-hover:text-[#f4d47c] transition-colors">
@@ -693,7 +723,18 @@ const App = () => {
           </div>
           <div className="pt-8 border-t border-white/10 text-xs text-gray-500 flex flex-col items-center gap-4">
             <p className="text-sm text-gray-400 max-w-md mx-auto">
-              Tem alguma dúvida, encontrou um erro ou gostava de sugerir alguma funcionalidade nova? Sinta-se à vontade para me enviar uma mensagem através do <a href="https://www.instagram.com/lfac_pt/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white underline underline-offset-2 transition-colors font-medium">Instagram</a>.
+              Tem alguma dúvida, encontrou um erro ou gostava de sugerir alguma
+              funcionalidade nova? Sinta-se à vontade para me enviar uma
+              mensagem através do{" "}
+              <a
+                href="https://www.instagram.com/lfac_pt/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white underline underline-offset-2 transition-colors font-medium"
+              >
+                Instagram
+              </a>
+              .
             </p>
             <p>
               &copy; {new Date().getFullYear()}{" "}
@@ -737,7 +778,9 @@ const App = () => {
           <HowToCountModal onClose={() => setIsHowToCountModalOpen(false)} />
         )}
         {isOnlineCourseModalOpen && (
-          <OnlineCourseModal onClose={() => setIsOnlineCourseModalOpen(false)} />
+          <OnlineCourseModal
+            onClose={() => setIsOnlineCourseModalOpen(false)}
+          />
         )}
       </Suspense>
     </div>
