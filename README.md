@@ -1,4 +1,4 @@
-# Rsbuild project
+# Borboletas de Coimbra
 
 ## Setup
 
