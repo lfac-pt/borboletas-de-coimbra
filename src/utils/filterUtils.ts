@@ -31,8 +31,9 @@ export const isNewSpeciesInMonth = (
   // If it's the first month (Março), and it flies, it's considered new for the season
   if (currentIndex === 0) return true;
 
-  const previousMonth = MONTHS_ORDER[currentIndex - 1];
+  // Get all months in MONTHS_ORDER prior to the selectedMonth
+  const precedingMonths = MONTHS_ORDER.slice(0, currentIndex);
 
-  // It is new if it DOES NOT fly in the previous month
-  return !speciesMonths.includes(previousMonth);
+  // It is new if it has not flown in any of the preceding months
+  return !precedingMonths.some((month) => speciesMonths.includes(month));
 };

@@ -31,12 +31,12 @@ describe("isNewSpeciesInMonth", () => {
 
   it("should handle non-contiguous periods correctly", () => {
     // Flies in March, stops in April, flies again in May.
-    // Should be new in March AND new in May.
+    // Should be new in March, but NOT new in May (since it already flew in March).
     const months = ["Março", "Maio"];
 
     expect(isNewSpeciesInMonth(months, "Março")).toBe(true);
     expect(isNewSpeciesInMonth(months, "Abril")).toBe(false); // Doesn't fly
-    expect(isNewSpeciesInMonth(months, "Maio")).toBe(true); // New appearing
+    expect(isNewSpeciesInMonth(months, "Maio")).toBe(false); // Already flew in March
   });
 
   it("should return false for invalid months", () => {
