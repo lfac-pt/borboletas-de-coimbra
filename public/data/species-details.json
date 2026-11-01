@@ -1046,8 +1046,8 @@
   },
   "Arethusana arethusa": {
     "sizeCategory": "medium",
-    "predominantColor": "",
-    "months": [],
+    "predominantColor": ["Castanho", "Laranja"],
+    "months": ["Julho"],
     "similarSpecies": [],
     "rarity": "common"
   },
